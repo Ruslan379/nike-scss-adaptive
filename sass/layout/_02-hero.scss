@@ -17,19 +17,22 @@
         center bottom 0;
     background-size: auto;
 
-    // .hero::after {
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     width: 837px;
-    //     height: 403px;
-    //     bottom: 0;
-    //     right: 72px;
-    //     background-image: url(../images/hero_background-sneaker.png);
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     // transform: translate(-50%, -50%) rotate(30deg);
-    // }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 837px;
+        height: 403px;
+        bottom: 0;
+        // right: 72px;
+        right: 0;
+        background-image: url(../images/hero_background-sneaker.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        // transform: translate(-50%, -50%) rotate(30deg);
+        transform-origin: bottom left;
+        transform: translate(40px, 1px) rotate(-30deg);
+    }
     
     &-logo {
         margin-left: 5px;
@@ -101,18 +104,4 @@
         height: 67px;
         // padding: 20px 61px 19px;
     }
-}
-
-.hero::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 837px;
-    height: 403px;
-    bottom: 0;
-    right: 72px;
-    background-image: url(../images/hero_background-sneaker.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    // transform: translate(-50%, -50%) rotate(30deg);
 }
