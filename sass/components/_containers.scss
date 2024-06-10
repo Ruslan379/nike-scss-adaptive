@@ -1,0 +1,28 @@
+// @import "../utils/mixins";
+
+//! ===========  ОСНОВНІ Контейнери  ===========
+.main-container {
+    width: 1440px;
+    margin: 0 auto;
+    // outline: 1px dashed #0ceb17; 
+}
+
+.container {
+    min-width: 360px;
+    // width: 1110px;
+    max-width: 1110px;
+    margin: 0 auto;
+    // outline: 1px dashed tomato;
+    // ! міксін outline
+    //todo var.1
+    // @include outline(1px, dashed, tomato);
+    //todo var.2
+    // @include outline();
+    // @include outline(3px);
+    // @include outline($type: dashed);
+
+    //! Медіа-запити
+    // @media screen and (max-width: 480px) {
+    //     width: 480px;
+    // }
+}

@@ -1,0 +1,69 @@
+$lang: "none";
+
+//? ============= var-01.SCSS-змінні ============
+//* ================= fonts ===================
+$font-family: "Roboto", sans-serif;
+$second-family: "Playfair Display", sans-serif;
+$third-family: "PT Serif", sans-serif;
+//* ================= colors ==================
+// $color-light: #d0e4ff;
+$color-light: #FFFFFF;
+$color-light-eng: #ffcdd5;
+$color-light-ua: #ffffb1;
+$color-font-main: #c7c7c7;
+$color-font-second: #dcdcdc;
+$color-font-third: #d8d8d8;
+$color-placeholder: #959595;
+$color-background-brand: #012d63;
+$color-brand-hover : #c33bde;
+$color-buttons-background: #8e32c6;
+$color-buttons-hover: #26c6ea;
+$color-background-footer: #021635;
+$color-border: #9b9b9b;
+//? _______________________________________________
+
+
+
+//? ==============  var-02.map-get ==============
+// * ================= fonts ===================
+$fonts: (
+    font-family: "Roboto",
+    second-family: "Playfair Display",
+    third-family: "PT Serif",
+);
+// * ================= colors ==================
+$colors: (
+    light: #FFFFFF,
+    light-eng: #ffcdd5,
+    light-ua: #ffffb1,
+    font-main: #c7c7c7,
+    font-second: #dcdcdc,
+    font-third: #d8d8d8,
+    placeholder: #959595,
+    background-brand: #012d63,
+    brand-hover : #c33bde,
+    buttons-background: #8e32c6,
+    buttons-hover: #26c6ea,
+    background-footer: #021635,
+    border: #9b9b9b,
+);
+//? _______________________________________________
+
+
+
+//? ======== var-03.map-get --> getColor ========
+// * ================= fonts ===================
+@function getFonts($key) {
+    @return map-get($fonts, $key);
+}
+// * ================= colors ==================
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+//? _______________________________________________
+
+
+
+//? == var-04.Cписок, або масив значень (icons) ==
+$icons: "premium-quality", "indelible-paint", "fast-shipping";
+//? ______________________________________________

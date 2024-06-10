@@ -1,0 +1,85 @@
+// @import "../utils/mixins";
+
+// ? main
+// ? section hero (BEM+SASS)
+.hero {
+    padding-top: 94px;
+    padding-bottom: 183px;
+    height: 858px; 
+    background-color: $color-background-brand;
+    background-image:url(../images/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 1440px;
+    
+    .hero-logo {
+        margin-left: 5px;
+        display: block;
+        width: 160px;
+        height: 120px;
+        // outline: 1px dotted yellow;
+        // ! міксін outline
+        // @include outline(1px, dotted, yellow);
+    }
+
+    &__logo-text {
+        margin-top: -35px;
+        margin-left: 30px;
+        width: 178px;
+        height: 86px;
+        line-height: 1.4;
+        font-family: $third-family;
+        // font-weight: 400;
+        font-size: 48px;
+        // color: $color-light;
+        // outline: 1px solid red;
+    }
+
+    &__title {
+        margin-top: -46px;
+        margin-left: -9px;
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 144px;
+        line-height: 1.33;
+        // color: $color-light;
+        // outline: 1px dashed wheat;
+    }
+
+    &__title-second {
+        margin-top: -36px;
+        margin-bottom: 12px;
+        margin-left: -1px;
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 1.337;
+        // color: $color-light;
+        // outline: 1px dashed #b3f5b3;
+    }
+
+    &__text {
+        margin-bottom: 41px;
+        margin-left: -1px;
+        width: 508px;
+        //! Інші властивості для сторінки index-ua.html
+        @if $lang == ua {
+            width: 612px;
+        }
+        font-family: $font-family;
+        // font-weight: 400;
+        font-size: 18px;
+        line-height: 1.17;
+        // color: red;
+        // color: $color-light;
+        // outline: 1px dashed #f5b3b3; 
+    }
+
+    &__button-link {
+        // @extend %buttons;
+        // @extend .buttons;
+        width: 254px;
+        height: 67px;
+        // padding: 20px 61px 19px;
+    }
+}

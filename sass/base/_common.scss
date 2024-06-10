@@ -1,0 +1,63 @@
+//! body
+body {
+    //* ================= fonts ===================
+    //? var-01.SCSS-змінні
+    // font-family: $font-family;
+    //? var-03.map-get --> getColor
+    font-family: getFonts('font-family');
+
+    //* ================= colors ===================
+    //? var-01.SCSS-змінні
+    // color: $color-light;
+
+    //? var-02.map-get
+    // color: map-get($colors, 'light');
+
+    //? var-03.map-get --> getColor
+    // color: getColor('light');
+
+    //? var-04.Cписок, або масив значень (icons)
+    @if $lang == eng {
+        color: getColor('light-eng');
+        } @else if $lang == ua {
+            color: getColor('light-ua');
+        } @else {
+            //? Колір gray, якщо $lang: "none"; 
+            // color: gray; 
+            //? Колір #FFFFFF;, якщо $lang: "none";
+            color: getColor('light');
+    }
+}
+
+//! Додаткове налаштування $color-light (заміна кольору)
+// @if $lang == eng {
+//         // todo var.1
+//         $color-light: $color-light-eng;
+//         // todo var.2
+//         $colors: (
+//             light: $color-light-eng,
+//         );
+//     } @else if $lang == ua {
+//         // todo var.1
+//         $color-light: $color-light-ua;
+//         // todo var.2
+//         $colors: (
+//             light: $color-light-ua,
+//         );
+//     //? Колір gray, якщо $lang: "none";     
+//     } @else {
+//         // todo var.1
+//         $color-light: #dddddd;
+//         // todo var.2
+//         $colors: (
+//             light: #dddddd,
+//         );
+// }
+
+
+// @media (min-width: 1600px) {
+//     body {
+//         background-color: getColor(background-brand);
+//         // color: greenyellow;
+//     }
+// }

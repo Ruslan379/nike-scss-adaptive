@@ -1,0 +1,97 @@
+// ? advantages (BEM+SASS)
+.advantages {
+    // height: 606px;
+    padding-top: 105px;
+    padding-bottom: 105px;
+    border-bottom: 2px solid $color-light;
+    background-color: $color-background-brand;
+    background-image:url(../images/advantages-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 1440px;
+
+    .container {
+        //! Додаткові flex-властивості до container
+        display: flex;
+        outline: 5px solid $color-buttons-background;
+        padding: 25px 50px;
+
+        .advantages-list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // outline: 1px dashed yellow;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 240px;
+                height: 346px;
+                // background-image: 
+                //     url(../images/advantages_premium-quality.png);
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                // outline: 1px dashed #00ffcc;
+
+                .advantages-list__title {
+                    // height: 102px;
+                    font-family: $second-family;
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 1.42;
+                    text-align: center;
+                    // color: $color-light; 
+                    // outline: 1px dotted red; 
+                }
+            }
+            // &__item:nth-child(1) {
+            //     background-image: 
+            //         url(../images/advantages_premium-quality.png);
+            // }
+            &__item:nth-child(2) {
+                justify-content: end;
+                // background-image: 
+                //     url(../images/advantages_indelible-paint.png);
+                background-position: center top;
+            }
+            // &__item:nth-child(3) {
+            //     background-image: 
+            //         url(../images/advantages_fast-shipping.png);
+            // }
+            //todo var.1 - Використання @each - цикл для додавання фонових зображень
+            // @each $iconName in $icons {
+            //     &__item--#{$iconName} {
+            //         background-image: 
+            //         url(../images/advantages_#{$iconName}.png);
+            //     }
+            // }
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для додавання фонових зображень
+            @include generateIcons($icons);
+
+
+            &__item:nth-child(1) .advantages-list__title {
+                width: 159px;
+            }
+            &__item:nth-child(2) .advantages-list__title {
+                width: 161px;
+            }
+            &__item:nth-child(3) .advantages-list__title {
+                width: 151px;
+            }
+
+            &__item:first-child::after,
+            &__item:last-child::after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                margin-top: -102px;
+                margin-right: -340px;
+                background-color: $color-light;
+            }
+            &__item:last-child::after {
+                margin-left: -680px;
+            }
+        }
+    }
+}

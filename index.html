@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--! Назва вкладки -->
+    <title>NIKE</title>
+
+    <!--! Завантаження іконки до назви сторінки (вкладки) title -->
+    <link href="https://img.icons8.com/external-tal-revivo-color-tal-revivo/16/external-nike-an-american-multinational-corporation-footwear-apparel-equipment-accessories-and-services-fashion-color-tal-revivo.png" type="image/x-icon" rel="shortcut icon">
+
+    <!--! Завантаження modern-normalize -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" 
+    />
+    <!--todo Another variant modern-normalize -->
+    <!-- <link 
+        rel="stylesheet" 
+        href="https://cdnjs./8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    /> -->
+
+    <!--! Завантаження шрифтів: 'Roboto' 300, 400 + 'Playfair Display' 400 + 'PT Serif' 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&family=Roboto:wght@300;400&display=swap" rel="stylesheet">    
+
+    <!--! Підкючення reset.css -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!--! Підкючення ДОДАТКОВОГО файла стилів для сторінки index.html (eng) -->
+    <!-- <link rel="stylesheet" href="./css/style-eng.css"> -->
+    <!--! Підкючення файла стилів -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    
+    <!--! Підкючення файла стилів SASS-->
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+    <link rel="stylesheet" href="./css/main-eng.min.css">
+    
+</head>
+
+<body>
+    <div class="main-container">
+        <!--? header -->
+        <header class="header">
+            <div class="container flex">
+                <nav class="navigation">
+                    <a class="header-logo" href="#">
+                        <img src="./images/header-logo.png" alt="logo" width="100">
+                    </a>
+                    <ul class="nav-list">
+                        <li class="nav-list__item"><a class="nav-list__link nav-list__link--active" href="./index.html">Main page</a></li>
+                        <li class="nav-list__item"><a class="nav-list__link" href="#benefits">Benefits</a></li>
+                        <li class="nav-list__item"><a class="nav-list__link" href="#advantages">Advantages</a></li>
+                        <li class="nav-list__item"><a class="nav-list__link" href="#reviews">Reviews</a></li>
+                        <li class="nav-list__item"><a class="nav-list__link" href="#contacts">Contacts</a></li>
+                        <li class="nav-list__item"><a class="nav-list__link" href="#order">Order</a></li>
+                    </ul>
+                </nav>
+                <!--? блок кнопок-перемикачів мови -->
+                <ul class="lang-list">
+                    <li class="lang-list__item">
+                        <a class="lang-list__link lang-list__link--active" href="./index.html">Eng</a>
+                    </li>
+                    <li class="lang-list__item">
+                        <a class="lang-list__link" href="./index-ua.html">Ua</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <!--? hero -->
+            <section class="hero" id="benefits">
+                <div class="container">
+                    <a class="hero-logo" href="#">
+                        <img src="./images/hero-logo.png" alt="logo" width="160">
+                    </a>
+                    <p class="hero__logo-text">С&R</p>
+                    <h1 class="hero__title">ColoRawe</h1>
+                    <h2 class="hero__title-second">Your dream Nike</h2>
+                    <p class="hero__text">
+                        On this site you can find custom Nike sneakers of your dreams. 
+                        The original company can`t create such beautiful <br>
+                        sneakers as we do. <br>
+                        Good luck finding your way in the world of custom sneakers.
+                    </p>
+                    <a class="buttons hero__button-link" href="#">Buy my Nike</a>
+                </div>
+            </section>
+            <!--? advantages -->
+            <section class="advantages" id="advantages">
+                <div class="container">
+                    <ul class="advantages-list">
+                        <li class="advantages-list__item advantages-list__item--premium-quality">
+                            <h3 class="advantages-list__title">Premium Quality</h3>
+                        </li>
+                        <li class="advantages-list__item advantages-list__item--indelible-paint">
+                            <h3 class="advantages-list__title">Indelible paint</h3>
+                        </li>
+                        <li class="advantages-list__item advantages-list__item--fast-shipping">
+                            <h3 class="advantages-list__title">Fast shipping</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--? reviews -->
+            <section class="reviews" id="reviews">
+                <div class="container">
+                    <h2 class="section-title">Reviews</h2>
+                    <ul class="reviews-list">
+                        <li class="reviews-list__item">
+                            <p class="reviews-list__review">
+                                Sneakers are very 
+                                comfortable and well 
+                                painted, nothing has 
+                                worn off in a year.
+                            </p>
+                            <p class="reviews-list__date">
+                                25.11
+                            </p>
+                            <div class="reviews-list__reviewer-box">
+                                <img 
+                                    class="reviews-list__reviewer-img"
+                                    src="./images/reviews_john-teylor.jpg" 
+                                    alt="John Teylor"
+                                    width="31"
+                                >
+                                <div class="reviews-list__reviewer-info-box">
+                                    <p class="reviews-list__reviewer-name">
+                                        John Teylor
+                                    </p>
+                                    <p class="reviews-list__reviewer-term">
+                                        With us from 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews-list__item">
+                            <p class="reviews-list__review">
+                                I'm very happy with 
+                                this color scheme.
+                                They match all my 
+                                clothes.
+                            </p>
+                            <p class="reviews-list__date">
+                                05.01
+                            </p>
+                            <div class="reviews-list__reviewer-box">
+                                <img 
+                                    class="reviews-list__reviewer-img"
+                                    src="./images/reviews_elizabeth-garsia.jpg" 
+                                    alt="Elizabeth Garsia"
+                                    width="31"
+                                >
+                                <div class="reviews-list__reviewer-info-box">
+                                    <p class="reviews-list__reviewer-name">
+                                        Elizabeth Garsia
+                                    </p>
+                                    <p class="reviews-list__reviewer-term">
+                                        With us from 2020
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews-list__item">
+                            <p class="reviews-list__review">
+                                Just right if you need 
+                                to go to a party.<br>
+                                I use them actively, 
+                                the paint is super.
+                            </p>
+                            <p class="reviews-list__date">
+                                18.06
+                            </p>
+                            <div class="reviews-list__reviewer-box">
+                                <img 
+                                    class="reviews-list__reviewer-img"
+                                    src="./images/reviews_tom-maquare.jpg" 
+                                    alt="With us from 2019"
+                                    width="31"
+                                >
+                                <div class="reviews-list__reviewer-info-box">
+                                    <p class="reviews-list__reviewer-name">
+                                        Tom Maquare
+                                    </p>
+                                    <p class="reviews-list__reviewer-term">
+                                        With us from 2019
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--? order -->
+            <section class="order" id="order">
+                <div class="container">
+                    <h2 class="section-title">Order</h2>
+                    <form class="order-form">
+                        <div class="order-form__input-email-box" >
+                            <input 
+                                class="order-form__input order-form__input--email" 
+                                type="email"
+                                name="user-email"
+                                placeholder="Write your email"
+                                required
+                            >
+                            <button 
+                                class="order-form__button-confirm" 
+                                type="button"
+                                disabled
+                            >
+                            Confirm
+                            </button>
+                        </div>
+                        <input 
+                            class="order-form__input" 
+                            type="text"
+                            name="user-country"
+                            placeholder="Your Country"
+                            required
+                        >
+                        <input 
+                            class="order-form__input" 
+                            type="text"
+                            name="user-city"
+                            placeholder="Your City"
+                            required
+                        >
+                        <input 
+                            class="order-form__input" 
+                            type="text"
+                            name="user-address"
+                            placeholder="Your Address"
+                            required
+                        >
+                        <!--? submit-button -->
+                        <button 
+                            class="buttons order-form__button-submit" 
+                            type="submit"
+                            disabled
+                            >
+                            Order my Nike
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!--? footer -->
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <p class="footer-list__question">Have a question?</p>
+                        <a class="footer-list__link" href="mailto:ColoRawe_support@gmail.com">ColoRawe_support@gmail.com</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <p class="footer-list__question">Have a proposal for cooperation?</p>
+                        <a class="footer-list__link" href="mailto:ColoRawe_Cooperation@gmail.com">ColoRawe_Cooperation@gmail.com</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <p class="footer-list__question">Advertising questions?</p>
+                        <a class="footer-list__link" href="mailto:ColoRawe_support@gmail.com">ColoRawe_Advertising@gmail.com</a>
+                    </li>
+                </ul>
+                <div class="footer__all-box">
+                    <div class="footer__trademark-box">
+                        <p class="footer__trademark">2022 ColoRawe @All rights reserved</p>
+                        <p class="footer__name-country">United States</p>
+                    </div>
+                    <div class="footer__logo-box">
+                        <a class="footer-logo" href="#">
+                            <img src="./images/footer-logo.png" alt="logo" width="108">
+                        </a>
+                        <p class="footer__logo-text">С&R</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--! Скріпт перевірки валіності e-mail та зміна статусу кнопки "Сonfirm" на enable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.querySelector('input[type="email"]');
+            const textInputs = document.querySelectorAll('input[type="text"]');
+            const confirmButton = document.querySelector('.order-form__button-confirm');
+            const submitButton = document.querySelector('.order-form__button-submit');
+
+            confirmButtonState = true // Початковий стан кнопки "Confirm"- Є (display = 'block')
+
+            // Блокуємо та зменшуємо прозорість інпутів, поки Є кнопка "Confirm"
+            function updateTextInputOpacity() {
+                // прозорість інпутів
+                // const opacity = confirmButton.disabled ? 0.3 : 1;
+                const opacity = confirmButtonState ? 0.3 : 1;
+                textInputs.forEach(function(input) {
+                    input.style.opacity = opacity;
+                });
+                // Блокування інпутів
+                // confirmButton.disabled
+                confirmButtonState
+                ? 
+                textInputs.forEach(function(input) {
+                    input.setAttribute('disabled', 'true');
+                }) 
+                : 
+                textInputs.forEach(function(input) {
+                    input.removeAttribute('disabled');
+                });
+            }
+            
+            // Зміна статусу кнопки "Сonfirm" (disabled)
+            emailInput.addEventListener('input', () => {
+                if (emailInput.validity.valid) {
+                    confirmButton.removeAttribute('disabled'); // Вмикаємо кнопку "Сonfirm"
+                } else {
+                    confirmButton.setAttribute('disabled', 'true'); // Вимикаємо кнопку "Сonfirm"
+                }
+                updateTextInputOpacity();
+            });
+
+            // Приховуємо кнопку "Сonfirm" після кліка
+            confirmButton.addEventListener('click', function () {
+                confirmButton.style.display = 'none';
+                submitButton.removeAttribute('disabled'); // Вмикаємо кнопку "submit"
+                confirmButtonState = false
+                updateTextInputOpacity(); // Обновление прозрачности после скрытия кнопки "Сonfirm"
+            });
+
+            // Змінюємо кольори для тих інпутів у яких type="text"
+            textInputs.forEach(function(input) {
+                // Добавление события focus для всех input с type="text"
+                input.addEventListener('focus', function () {
+                    input.style.border = '2px solid green'; // Изменяем цвет рамки при фокусе
+                    input.style.backgroundColor = '#d6ffdf'; 
+                });
+
+                // Добавление события blur для всех input с type="text"
+                input.addEventListener('blur', function () {
+                    input.style.border = ''; // Сбрасываем цвет рамки при потере фокуса
+                    input.style.backgroundColor = ''; 
+                });
+            });
+
+            // Инициализация прозрачности текстовых полей при загрузке страницы
+            updateTextInputOpacity();
+        });
+    </script>
+</body>
+
+</html>
