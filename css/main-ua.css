@@ -167,16 +167,16 @@ body {
 }
 
 .hero {
+  position: relative;
   padding-top: 94px;
   padding-bottom: 183px;
-  height: 858px;
   background-color: #012d63;
-  background-image: url(../images/hero-background.jpg);
+  background-image: url(../images/hero_background.jpg);
   background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: 1440px;
+  background-position: center bottom 0;
+  background-size: auto;
 }
-.hero .hero-logo {
+.hero-logo {
   margin-left: 5px;
   display: block;
   width: 160px;
@@ -220,6 +220,19 @@ body {
 .hero__button-link {
   width: 254px;
   height: 67px;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 837px;
+  height: 403px;
+  bottom: 0;
+  right: 72px;
+  background-image: url(../images/hero_background-sneaker.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .advantages {
