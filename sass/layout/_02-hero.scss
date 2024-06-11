@@ -8,13 +8,9 @@
     padding-bottom: 183px;
     // height: 858px; 
     background-color: $color-background-brand;
-    background-image:
-        // url(../images/hero_background-sneaker.png),
-        url(../images/hero_background.jpg);
+    background-image: url(../images/hero_background.jpg);
     background-repeat: no-repeat;
-    background-position:
-        // right 0 bottom 0,
-        center bottom 0;
+    background-position: center bottom 0;
     background-size: auto;
 
     &::after {
@@ -24,14 +20,18 @@
         width: 837px;
         height: 403px;
         bottom: 0;
-        // right: 72px;
-        right: 0;
+        right: calc(50%);
+        // right: calc(50% - 25vw);
         background-image: url(../images/hero_background-sneaker.png);
+        // background-size: auto;
         background-size: cover;
         background-repeat: no-repeat;
-        // transform: translate(-50%, -50%) rotate(30deg);
         transform-origin: bottom left;
-        transform: translate(40px, -1px) rotate(-30deg);
+        // transform: translate(40px, -1px) rotate(-30deg);
+        transform: translate(91%, -1px) rotate(-30deg);
+        // ! міксін outline
+        // @include outline(1px, dotted, yellowgreen);
+        
     }
     
     &-logo {

@@ -8,9 +8,12 @@
 }
 
 .container {
-    min-width: 360px;
+    // min-width: 360px;
     // width: 1110px;
-    max-width: 1110px;
+    // max-width: 1110px;
+
+    width: 100%;
+    padding: 0 165px;
     margin: 0 auto;
     // outline: 1px dashed tomato;
     // ! міксін outline
@@ -22,7 +25,20 @@
     // @include outline($type: dashed);
 
     //! Медіа-запити
-    // @media screen and (max-width: 480px) {
+    // //? var-01.SCSS-змінні
+    // @media screen and (min-width: $mobile) {
     //     width: 480px;
     // }
+    //? var-03.map-get --> getColor
+    @media screen and (min-width: getBreakPoint('mobile')) {
+        width: 360px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 1440px;
+    }
 }

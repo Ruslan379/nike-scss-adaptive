@@ -83,9 +83,24 @@ body {
 }
 
 .container {
-  min-width: 360px;
-  max-width: 1110px;
+  width: 100%;
+  padding: 0 165px;
   margin: 0 auto;
+}
+@media screen and (min-width: getBreakPoint("mobile")) {
+  .container {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
 }
 
 .buttons {
@@ -184,12 +199,12 @@ body {
   width: 837px;
   height: 403px;
   bottom: 0;
-  right: 0;
+  right: 50%;
   background-image: url(../images/hero_background-sneaker.png);
   background-size: cover;
   background-repeat: no-repeat;
   transform-origin: bottom left;
-  transform: translate(40px, -1px) rotate(-30deg);
+  transform: translate(91%, -1px) rotate(-30deg);
 }
 .hero-logo {
   margin-left: 5px;

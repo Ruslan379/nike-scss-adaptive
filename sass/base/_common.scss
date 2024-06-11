@@ -16,7 +16,7 @@ body {
     //? var-03.map-get --> getColor
     // color: getColor('light');
 
-    //? var-04.Cписок, або масив значень (icons)
+    //? var-04.Зміна color за умовою - вибір сторінки
     @if $lang == eng {
         color: getColor('light-eng');
         } @else if $lang == ua {
