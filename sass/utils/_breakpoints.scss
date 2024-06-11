@@ -12,8 +12,8 @@ $break-points: (
     desktop: 1440px,
 );
 
-//? ======== var-03.map-get --> getBreakPoints ========
+//? ======== var-03.map-get --> getBreakPoint ========
 // * ================= fonts ===================
-@function getBreakPoints($key) {
+@function getBreakPoint($key) {
     @return map-get($break-points, $key);
 }

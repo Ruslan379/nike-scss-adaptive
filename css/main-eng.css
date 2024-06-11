@@ -247,13 +247,13 @@ body {
   width: 178px;
   height: 86px;
   line-height: 1.4;
-  font-family: "PT Serif", sans-serif;
+  font-family: "PT Serif";
   font-size: 48px;
 }
 .hero__title {
   margin-top: -46px;
   margin-left: -9px;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display";
   font-weight: 400;
   font-size: 144px;
   line-height: 1.33;
@@ -262,7 +262,7 @@ body {
   margin-top: -36px;
   margin-bottom: 12px;
   margin-left: -1px;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display";
   font-weight: 400;
   font-size: 72px;
   line-height: 1.337;

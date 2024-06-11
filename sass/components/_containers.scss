@@ -30,21 +30,21 @@
     // @media screen and (min-width: $mobile) {
     //     width: 360px;
     // }
-    //? var-03.map-get --> getBreakPoints
-    @media screen and (min-width: getBreakPoints('mobile')) {
-        max-width: getBreakPoints('mobile');
+    //? var-03.map-get --> getBreakPoint
+    @media screen and (min-width: getBreakPoint('mobile')) {
+        max-width: getBreakPoint('mobile');
         // width: 360px;
         padding: 0 50px;
     }
 
-    @media screen and (min-width: getBreakPoints('tablet')) {
-        max-width: getBreakPoints('tablet');
+    @media screen and (min-width: getBreakPoint('tablet')) {
+        max-width: getBreakPoint('tablet');
         // width: 768px;
         padding: 0 100px;
     }
 
-    @media screen and (min-width: getBreakPoints('desktop')) {
-        max-width: getBreakPoints('desktop');
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        max-width: getBreakPoint('desktop');
         // width: 1440px;
         padding: 0 165px;
 

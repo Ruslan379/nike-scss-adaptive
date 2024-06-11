@@ -4,13 +4,12 @@
 .header {
     padding-top: 15px;
     padding-bottom: 15px;
-    // todo --- Фіксований header --- 
+    //! --- Фіксований header --- 
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
-    // todo var.3
     background-color: getColor('background-brand');
     // ! міксін outline
     // @include outline(1px, solid, red);
@@ -44,7 +43,6 @@
                 gap: 29px;
             
                 &__item:hover .nav-list__link {
-                    // todo var.3
                     color: getColor('brand-hover');
                     transform: scale(1.1);
                 }
@@ -54,7 +52,6 @@
                     font-weight: 300;
                     font-size: 24px;
                     line-height: 1.25;
-                    // todo var.3
                     color: getColor('font-main');
                     //* анімація
                     transition: 
@@ -77,7 +74,6 @@
             @extend %flex-JCsb-AIcen;
         
             &__item:hover .lang-list__link {
-                // todo var.3
                 color: getColor('brand-hover');
                 transform: scale(1.1);
             }
@@ -87,7 +83,6 @@
                 font-weight: 300;
                 font-size: 24px;
                 line-height: 1.25;
-                // todo var.3
                 color: getColor('font-second');
                 //* анімація
                 transition: 
@@ -99,7 +94,6 @@
                 
                 &--active {
                     font-weight: 400;
-                    // todo var.3
                     color: getColor('light');
                 }
             }
