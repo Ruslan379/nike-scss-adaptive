@@ -208,8 +208,8 @@ body {
   background-image: url(../images/hero_background-sneaker.png);
   background-size: cover;
   background-repeat: no-repeat;
-  transform-origin: bottom left;
-  transform: translate(91%, -1px) rotate(-30deg);
+  transform-origin: bottom right;
+  transform: translate(10%, -1px) rotate(-40deg) scaleX(-1);
 }
 .hero-logo {
   margin-left: 5px;

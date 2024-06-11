@@ -28,9 +28,19 @@
         // background-size: auto;
         background-size: cover;
         background-repeat: no-repeat;
-        transform-origin: bottom left;
-        // transform: translate(40px, -1px) rotate(-30deg);
-        transform: translate(91%, -1px) rotate(-30deg);
+        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+        // transform-origin: bottom left; //! eng
+        // transform-origin: bottom right; //! ua
+        transform-origin: if($lang == ua, bottom right, bottom left);
+        // transform: translate(40px, -1px) rotate(-30deg); // old
+        // transform: translate(91%, -1px) rotate(-30deg); //! eng
+        // transform: translate(10%, -1px) rotate(-40deg) scaleX(-1); //! ua
+        transform: 
+            if(
+                $lang == ua, 
+                translate(10%, -1px) rotate(-40deg) scaleX(-1), 
+                translate(91%, -1px) rotate(-30deg)
+            );
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
         
