@@ -2,31 +2,19 @@
 
 // ? header (BEM+SASS)
 .header {
-    // todo --- Фіксований header --- 
-    // position: fixed;
-    // width: 100%;
-    // max-width: 1600px;
-    //? var-03.map-get --> getBreakPoint
-    // @media screen and (min-width: getBreakPoint('mobile')) {
-    //     max-width: getBreakPoint('mobile');
-    // }
-
-    // @media screen and (min-width: getBreakPoint('tablet')) {
-    //     max-width: getBreakPoint('tablet');
-    // }
-
-    // @media screen and (min-width: getBreakPoint('desktop')) {
-    //     max-width: getBreakPoint('desktop');
-    // }
-    // top: 0;
-    // z-index: 1;
-
     padding-top: 15px;
     padding-bottom: 15px;
+    // todo --- Фіксований header --- 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
     // todo var.3
     background-color: getColor('background-brand');
+    // ! міксін outline
+    // @include outline(1px, solid, red);
     
-
     .container {
         //! Додаткові flex-властивості до container
         @extend %flex-JCsb-AIcen;

@@ -132,6 +132,11 @@ body {
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #012d63;
 }
 .header .container {
@@ -191,6 +196,7 @@ body {
 
 .hero {
   position: relative;
+  margin-top: 90px;
   padding-top: 94px;
   padding-bottom: 273px;
   background-color: #012d63;
@@ -211,7 +217,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   transform-origin: bottom right;
-  transform: translate(10%, -1px) rotate(-40deg) scaleX(-1);
+  transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
 }
 .hero-logo {
   margin-left: 5px;

@@ -12,7 +12,7 @@ $break-points: (
     desktop: 1440px,
 );
 
-//? ======== var-03.map-get --> getColor ========
+//? ======== var-03.map-get --> getBreakPoints ========
 // * ================= fonts ===================
 @function getBreakPoints($key) {
     @return map-get($break-points, $key);

@@ -4,16 +4,22 @@
 // ? section hero (BEM+SASS)
 .hero {
     position: relative;
+    margin-top: 90px;
     padding-top: 94px;
-    // padding-bottom: 183px;
+    // padding-bottom: 183px; //todo OLD
     padding-bottom: 273px;
-    // height: 858px;
+    // height: 858px; //todo OLD
     // height: 948px;
-    background-color: $color-background-brand;
+    // todo var.3
+    background-color: getColor('background-brand');
     background-image: url(../images/hero_background.jpg);
     background-repeat: no-repeat;
     background-position: center bottom 0;
+    //! Адаптивне (adaptive) зображення 
     background-size: auto;
+    //! Чутливе (responsive) зображення
+    // background-size: cover;
+    
 
     &::after {
         content: "";
@@ -38,7 +44,7 @@
         transform: 
             if(
                 $lang == ua, 
-                translate(10%, -1px) rotate(-40deg) scaleX(-1), 
+                translate(10%, -1px) rotate(-41deg) scaleX(-1), 
                 translate(91%, -1px) rotate(-30deg)
             );
         // ! міксін outline
