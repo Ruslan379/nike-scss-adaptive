@@ -50,7 +50,7 @@
             );
         //todo Анімація-2
         //* 1.Назва анімації
-        animation-name: pulse-button;
+        animation-name: pulse-sneaker;
         //* 2.Тривалість анімації/
         animation-duration: 2s;
         //* 3.Функція розподілу часу
@@ -60,7 +60,6 @@
         //* 6.Напрямок відтворення анімації
         // animation-direction: normal;
         animation-direction: alternate;
-        
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
     }

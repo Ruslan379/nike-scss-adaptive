@@ -228,7 +228,7 @@ body {
   background-repeat: no-repeat;
   transform-origin: bottom right;
   transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
-  animation-name: pulse-button;
+  animation-name: pulse-sneaker;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
