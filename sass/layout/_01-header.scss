@@ -2,52 +2,40 @@
 
 // ? header (BEM+SASS)
 .header {
-    padding-top: 16px;
-    padding-bottom: 14px;
-    // todo var.1
-    // background-color: $color-background-brand;
+    padding-top: 15px;
+    padding-bottom: 15px;
     // todo var.3
     background-color: getColor('background-brand');
 
     .container {
         //! Додаткові flex-властивості до container
-        // display: flex;
-        // align-items: center;
-        @extend %flex-AIcen;
+        @extend %flex-JCsb-AIcen;
+        gap: 8%;
 
         .navigation {
-            margin-right: 73px;
-            @extend %flex-AIcen;
+            flex-grow: 1;
+            @extend %flex-JCsb-AIcen;
 
             .header-logo {
-                //! var.1 - Вибір властивості для сторінки index-ua.html або index.html (eng) 
-                // //* властивість для сторінки index.html (eng)
-                // margin-right: 152px;
-                // //* інша властивість для сторінки index-ua.html
-                // @if $lang == ua {
-                //     margin-right: 116px;
-                // }
+                width: 100px;
+                height: 60px;
+                position: relative;
                 //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                margin-right: if($lang == ua, 116px, 152px);
-
                 opacity: if($lang == ua, 0.7, 1.0);
-    
-                //* outline
-                // outline: 1px dotted yellowgreen;
                 // ! міксін outline
                 // @include outline(1px, dotted, yellowgreen);
+
+                &__img {
+                    position: absolute;
+                    top: 8px;
+                }
             }
 
             .nav-list {
                 @extend %flex-AIcen;
                 gap: 29px;
             
-                &__item:last-child {
-                    margin-left: -9px;
-                }
                 &__item:hover .nav-list__link {
-                    // todo var.1
-                    // color: $color-brand-hover;
                     // todo var.3
                     color: getColor('brand-hover');
                     transform: scale(1.1);
@@ -58,8 +46,6 @@
                     font-weight: 300;
                     font-size: 24px;
                     line-height: 1.25;
-                    // todo var.1
-                    // color: $color-font-main;
                     // todo var.3
                     color: getColor('font-main');
                     //* анімація
@@ -67,13 +53,11 @@
                         transform, color, 
                         300ms 
                         ease-in-out;
-                    // outline: 2px dashed green;
-
+                    // ! міксін outline
+                    // @include outline(2px, dashed, green);
+                    
                     &--active {
                         font-weight: 400;
-                        // todo var.1
-                        // color: $color-light;
-                        // todo var.3
                         color: getColor('light');
                     }
                 }
@@ -81,12 +65,10 @@
         }
         
         .lang-list {
-            @extend %flex-AIcen;
-            gap: 12px;
+            width: 90px;
+            @extend %flex-JCsb-AIcen;
         
             &__item:hover .lang-list__link {
-                // todo var.1
-                // color: $color-brand-hover;
                 // todo var.3
                 color: getColor('brand-hover');
                 transform: scale(1.1);
@@ -97,8 +79,6 @@
                 font-weight: 300;
                 font-size: 24px;
                 line-height: 1.25;
-                // todo var.1
-                color: $color-font-second;
                 // todo var.3
                 color: getColor('font-second');
                 //* анімація
@@ -106,12 +86,11 @@
                     transform, color,
                     300ms 
                     ease-in-out;
-                // outline: 2px dashed red;
-
+                // ! міксін outline
+                // @include outline(2px, dashed, red);
+                
                 &--active {
                     font-weight: 400;
-                    // todo var.1
-                    color: $color-light;
                     // todo var.3
                     color: getColor('light');
                 }
