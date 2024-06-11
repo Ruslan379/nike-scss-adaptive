@@ -207,7 +207,6 @@ body {
 }
 .hero::after {
   content: "";
-  display: block;
   position: absolute;
   width: 837px;
   height: 403px;
@@ -218,6 +217,23 @@ body {
   background-repeat: no-repeat;
   transform-origin: bottom left;
   transform: translate(91%, -1px) rotate(-30deg);
+}
+.hero::before {
+  z-index: 1;
+  content: "";
+  display: none;
+  position: absolute;
+  width: 115px;
+  height: 60px;
+  bottom: 0;
+  right: 50%;
+  border-radius: 10px;
+  background-image: url(../images/hero_background-sneaker.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom -35px right -72px;
+  transform: translate(166%, -100px) rotate(-37deg);
+  box-shadow: inset 17px 1px 24px 3px rgba(61, 61, 61, 0.2);
 }
 .hero-logo {
   margin-left: 5px;
