@@ -121,6 +121,7 @@ body {
 }
 .header .container .navigation .header-logo {
   margin-right: 152px;
+  opacity: 1;
 }
 .header .container .navigation .nav-list {
   gap: 29px;
