@@ -22,3 +22,32 @@
         // background-color:$color-brand-hover;
     }
 }
+
+@keyframes pulse-sneaker {
+    0% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(10%, -1px) rotate(-41deg) scaleX(-1), 
+                translate(91%, -1px) rotate(-30deg)
+            );
+    }
+
+    50% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(10%, -1px) rotate(-41deg) scaleX(-1), 
+                translate(91%, -1px) rotate(-30deg)
+            );
+    }
+
+    100% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(10%, -1px) rotate(-41deg) scaleX(-1), 
+                translate(91%, -1px) rotate(-30deg)
+            );
+    }
+}

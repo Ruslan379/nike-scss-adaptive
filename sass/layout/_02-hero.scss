@@ -19,6 +19,7 @@
     background-size: auto;
     //! Чутливе (responsive) зображення
     // background-size: cover;
+
     
 
     &::after {
@@ -49,7 +50,14 @@
             );
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
-        
+    }
+    &:hover.hero::after {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(10%, -1px) rotate(-41deg) scaleX(-1) scale(1.1), 
+                translate(91%, -1px) rotate(-30deg) scale(1.1)
+            );
     }
 
     //! вірний логотип для сторінки index-ua.html
@@ -75,7 +83,6 @@
         // opacity: 0.8;
         // ! міксін outline
         // @include outline(1px, dashed, violet);
-        
     }
     
     &-logo {
@@ -146,3 +153,9 @@
         // padding: 20px 61px 19px;
     }
 }
+
+// .hero:hover.hero::after{
+//     cursor: pointer;
+//     transform: scale(1.1);
+//     @include outline(1px, dashed, violet);
+// }

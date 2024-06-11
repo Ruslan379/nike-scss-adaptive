@@ -61,6 +61,17 @@ button:hover:disabled {
     transform: scale(1);
   }
 }
+@keyframes pulse-sneaker {
+  0% {
+    transform: translate(91%, -1px) rotate(-30deg);
+  }
+  50% {
+    transform: translate(91%, -1px) rotate(-30deg);
+  }
+  100% {
+    transform: translate(91%, -1px) rotate(-30deg);
+  }
+}
 .header .container .navigation .nav-list {
   display: flex;
   align-items: center;
@@ -217,6 +228,9 @@ body {
   background-repeat: no-repeat;
   transform-origin: bottom left;
   transform: translate(91%, -1px) rotate(-30deg);
+}
+.hero:hover.hero::after {
+  transform: translate(91%, -1px) rotate(-30deg) scale(1.1);
 }
 .hero::before {
   z-index: 1;
