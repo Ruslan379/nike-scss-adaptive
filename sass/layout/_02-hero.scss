@@ -48,17 +48,30 @@
                 translate(10%, -1px) rotate(-41deg) scaleX(-1), 
                 translate(91%, -1px) rotate(-30deg)
             );
+        //todo Анімація-2
+        //* 1.Назва анімації
+        animation-name: pulse-button;
+        //* 2.Тривалість анімації/
+        animation-duration: 2s;
+        //* 3.Функція розподілу часу
+        animation-timing-function: ease-in-out;
+        //* 5.Кількість повних повторень анімації - постійно
+        animation-iteration-count: infinite;
+        //* 6.Напрямок відтворення анімації
+        // animation-direction: normal;
+        animation-direction: alternate;
+        
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
     }
-    &:hover.hero::after {
-        transform: 
-            if(
-                $lang == ua, 
-                translate(10%, -1px) rotate(-41deg) scaleX(-1) scale(1.1), 
-                translate(91%, -1px) rotate(-30deg) scale(1.1)
-            );
-    }
+    // &:hover.hero::after {
+    //     transform: 
+    //         if(
+    //             $lang == ua, 
+    //             translate(10%, -1px) rotate(-41deg) scaleX(-1) scale(1.1), 
+    //             translate(91%, -1px) rotate(-30deg) scale(1.1)
+    //         );
+    // }
 
     //! вірний логотип для сторінки index-ua.html
     &::before {

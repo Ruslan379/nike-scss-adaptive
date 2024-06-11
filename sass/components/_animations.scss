@@ -37,8 +37,8 @@
         transform: 
             if(
                 $lang == ua, 
-                translate(10%, -1px) rotate(-41deg) scaleX(-1), 
-                translate(91%, -1px) rotate(-30deg)
+                translate(10%, -1px) rotate(-42deg) scaleX(-1), 
+                translate(91%, -1px) rotate(-31deg)
             );
     }
 

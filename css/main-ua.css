@@ -66,7 +66,7 @@ button:hover:disabled {
     transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
   }
   50% {
-    transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
+    transform: translate(10%, -1px) rotate(-42deg) scaleX(-1);
   }
   100% {
     transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
@@ -228,9 +228,11 @@ body {
   background-repeat: no-repeat;
   transform-origin: bottom right;
   transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
-}
-.hero:hover.hero::after {
-  transform: translate(10%, -1px) rotate(-41deg) scaleX(-1) scale(1.1);
+  animation-name: pulse-button;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .hero::before {
   z-index: 1;
