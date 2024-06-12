@@ -267,6 +267,9 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.hero:hover::after, .hero:hover::before {
+  animation-play-state: paused;
+}
 .hero-logo {
   margin-left: 5px;
   display: block;

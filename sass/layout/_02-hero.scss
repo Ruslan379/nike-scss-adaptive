@@ -63,6 +63,7 @@
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
     }
+    
     // &:hover.hero::after {
     //     transform: 
     //         if(
@@ -71,6 +72,7 @@
     //             translate(91%, -1px) rotate(-30deg) scale(1.1)
     //         );
     // }
+    
 
     //! вірний логотип для сторінки index-ua.html
     &::before {
@@ -107,6 +109,12 @@
         animation-direction: alternate;
         // ! міксін outline
         // @include outline(1px, dashed, violet);
+    }
+
+    // ? +++++ Пауза в анімації +++++
+    &:hover::after,
+    &:hover::before {
+        animation-play-state: paused;
     }
     
     &-logo {
@@ -177,9 +185,3 @@
         // padding: 20px 61px 19px;
     }
 }
-
-// .hero:hover.hero::after{
-//     cursor: pointer;
-//     transform: scale(1.1);
-//     @include outline(1px, dashed, violet);
-// }
