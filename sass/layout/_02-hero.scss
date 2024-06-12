@@ -20,8 +20,6 @@
     //! Чутливе (responsive) зображення
     // background-size: cover;
 
-    
-
     &::after {
         content: "";
         // display: block;
@@ -63,7 +61,7 @@
         // ! міксін outline
         // @include outline(1px, dotted, yellowgreen);
     }
-    
+
     // &:hover.hero::after {
     //     transform: 
     //         if(
