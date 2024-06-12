@@ -61,7 +61,7 @@ button:hover:disabled {
     transform: scale(1);
   }
 }
-@keyframes pulse-sneaker {
+@keyframes pulse-sneaker-after {
   0% {
     transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
   }
@@ -70,6 +70,17 @@ button:hover:disabled {
   }
   100% {
     transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
+  }
+}
+@keyframes pulse-sneaker-before {
+  0% {
+    transform: translate(166%, -100px) rotate(-37deg);
+  }
+  50% {
+    transform: translate(164%, -101px) rotate(-38deg);
+  }
+  100% {
+    transform: translate(166%, -100px) rotate(-37deg);
   }
 }
 .header .container .navigation .nav-list {
@@ -228,7 +239,7 @@ body {
   background-repeat: no-repeat;
   transform-origin: bottom right;
   transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
-  animation-name: pulse-sneaker;
+  animation-name: pulse-sneaker-after;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -250,6 +261,11 @@ body {
   background-position: bottom -35px right -72px;
   transform: translate(166%, -100px) rotate(-37deg);
   box-shadow: inset 17px 1px 24px 3px rgba(61, 61, 61, 0.2);
+  animation-name: pulse-sneaker-before;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .hero-logo {
   margin-left: 5px;
