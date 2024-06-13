@@ -170,6 +170,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  border-bottom: 2px solid #FFFFFF;
+  background-color: #012d63;
   background-color: #012d63;
 }
 .header .container {
@@ -231,7 +233,7 @@ body {
 
 .hero {
   position: relative;
-  margin-top: 90px;
+  margin-top: 92px;
   padding-top: 94px;
   padding-bottom: 273px;
   background-color: #012d63;

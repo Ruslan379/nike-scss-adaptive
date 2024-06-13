@@ -10,6 +10,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    border-bottom: 2px solid getColor('light');
+    background-color: getColor('background-brand');
     background-color: getColor('background-brand');
     // ! міксін outline
     // @include outline(1px, solid, red);
