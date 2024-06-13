@@ -16,7 +16,7 @@
 //todo var.2
 @mixin generateIcons($iconList) {
     @each $iconName in $iconList {
-        .advantages-list__item--#{$iconName} {
+        &__item--#{$iconName} {
             background-image: 
             url(../images/advantages_#{$iconName}.png);
         }

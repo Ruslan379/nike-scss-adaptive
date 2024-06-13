@@ -88,6 +88,11 @@ button:hover:disabled {
   align-items: center;
 }
 
+.advantages .container .advantages-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -331,24 +336,20 @@ body {
   background-position: center 0;
   background-size: cover;
 }
-.advantages .container {
-  display: flex;
-}
 .advantages .container .advantages-list {
   width: 100%;
   padding: 25px 50px;
-  display: flex;
-  justify-content: space-between;
   outline: 5px solid #8e32c6;
 }
 .advantages .container .advantages-list__item {
+  position: relative;
   width: 240px;
   height: 346px;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
 .advantages .container .advantages-list__item .advantages-list__title {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display";
   font-weight: 400;
   font-size: 36px;
   line-height: 1.42;
@@ -358,13 +359,13 @@ body {
   justify-content: end;
   background-position: center top;
 }
-.advantages .container .advantages-list .advantages-list__item--premium-quality {
+.advantages .container .advantages-list__item--premium-quality {
   background-image: url(../images/advantages_premium-quality.png);
 }
-.advantages .container .advantages-list .advantages-list__item--indelible-paint {
+.advantages .container .advantages-list__item--indelible-paint {
   background-image: url(../images/advantages_indelible-paint.png);
 }
-.advantages .container .advantages-list .advantages-list__item--fast-shipping {
+.advantages .container .advantages-list__item--fast-shipping {
   background-image: url(../images/advantages_fast-shipping.png);
 }
 .advantages .container .advantages-list__item:nth-child(1) .advantages-list__title {
@@ -377,15 +378,15 @@ body {
   width: 151px;
 }
 .advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::after {
+  position: absolute;
   content: "";
   width: 2px;
   height: 100%;
-  margin-top: -102px;
-  margin-right: -340px;
+  right: -50px;
   background-color: #FFFFFF;
 }
 .advantages .container .advantages-list__item:last-child::after {
-  margin-left: -680px;
+  left: -50px;
 }
 
 .reviews {

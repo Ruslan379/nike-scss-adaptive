@@ -3,80 +3,51 @@
     // height: 606px;
     padding-top: 105px;
     padding-bottom: 105px;
-    // border-bottom: 2px solid $color-light;
     border-bottom: 2px solid getColor('light');
-    // background-color: $color-background-brand;
     background-color: getColor('background-brand');
     background-image:url(../images/advantages-background.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
-    // background-size: 1440px;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     background-size: if($adaptive, auto, cover);
 
     .container {
-        //! Додаткові flex-властивості до container
-        display: flex;
-        // outline: 5px solid $color-buttons-background;
-        // padding: 25px 50px;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
 
         .advantages-list {
             width: 100%;
             padding: 25px 50px;
-            display: flex;
-            justify-content: space-between;
-            // outline: 5px solid $color-buttons-background;
+            @extend %flex-JCsb;
             outline: 5px solid getColor('buttons-background');
             
-
             &__item {
+                position: relative;
                 width: 240px;
                 height: 346px;
-                // display: flex;
-                // flex-direction: column;
-                // align-items: center;
                 @extend %flex-FDcol-AIcen;
-                // background-image: 
-                //     url(../images/advantages_premium-quality.png);
                 background-repeat: no-repeat;
                 background-position: center bottom;
-                // outline: 1px dashed #00ffcc;
+                // ! міксін outline
+                // @include outline(1px, dashed, #00ffcc);
 
                 .advantages-list__title {
                     // height: 102px;
-                    font-family: $second-family;
+                    font-family: getFont('second-family');
                     font-weight: 400;
                     font-size: 36px;
                     line-height: 1.42;
                     text-align: center;
-                    // color: $color-light; 
-                    // outline: 1px dotted red; 
+                    // ! міксін outline
+                    // @include outline(1px, dotted, red);
                 }
             }
-            // &__item:nth-child(1) {
-            //     background-image: 
-            //         url(../images/advantages_premium-quality.png);
-            // }
             &__item:nth-child(2) {
                 justify-content: end;
-                // background-image: 
-                //     url(../images/advantages_indelible-paint.png);
                 background-position: center top;
             }
-            // &__item:nth-child(3) {
-            //     background-image: 
-            //         url(../images/advantages_fast-shipping.png);
-            // }
-            //todo var.1 - Використання @each - цикл для додавання фонових зображень
-            // @each $iconName in $icons {
-            //     &__item--#{$iconName} {
-            //         background-image: 
-            //         url(../images/advantages_#{$iconName}.png);
-            //     }
-            // }
-            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для додавання фонових зображень
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
             @include generateIcons($icons);
 
 
@@ -90,17 +61,32 @@
                 width: 151px;
             }
 
+            // todo var.1 - OLD
+            // &__item:first-child::after,
+            // &__item:last-child::after {
+            //     content: "";
+            //     width: 2px;
+            //     height: 100%;
+            //     margin-top: -102px;
+            //     margin-right: -340px;
+            //     background-color: getColor('light');
+            // }
+            // &__item:last-child::after {
+            //     margin-left: -680px;
+            // }
+
+            // todo var.2 - NEW
             &__item:first-child::after,
             &__item:last-child::after {
+                position: absolute;
                 content: "";
                 width: 2px;
                 height: 100%;
-                margin-top: -102px;
-                margin-right: -340px;
-                background-color: $color-light;
+                right: -50px;
+                background-color: getColor('light');
             }
             &__item:last-child::after {
-                margin-left: -680px;
+                left: -50px;;
             }
         }
     }
