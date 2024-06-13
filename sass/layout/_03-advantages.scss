@@ -3,31 +3,41 @@
     // height: 606px;
     padding-top: 105px;
     padding-bottom: 105px;
-    border-bottom: 2px solid $color-light;
-    background-color: $color-background-brand;
+    // border-bottom: 2px solid $color-light;
+    border-bottom: 2px solid getColor('light');
+    // background-color: $color-background-brand;
+    background-color: getColor('background-brand');
     background-image:url(../images/advantages-background.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
-    background-size: 1440px;
+    // background-size: 1440px;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    background-size: if($adaptive, auto, cover);
 
     .container {
         //! Додаткові flex-властивості до container
         display: flex;
-        outline: 5px solid $color-buttons-background;
-        padding: 25px 50px;
+        // outline: 5px solid $color-buttons-background;
+        // padding: 25px 50px;
+        // ! міксін outline
+        // @include outline(1px, dashed, yellow);
 
         .advantages-list {
             width: 100%;
+            padding: 25px 50px;
             display: flex;
             justify-content: space-between;
-            // outline: 1px dashed yellow;
+            // outline: 5px solid $color-buttons-background;
+            outline: 5px solid getColor('buttons-background');
+            
 
             &__item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
                 width: 240px;
                 height: 346px;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                @extend %flex-FDcol-AIcen;
                 // background-image: 
                 //     url(../images/advantages_premium-quality.png);
                 background-repeat: no-repeat;
