@@ -82,11 +82,13 @@
                 width: 2px;
                 height: 100%;
                 // right: -50px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
                 background-color: getColor('light');
             }
             &__item:last-child::before {
                 // left: -50px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
             }
         }

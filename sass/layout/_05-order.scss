@@ -7,7 +7,9 @@
     background-image:url(../images/order-background.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
-    background-size: 1440px;
+    // background-size: 1440px;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    background-size: if($adaptive, auto, 100vw 100%);
 
     .section-title {
         margin-bottom: 33px;
@@ -27,7 +29,9 @@
         
         &__input {
             padding-left: 24px;
-            width: 580px;
+            // width: 580px;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            width: if($adaptive, 580px, calc(580px + ((100vw - getBreakPoint('desktop')) * 0.5)));
             height: 50px;
             // font-family: $font-family;
             // font-weight: 400;
@@ -46,7 +50,9 @@
         
         &__input.order-form__input--email {
             padding-left: 25px;
-            width: 690px;
+            // width: 690px;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            width: if($adaptive, 690px, calc(690px + ((100vw - getBreakPoint('desktop')) * 0.5)));
             height: 60px;
         }
         

@@ -45,9 +45,11 @@
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         // max-width: getBreakPoint('desktop');
-        max-width: if($adaptive, getBreakPoint('desktop'), 100vw);
         // width: 1440px;
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        max-width: if($adaptive, getBreakPoint('desktop'), 100vw);
         // padding: 0 165px;
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
         padding: if($adaptive, 0 165px, 0 calc(165px + ((100vw - getBreakPoint('desktop')) * 0.2)));
     }
 }
