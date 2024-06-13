@@ -179,6 +179,7 @@ body {
   flex-grow: 1;
 }
 .header .container .navigation .header-logo {
+  flex-grow: 11;
   width: 100px;
   height: 60px;
   position: relative;
@@ -189,6 +190,7 @@ body {
   top: 8px;
 }
 .header .container .navigation .nav-list {
+  flex-grow: 4;
   gap: 29px;
 }
 .header .container .navigation .nav-list__item:hover .nav-list__link {

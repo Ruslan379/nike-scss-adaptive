@@ -24,6 +24,7 @@
             @extend %flex-JCsb-AIcen;
 
             .header-logo {
+                flex-grow: 11;
                 width: 100px;
                 height: 60px;
                 position: relative;
@@ -39,6 +40,7 @@
             }
 
             .nav-list {
+                flex-grow: 4;
                 @extend %flex-AIcen;
                 gap: 29px;
             
