@@ -16,9 +16,11 @@
     background-repeat: no-repeat;
     background-position: center bottom 0;
     //! Адаптивне (adaptive) зображення 
-    background-size: auto;
+    // background-size: auto;
     //! Чутливе (responsive) зображення
     // background-size: cover;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    background-size: if($adaptive, auto, cover);
 
     &::after {
         content: "";
