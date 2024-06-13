@@ -379,16 +379,16 @@ body {
 .advantages .container .advantages-list__item:nth-child(3) .advantages-list__title {
   width: 151px;
 }
-.advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::after {
+.advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::before {
   position: absolute;
   content: "";
   width: 2px;
   height: 100%;
-  right: -50px;
+  right: calc(-50px - (100vw - 1440px) * 0.2);
   background-color: #FFFFFF;
 }
-.advantages .container .advantages-list__item:last-child::after {
-  left: -50px;
+.advantages .container .advantages-list__item:last-child::before {
+  left: calc(-50px - (100vw - 1440px) * 0.2);
 }
 
 .reviews {

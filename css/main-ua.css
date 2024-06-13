@@ -380,7 +380,7 @@ body {
 .advantages .container .advantages-list__item:nth-child(3) .advantages-list__title {
   width: 151px;
 }
-.advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::after {
+.advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::before {
   position: absolute;
   content: "";
   width: 2px;
@@ -388,7 +388,7 @@ body {
   right: -50px;
   background-color: #FFFFFF;
 }
-.advantages .container .advantages-list__item:last-child::after {
+.advantages .container .advantages-list__item:last-child::before {
   left: -50px;
 }
 

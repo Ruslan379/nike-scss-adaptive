@@ -50,7 +50,6 @@
             //todo         додавання фонових зображень
             @include generateIcons($icons);
 
-
             &__item:nth-child(1) .advantages-list__title {
                 width: 159px;
             }
@@ -77,16 +76,18 @@
 
             // todo var.2 - NEW
             &__item:first-child::after,
-            &__item:last-child::after {
+            &__item:last-child::before {
                 position: absolute;
                 content: "";
                 width: 2px;
                 height: 100%;
-                right: -50px;
+                // right: -50px;
+                right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
                 background-color: getColor('light');
             }
-            &__item:last-child::after {
-                left: -50px;;
+            &__item:last-child::before {
+                // left: -50px;
+                left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
             }
         }
     }
