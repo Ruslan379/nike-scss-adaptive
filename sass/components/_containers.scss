@@ -44,7 +44,9 @@
     }
 
     @media screen and (min-width: getBreakPoint('desktop')) {
-        max-width: getBreakPoint('desktop');
+        // max-width: getBreakPoint('desktop');
+        // max-width: if($adaptive, getBreakPoint('desktop'), 80%);
+        max-width: 90vw;
         // width: 1440px;
         padding: 0 165px;
     }

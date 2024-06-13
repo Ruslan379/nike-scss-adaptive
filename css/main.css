@@ -88,7 +88,7 @@ button:hover:disabled {
   align-items: center;
 }
 
-.advantages .container .advantages-list {
+.reviews .container .reviews-list, .advantages .container .advantages-list {
   display: flex;
   justify-content: space-between;
 }
@@ -134,7 +134,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    max-width: 90vw;
     padding: 0 165px;
   }
 }
@@ -398,18 +398,13 @@ body {
   background-image: url(../images/reviews-background-image.png), url(../images/reviews-background.jpg);
   background-repeat: no-repeat;
   background-position: calc(50% - 607px) bottom, center 0;
-  background-size: auto, 1440px;
-}
-.reviews .container {
-  padding-right: 80px;
-  padding-left: 79px;
+  background-size: auto, auto;
 }
 .reviews .container .section-title {
   margin-bottom: 24px;
 }
 .reviews .container .reviews-list {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 80px;
 }
 .reviews .container .reviews-list__item {
   padding: 49px 11px 29px 18px;

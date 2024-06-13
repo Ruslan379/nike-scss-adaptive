@@ -9,17 +9,19 @@
         url(../images/reviews-background-image.png),
         url(../images/reviews-background.jpg);
     background-repeat: no-repeat;
-    background-position: 
-        calc(50% - 607px) bottom,
+    background-position:
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        if($adaptive, calc(50% - 607px) bottom, left bottom),
         center 0;
     background-size: 
-        auto, 
-        1440px;
+        auto,
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        if($adaptive, auto, cover);
+
 
     .container {
-        //! Додаткові flex-властивості до container
-        padding-right: 80px;
-        padding-left: 79px;
+        // ! міксін outline
+        // @include outline(1px, dashed, yellow);
 
         .section-title {
             margin-bottom: 24px;
@@ -27,8 +29,10 @@
         }
 
         .reviews-list {
-            display: flex;
-            justify-content: space-between;
+            padding: 0 80px;
+            // display: flex;
+            // justify-content: space-between;
+            @extend %flex-JCsb;
             // outline: 1px dotted red;
             
             &__item {
