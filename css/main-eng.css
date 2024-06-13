@@ -225,7 +225,7 @@ body {
   background-image: url(../images/hero_background.jpg);
   background-repeat: no-repeat;
   background-position: center bottom 0;
-  background-size: auto;
+  background-size: cover;
 }
 .hero::after {
   content: "";
