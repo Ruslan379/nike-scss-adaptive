@@ -4,44 +4,39 @@
     padding-top: 45px;
     padding-bottom: 38px;
     border-bottom: 24px solid $color-light;
-    background-color: $color-background-footer;
+    background-color: getColor('background-footer');
 
     .footer-list {
         margin-bottom: 22px;
-        // outline: 1px dashed yellow;
+        // ! міксін outline
+        // @include outline(1px, dashed, yellow);
         
         &__item {
-            display: flex;
-            justify-content: space-between;
+            @extend %flex-JCsb;
         }
         &__item:not(:last-child) {
             margin-bottom: 10px;
         }
         
         &__question {
-            // font-family: $font-family;
-            // font-weight: 400;
             font-size: 24px;
             line-height: 1.17;
-            // color: $color-light;
         }
         
         &__link {
-            // font-family: $font-family);
-            // font-weight: 400;
             font-size: 24px;
             line-height: 1.17;
             text-decoration: underline;
             text-decoration-skip-ink: none;
-            color: $color-light;
-            // * анімація
+            color: getColor('light');
+            //? Анімація-1
             transition: 
                 transform, color, 
                 300ms 
                 ease-in-out;
         }
         &__link:hover {
-            color: $color-brand-hover;
+            color: getColor('brand-hover');
             transform: scale(1.05);
         }
         
@@ -51,13 +46,12 @@
             width: 100%;
             height:  2px;
             margin-top: 20px;
-            background-color: $color-border;
+            background-color: getColor('border');
         }
     }
 
     &__all-box {
-        display: flex;
-        justify-content: space-between;
+        @extend %flex-JCsb;
     }
     
     &__trademark{
@@ -66,11 +60,8 @@
     
     &__trademark,
     &__name-country {
-        // font-family: $font-family;
-        // font-weight: 400;
         font-size: 18px;
         left: 1.67;
-        // color: $color-light;
     }
     
     &__logo-box {
@@ -79,17 +70,17 @@
     
     .footer-logo {
         display: flex;
-        // outline: 1px solid green;
+        // ! міксін outline
+        // @include outline(1px, solid, green);
     }
     
     &__logo-text {
         margin-top: -19px;
         margin-left: 26px;
-        font-family: $third-family;
-        // font-weight: 400;
+        font-family: getFont('third-family');
         font-size: 24px;
         line-height: 1.0;
-        // color: $color-light;
-        // outline: 1px solid blue;
+        // ! міксін outline
+        // @include outline(1px, solid, blue);
     }
 }
