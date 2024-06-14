@@ -83,7 +83,7 @@ button:hover:disabled {
     transform: translate(166%, -100px) rotate(-37deg);
   }
 }
-.header .container .navigation .nav-list {
+.order .order-form__input-email-box, .header .container .navigation .nav-list {
   display: flex;
   align-items: center;
 }
@@ -105,7 +105,7 @@ button:hover:disabled {
   align-items: center;
 }
 
-.advantages .container .advantages-list__item {
+.order .order-form, .advantages .container .advantages-list__item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -468,15 +468,10 @@ body {
   margin-bottom: 33px;
 }
 .order .order-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 19px;
 }
 .order .order-form__input-email-box {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 .order .order-form__input {
   padding-left: 24px;

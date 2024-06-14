@@ -3,11 +3,10 @@
     // height: 509px;
     padding-top: 20px;
     padding-bottom: 37px;
-    background-color: $color-background-brand;
+    background-color: getColor('background-brand');
     background-image:url(../images/order-background.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
-    // background-size: 1440px;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     background-size: if($adaptive, auto, 100vw 100%);
 
@@ -16,15 +15,12 @@
     }
 
     .order-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend %flex-FDcol-AIcen;
         gap: 19px;
 
         &__input-email-box {
             position: relative;
-            display: flex;
-            align-items: center;
+            @extend %flex-AIcen;
         }
         
         &__input {
@@ -33,19 +29,15 @@
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
             width: if($adaptive, 580px, calc(580px + ((100vw - getBreakPoint('desktop')) * 0.5)));
             height: 50px;
-            // font-family: $font-family;
-            // font-weight: 400;
             font-size: 28px;
             border-radius: 50px;
             border: none;
             outline: none;
-            background-color: $color-light;
+            background-color: getColor('light');
         }
         &__input::placeholder {
-            // font-family: $font-family;
-            // font-weight: 400;
             font-size: 28px;
-            color: $color-placeholder;
+            color: getColor('placeholder');
         }
         
         &__input.order-form__input--email {
@@ -57,8 +49,8 @@
         }
         
         &__input.order-form__input--email:focus {
-            border: 2px solid $color-buttons-hover;
-            background-color: $color-brand-hover;
+            border: 2px solid getColor('buttons-hover');
+            background-color: getColor('brand-hover');
         }
         &__input.order-form__input--email:valid {
             border: 2px solid green;
@@ -78,15 +70,12 @@
         &__button-confirm {
             position: absolute;
             right: 78px;
-            // font-family: $font-family;
-            // font-weight: 400;
             font-size: 28px;
             border: none;
-            color: $color-font-third;
+            color: getColor('font-third');
             background: transparent;
         }
         &__button-confirm:disabled {
-            // background-color: lightgray;
             cursor: not-allowed;
         }
         
