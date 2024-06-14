@@ -26,7 +26,6 @@
     // @include outline($type: dashed);
 
     //! Медіа-запити
-    // //? var-01.SCSS-змінні
     // @media screen and (min-width: $mobile) {
     //     width: 360px;
     // }
@@ -38,6 +37,7 @@
     }
 
     @media screen and (min-width: getBreakPoint('tablet')) {
+        padding-top: 92px; //! для Фіксований header 
         max-width: getBreakPoint('tablet');
         // width: 768px;
         padding: 0 100px;

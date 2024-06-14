@@ -2,20 +2,27 @@
 
 // ? header (BEM+SASS)
 .header {
-    // display: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    //! --- Фіксований header --- 
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 2px solid getColor('light');
-    background-color: getColor('background-brand');
-    background-color: getColor('background-brand');
-    // ! міксін outline
-    // @include outline(1px, solid, red);
+    display: none;
+
+    @media screen and (min-width: getBreakPoint('tablet')) {
+        display: block;
+    }
+
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        //! --- Фіксований header --- 
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 2px solid getColor('light');
+        background-color: getColor('background-brand');
+        background-color: getColor('background-brand');
+        // ! міксін outline
+        // @include outline(1px, solid, red);
+    }
     
     .container {
         //! Додаткові flex-властивості до container
