@@ -1,34 +1,62 @@
-//! ----------- Загальні стилі для ВСІХ кнопок -----------
-%buttons {
+//! ----------- flex-властивості (flex-контейнери) -----------
+%flex-AIcen {
+    display: flex;
+    align-items: center;
+}
+
+%flex-JCsb {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-JCcen-AIcen {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%flex-JCsb-AIcen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flex-FDcol-AIcen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+//! ----------- Загальні стилі для ВСІХ кнопок -----------
+%buttons {
+    @extend %flex-JCcen-AIcen;
     font-size: 24px;
     border: none;
     border-radius: 10px;
-    color: $color-light;
-    background-color: $color-buttons-background;
-    ///? Анімація-1
+    color: getColor('light');
+    background-color: getColor('buttons-background');
+    //? Анімація-1
     // transition:
     //     color, border, background-color,
     //     300ms
     //     ease-in-out;
 
-    .buttons:hover:not(:disabled) {
-        // * var.1 Зміна кольорів на кнопці при події hover
+    &:hover:not(:disabled) {
+        //? Анімація-1 -  Зміна кольорів на кнопці при події hover
         // color: $color-buttons-hover;
         // border: 1px solid $color-buttons-hover;
         // background-color: $color-brand-hover;
         //todo Анімація-2 на кнопці при події hover
-        // ! 1.Назва анімації
+        //* 1.Назва анімації
         animation-name: pulse-button;
-        // ! 2.Тривалість анімації/
+        //* 2.Тривалість анімації/
         animation-duration: 2s;
-        // ! 3.Функція розподілу часу
+        //* 3.Функція розподілу часу
         animation-timing-function: ease-in-out;
-        // ! 5.Кількість повних повторень анімації - постійно
+        //* 5.Кількість повних повторень анімації - постійно
         animation-iteration-count: infinite;
-        // ! 6.Напрямок відтворення анімації
+        //* 6.Напрямок відтворення анімації
         // animation-direction: normal;
         animation-direction: alternate;
     }
@@ -60,32 +88,3 @@
 //     }
 // }
 
-
-//! ----------- flex-властивості (flex-контейнери) -----------
-%flex-AIcen {
-    display: flex;
-    align-items: center;
-}
-
-%flex-JCsb {
-    display: flex;
-    justify-content: space-between;
-}
-
-%flex-JCcen-AIcen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-%flex-JCsb-AIcen {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-%flex-FDcol-AIcen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
