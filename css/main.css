@@ -93,12 +93,6 @@ button:hover:disabled {
   justify-content: space-between;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .header .container .lang-list, .header .container .navigation, .header .container {
   display: flex;
   justify-content: space-between;
@@ -140,13 +134,16 @@ body {
 }
 
 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
   border: none;
   border-radius: 10px;
   color: #FFFFFF;
   background-color: #8e32c6;
 }
-.buttons:hover:not(:disabled) {
+.buttons .buttons:hover:not(:disabled) {
   animation-name: pulse-button;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
