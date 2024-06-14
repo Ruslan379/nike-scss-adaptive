@@ -2,24 +2,15 @@
 @keyframes pulse-button {
     0% {
         transform: scale(1);
-        // color: $color-buttons-hover; 
-        // border: 1px solid $color-buttons-hover;
-        // background-color: $color-brand-hover;
     }
-
     50% {
         transform: scale(1.05);
-        color: $color-buttons-hover;
-        border: 1px solid $color-buttons-hover;
-        background-color: $color-brand-hover;
+        color: getColor('buttons-hover');
+        border: 1px solid getColor('buttons-hover');
+        background-color: getColor('brand-hover');
     }
-
     100% {
         transform: scale(1);
-        // transform: scale(0.9);
-        // color: $color-buttons-hover;
-        // border: 1px solid$color-buttons-hover;
-        // background-color:$color-brand-hover;
     }
 }
 
@@ -34,7 +25,6 @@
                 translate(91%, -1px) rotate(-30deg)
             );
     }
-
     50% {
         transform: 
             if(
@@ -43,7 +33,6 @@
                 translate(91%, -1px) rotate(-31deg)
             );
     }
-
     100% {
         transform: 
             if(
@@ -54,16 +43,15 @@
     }
 }
 
+
 //todo Анімація-2 в hero:before
 @keyframes pulse-sneaker-before {
     0% {
         transform: translate(166%, -100px) rotate(-37deg);
     }
-
     50% {
         transform: translate(164%, -101px) rotate(-38deg);
     }
-
     100% {
         transform: translate(166%, -100px) rotate(-37deg);
     }
