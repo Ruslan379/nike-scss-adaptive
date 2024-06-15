@@ -22,6 +22,12 @@
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     background-size: if($adaptive, auto, cover);
 
+    .container {
+        position: relative;
+        // ! міксін outline
+        @include outline(1px, dashed, yellow);
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -116,16 +122,21 @@
         animation-play-state: paused;
     }
 
+
     .burger-menu-buttons {
-        padding: 0;
+        // display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
         @extend %flex-JCcen-AIcen;
+        padding: 0;
         border: none;
         background-color: transparent;
         fill: getColor('buttons-background');
         stroke: getColor('buttons-background');
         // stroke-width: 2;
         // ! міксін outline
-        @include outline(1px, dashed, black);
+        @include outline(1px, dashed, wheat);
     }
 
     &-logo {
@@ -191,4 +202,6 @@
         height: 67px;
         // padding: 20px 61px 19px;
     }
+
+    
 }

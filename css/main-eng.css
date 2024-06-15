@@ -252,6 +252,10 @@ body {
   background-position: center bottom 0;
   background-size: cover;
 }
+.hero .container {
+  position: relative;
+  outline: 1px dashed yellow;
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -296,12 +300,15 @@ body {
   animation-play-state: paused;
 }
 .hero .burger-menu-buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
   padding: 0;
   border: none;
   background-color: transparent;
   fill: #8e32c6;
   stroke: #8e32c6;
-  outline: 1px dashed black;
+  outline: 1px dashed wheat;
 }
 .hero-logo {
   margin-left: 5px;
