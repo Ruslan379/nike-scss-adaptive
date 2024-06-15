@@ -115,7 +115,19 @@
     &:hover::before {
         animation-play-state: paused;
     }
-    
+
+    .burger-menu-buttons {
+        padding: 0;
+        @extend %flex-JCcen-AIcen;
+        border: none;
+        background-color: transparent;
+        fill: getColor('buttons-background');
+        stroke: getColor('buttons-background');
+        // stroke-width: 2;
+        // ! міксін outline
+        @include outline(1px, dashed, black);
+    }
+
     &-logo {
         margin-left: 5px;
         display: block;

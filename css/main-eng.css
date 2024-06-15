@@ -93,7 +93,7 @@ button:hover:disabled {
   justify-content: space-between;
 }
 
-.buttons {
+.hero .burger-menu-buttons, .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,6 +294,14 @@ body {
 }
 .hero:hover::after, .hero:hover::before {
   animation-play-state: paused;
+}
+.hero .burger-menu-buttons {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  fill: #8e32c6;
+  stroke: #8e32c6;
+  outline: 1px dashed black;
 }
 .hero-logo {
   margin-left: 5px;
