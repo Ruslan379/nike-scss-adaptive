@@ -355,7 +355,15 @@ body {
     background-color: transparent;
     fill: #8e32c6;
     stroke: #8e32c6;
-    outline: 1px dashed wheat;
+  }
+  .hero .burger-menu-buttons .icon-burger-menu-button-close {
+    display: none;
+  }
+  .hero .burger-menu-buttons.is-open .icon-burger-menu-button-close {
+    display: flex;
+  }
+  .hero .burger-menu-buttons.is-open .icon-burger-menu-button-open {
+    display: none;
   }
 }
 @media screen and (min-width: 1440px) {
