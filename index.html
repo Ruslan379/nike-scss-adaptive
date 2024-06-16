@@ -44,7 +44,7 @@
 <body>
     <div class="main-container-">
         <!--? header -->
-        <header class="header" data-burger-menu>
+        <header class="header" id="burger-menu-container" data-burger-menu>
             <div class="container flex">
                 <nav class="navigation">
                     <a class="header-logo" href="#">
@@ -79,6 +79,7 @@
                     class="burger-menu-buttons"
                     type="button"
                     aria-expanded="false"
+                    aria-controls="burger-menu-container"
                     data-burger-menu-buttons
                     >
                         <svg 
