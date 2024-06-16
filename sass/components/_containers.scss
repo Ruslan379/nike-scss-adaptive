@@ -13,8 +13,8 @@
     // max-width: 1110px;
 
     width: 100%;
-    // max-width: 100%;
-    // padding: 0 165px;
+    min-width: 320px;
+    padding: 0 20px;
     margin: 0 auto;
     // outline: 1px dashed tomato;
     // ! міксін outline
@@ -37,7 +37,7 @@
         max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
         // padding: 0 50px;
         //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-        padding: if($adaptive, 0 50px, 0 calc(165px + ((100vw - getBreakPoint('mobile')) * 0.2)));
+        padding: if($adaptive, 0 25px, 0 calc(25px + ((100vw - getBreakPoint('mobile')) * 0.2)));
     }
 
     @media screen and (min-width: getBreakPoint('tablet')) {
