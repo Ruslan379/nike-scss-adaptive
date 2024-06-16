@@ -5,9 +5,10 @@
 
   let expanded = false;
 
-  //! Закриття burger-menu по кліку на кнопці 
+  //! Закриття burger-menu по кліку на кнопці icon-burger-menu-button-close
   menuBtnRef.addEventListener("click", () => {
-    console.log("Це клік в burger-menu-buttons");
+    // console.log("Це клік в burger-menu-buttons");
+    
     expanded =
       menuBtnRef.getAttribute("aria-expanded") === "true" || false;
 
@@ -21,7 +22,7 @@
   //! Закриття burger-menu по кліку на елементі списку nav-list
   mobileMenuItemRef.forEach(function(item) {
     item.addEventListener('click', function () {
-      console.log("Це клік в nav-list__item");
+      // console.log("Це клік в nav-list__item");
 
       expanded =
         menuBtnRef.getAttribute("aria-expanded") === "true" || false;
