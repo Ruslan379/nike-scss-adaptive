@@ -15,7 +15,7 @@
     }
 
     .order-form {
-        @include flex-FDcol-AIcen;
+        @include flex_FDcol-AIcen;
         gap: 19px;
 
         &__input-email-box {

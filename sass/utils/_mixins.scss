@@ -50,7 +50,14 @@
     align-items: center;
 }
 
-@mixin flex-FDcol-AIcen {
+@mixin flex-JCfe-AIcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex_FDcol-AIcen {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -160,9 +160,11 @@ body.no-scroll {
   background-color: rgba(2, 22, 53, 0.9);
   outline: 1px solid red;
 }
-.header.is-open {
-  display: block;
-  pointer-events: all;
+@media screen and (max-width: calc(768px - 1px)) {
+  .header.is-open {
+    display: block;
+    pointer-events: all;
+  }
 }
 @media screen and (min-width: 1440px) {
   .header {
@@ -181,7 +183,6 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
   .header .container {
@@ -195,11 +196,13 @@ body.no-scroll {
   .header .container .navigation {
     flex-grow: 4;
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 }
 .header .container .navigation .header-logo {
   display: none;
+  outline: 1px dotted yellowgreen;
 }
 @media screen and (min-width: 1440px) {
   .header .container .navigation .header-logo {
@@ -209,7 +212,6 @@ body.no-scroll {
     height: 60px;
     position: relative;
     opacity: 1;
-    outline: 1px dotted yellowgreen;
   }
   .header .container .navigation .header-logo__img {
     position: absolute;
@@ -237,11 +239,11 @@ body.no-scroll {
   transform: scale(1.1);
 }
 .header .container .navigation .nav-list__link {
-  color: #c7c7c7;
   display: flex;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.125;
+  color: #c7c7c7;
   transition: transform, color, 300ms ease-in-out;
 }
 @media screen and (min-width: 1440px) {
@@ -257,6 +259,7 @@ body.no-scroll {
   flex-grow: 1;
   height: 48px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;

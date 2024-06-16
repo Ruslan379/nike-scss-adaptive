@@ -21,8 +21,10 @@
     @include outline(1px, solid, red);
 
     &.is-open {
-        display: block;
-        pointer-events: all;
+        @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+            display: block;
+            pointer-events: all;
+        }
     }
 
     @media screen and (min-width: getBreakPoint('desktop')) {
@@ -47,46 +49,36 @@
     
     .container {
         //! Додаткові flex-властивості до container
-        @include flex-FDcol-AIcen;
+        @include flex_FDcol-AIcen;
         gap: 48px;
         // ! міксін outline
-        @include outline(1px, dashed, yellow);
-
-
+        // @include outline(1px, dashed, yellow);
+        
         @media screen and (min-width: getBreakPoint('desktop')) {
-            // @include flex-JCsb-AIcen;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            // gap: 8%;
+            @include flex-AIcen;
             gap: 0;
         }
         
         .navigation {
             @media screen and (min-width: getBreakPoint('desktop')) {
                 flex-grow: 4;
-                // @include flex-JCsb-AIcen;
-                display: flex;
-                align-items: center;
+                @include flex-AIcen;
             }
             
             .header-logo {
                 display: none;
-
+                // ! міксін outline
+                @include outline(1px, dotted, yellowgreen);
+                
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     display: block;
-                    // flex-grow: 11;
                     flex-grow: 1;
-                    //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                    // flex-grow: if($lang == ua, 20, 7);
                     width: 100px;
                     height: 60px;
                     position: relative;
                     //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
                     opacity: if($lang == ua, 0.7, 1.0);
-                    // ! міксін outline
-                    @include outline(1px, dotted, yellowgreen);
-
+                    
                     &__img {
                         position: absolute;
                         top: 8px;
@@ -95,29 +87,26 @@
             }
 
             .nav-list {
-                @include flex-FDcol-AIcen;
+                @include flex_FDcol-AIcen;
                 gap: 57px;
 
                 @media screen and (min-width: getBreakPoint('desktop')) {
-                    // flex-grow: 4;
                     flex-grow: 3;
-                    // @include flex-AIcen;
                     @include flex-JCsb-AIcen;
-                    // gap: 29px;
                     gap: 0;
                 }
+
                 &__item:hover .nav-list__link {
                     color: getColor('brand-hover');
                     transform: scale(1.1);
                 }
                 
                 &__link {
-                    color: getColor('font-main');
                     display: flex;
                     font-weight: 300;
                     font-size: 24px;
                     line-height: 1.125;
-                    // color: getColor('font-main'); //* +
+                    color: getColor('font-main'); 
                     //? Aнімація-1
                     transition: 
                         transform, color, 
@@ -125,11 +114,11 @@
                         ease-in-out;
                     // ! міксін outline
                     // @include outline(2px, dashed, green);
-
+                    
                     @media screen and (min-width: getBreakPoint('desktop')) {
                         line-height: 1.25;
                     }
-
+                    
                     &--active {
                         font-weight: 400;
                         color: getColor('light');
@@ -140,17 +129,9 @@
         
         .lang-list {
             flex-grow: 1;
-            // width: 81px;
-            // padding: 10px;
-            // width: 101px;
             height: 48px;
-
-            // @include flex-JCsb-AIcen;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            @include flex-JCfe-AIcen;
             gap: 10px;
-
             // border-radius: 10px;
             // box-shadow: 
             //     0px 0px 8px 0px getColor('light'),
@@ -172,13 +153,6 @@
                 transform: scale(1.1);
             }
 
-            @media screen and (min-width: getBreakPoint('desktop')) {
-                // flex-grow: 1;
-                // padding: 0;
-                // width: 90px;
-                // height: auto;
-            }
-            
             &__link {
                 padding: 0 5px;
                 color: getColor('font-second');
@@ -196,14 +170,12 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, red);
                 
-                //* +
                 &--active {
                     font-weight: 400;
                     // color: getColor('light');
                     color: if($lang == ua, getColor('light-ua'), getColor('light-eng'));
                     box-shadow: 
-                    0px 0px 8px 0px if($lang == ua, getColor('light-ua'), getColor('light-eng'));
-                    // 0px 0px 0px 1px getColor('buttons-background');
+                        0px 0px 8px 0px if($lang == ua, getColor('light-ua'), getColor('light-eng'));
                 }
             }
         }
