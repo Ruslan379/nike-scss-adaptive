@@ -26,22 +26,26 @@
 //! ----------- flex-властивості (flex-контейнери) -----------
 @mixin flex-AIcen {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
 @mixin flex-JCsb {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 @mixin flex-JCcen-AIcen {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 @mixin flex-JCsb-AIcen {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }

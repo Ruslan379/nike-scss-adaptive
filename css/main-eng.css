@@ -117,6 +117,7 @@ body {
 
 .buttons {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 24px;
@@ -142,6 +143,8 @@ body {
 }
 
 .header {
+  padding-top: 91px;
+  padding-bottom: 104px;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -149,7 +152,6 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 100vw;
-  height: 738px;
   background-color: rgba(2, 22, 53, 0.9);
   outline: 1px solid red;
 }
@@ -160,18 +162,20 @@ body {
     left: 0;
     transform: translateX(0);
     max-width: 100%;
-    height: auto;
     border-bottom: 2px solid #FFFFFF;
     background-color: #012d63;
   }
 }
 .header .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 @media screen and (min-width: 1440px) {
   .header .container {
-    text-align: initial;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 8%;
@@ -181,6 +185,7 @@ body {
   .header .container .navigation {
     flex-grow: 1;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -191,7 +196,7 @@ body {
 @media screen and (min-width: 1440px) {
   .header .container .navigation .header-logo {
     display: block;
-    flex-grow: 11;
+    flex-grow: 7;
     width: 100px;
     height: 60px;
     position: relative;
@@ -202,62 +207,69 @@ body {
     top: 8px;
   }
 }
+.header .container .navigation .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57px;
+}
 @media screen and (min-width: 1440px) {
   .header .container .navigation .nav-list {
     flex-grow: 4;
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 29px;
   }
-  .header .container .navigation .nav-list__item:hover .nav-list__link {
-    color: #c33bde;
-    transform: scale(1.1);
-  }
+}
+.header .container .navigation .nav-list__item:hover .nav-list__link {
+  color: #c33bde;
+  transform: scale(1.1);
 }
 .header .container .navigation .nav-list__link {
   color: #c7c7c7;
+  display: flex;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.125;
+  transition: transform, color, 300ms ease-in-out;
+}
+@media screen and (min-width: 1440px) {
+  .header .container .navigation .nav-list__link {
+    line-height: 1.25;
+  }
 }
 .header .container .navigation .nav-list__link--active {
   font-weight: 400;
   color: #FFFFFF;
 }
-@media screen and (min-width: 1440px) {
-  .header .container .navigation .nav-list__link {
-    display: flex;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 1.25;
-    transition: transform, color, 300ms ease-in-out;
-  }
+.header .container .lang-list {
+  padding: 10px;
+  width: 101px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px #FFFFFF, 0px 0px 0px 1px #8e32c6;
 }
-@media screen and (min-width: 1440px) {
-  .header .container .lang-list {
-    width: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header .container .lang-list__item:hover .lang-list__link {
-    color: #c33bde;
-    transform: scale(1.1);
-  }
+.header .container .lang-list__item:hover .lang-list__link {
+  color: #c33bde;
+  transform: scale(1.1);
 }
 .header .container .lang-list__link {
   color: #dcdcdc;
+  display: flex;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #dcdcdc;
+  transition: transform, color, 300ms ease-in-out;
 }
 .header .container .lang-list__link--active {
   font-weight: 400;
   color: #ffcdd5;
-}
-@media screen and (min-width: 1440px) {
-  .header .container .lang-list__link {
-    display: flex;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 1.25;
-    color: #dcdcdc;
-    transition: transform, color, 300ms ease-in-out;
-  }
 }
 
 .hero {
@@ -335,6 +347,7 @@ body {
     right: 25px;
     top: 44px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0;

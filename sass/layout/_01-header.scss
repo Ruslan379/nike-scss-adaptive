@@ -2,6 +2,8 @@
 
 // ? header (BEM+SASS)
 .header {
+    padding-top: 91px;
+    padding-bottom: 104px;
     //! --- Фіксований header --- 
     position: fixed;
     z-index: 2;
@@ -11,13 +13,11 @@
     width: 100%;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
-    height: 738px;
+    // height: 738px;
     //! --- --------------------- ---
     background-color: getColor('background-brand-mobile');
     // ! міксін outline
     @include outline(1px, solid, red);
-
-
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         // display: block;
@@ -31,7 +31,7 @@
         transform: translateX(0);
         // width: 100%; //* +
         max-width: 100%;
-        height: auto;
+        // height: auto;
         //! --- --------------------- ---
         border-bottom: 2px solid getColor('light');
         background-color: getColor('background-brand');
@@ -41,10 +41,11 @@
     
     .container {
         //! Додаткові flex-властивості до container
-        text-align: center;
+        @include flex-FDcol-AIcen;
+        gap: 48px;
+
 
         @media screen and (min-width: getBreakPoint('desktop')) {
-            text-align: initial;
             @include flex-JCsb-AIcen;
             gap: 8%;
         }
@@ -60,7 +61,9 @@
 
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     display: block;
-                    flex-grow: 11;
+                    // flex-grow: 11;
+                    //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                    flex-grow: if($lang == ua, 20, 7);
                     width: 100px;
                     height: 60px;
                     position: relative;
@@ -74,96 +77,94 @@
                         top: 8px;
                     }
                 }
-                
             }
 
             .nav-list {
+                @include flex-FDcol-AIcen;
+                gap: 57px;
+
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     flex-grow: 4;
                     @include flex-AIcen;
                     gap: 29px;
-                    
-                    &__item:hover .nav-list__link {
-                        
-                        color: getColor('brand-hover');
-                        transform: scale(1.1);
-                    }
+                }
+                &__item:hover .nav-list__link {
+                    color: getColor('brand-hover');
+                    transform: scale(1.1);
                 }
                 
                 &__link {
                     color: getColor('font-main');
+                    display: flex;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 1.125;
+                    // color: getColor('font-main'); //* +
+                    //? Aнімація-1
+                    transition: 
+                        transform, color, 
+                        300ms 
+                        ease-in-out;
+                    // ! міксін outline
+                    // @include outline(2px, dashed, green);
+
+                    @media screen and (min-width: getBreakPoint('desktop')) {
+                        line-height: 1.25;
+                    }
 
                     &--active {
                         font-weight: 400;
                         color: getColor('light');
-                    }
-                    
-                    @media screen and (min-width: getBreakPoint('desktop')) {
-                        display: flex;
-                        font-weight: 300;
-                        font-size: 24px;
-                        line-height: 1.25;
-                        // color: getColor('font-main'); //* +
-                        //? Aнімація-1
-                        transition: 
-                            transform, color, 
-                            300ms 
-                            ease-in-out;
-                        // ! міксін outline
-                        // @include outline(2px, dashed, green);
-
-                        //* +
-                        // &--active {
-                        //     font-weight: 400;
-                        //     color: getColor('light');
-                        // }
                     }
                 }
             }
         }
         
         .lang-list {
-            @media screen and (min-width: getBreakPoint('desktop')) {
-                width: 90px;
-                @include flex-JCsb-AIcen;
+            // width: 81px;
+            padding: 10px;
+            width: 101px;
+            height: 48px;
+            @include flex-JCsb-AIcen;
+            border-radius: 10px;
+            box-shadow: 
+                0px 0px 8px 0px getColor('light'),
+                0px 0px 0px 1px getColor('buttons-background');
+            // ! міксін outline
+            // @include outline(2px, dashed, yellowgreen);
             
-                &__item:hover .lang-list__link {
-                    color: getColor('brand-hover');
-                    transform: scale(1.1);
-                }
+            &__item:hover .lang-list__link {
+                color: getColor('brand-hover');
+                transform: scale(1.1);
+            }
+
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                // padding: 0;
+                // width: 90px;
+                // height: auto;
             }
             
             &__link {
                 color: getColor('font-second');
-
+                display: flex;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 1.25;
+                color: getColor('font-second'); //* +
+                //? Aнімація-1
+                transition: 
+                    transform, color,
+                    300ms 
+                    ease-in-out;
+                // ! міксін outline
+                // @include outline(2px, dashed, red);
+                
+                //* +
                 &--active {
                     font-weight: 400;
                     // color: getColor('light');
                     color: if($lang == ua, getColor('light-ua'), getColor('light-eng'));
                 }
-
-                @media screen and (min-width: getBreakPoint('desktop')) {
-                    display: flex;
-                    font-weight: 300;
-                    font-size: 24px;
-                    line-height: 1.25;
-                    color: getColor('font-second'); //* +
-                    //? Aнімація-1
-                    transition: 
-                        transform, color,
-                        300ms 
-                        ease-in-out;
-                    // ! міксін outline
-                    // @include outline(2px, dashed, red);
-                    
-                    //* +
-                    // &--active {
-                    //     font-weight: 400;
-                    //     // color: getColor('light');
-                    //     color: if($lang == ua, getColor('light-ua'), getColor('light-eng'));
-                    // }
-                }
-                
             }
         }
     }
