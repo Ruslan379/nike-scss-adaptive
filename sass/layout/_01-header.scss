@@ -15,7 +15,7 @@
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
     // height: 738px;
-    //! --- --------------------- ---
+    //! --- ----------------- ---
     background-color: getColor('background-brand-mobile');
     // ! міксін outline
     @include outline(1px, solid, red);
@@ -31,7 +31,7 @@
         display: block;
         padding-top: 15px;
         padding-bottom: 15px;
-        //! --- Фіксований header --- 
+        //! --- Фіксований header ---
         // position: fixed; //* +
         // z-index: 2; //* +
         // top: 0; //* +
@@ -40,7 +40,7 @@
         // width: 100%; //* +
         max-width: 100%;
         // height: auto;
-        //! --- --------------------- ---
+        //! --- ----------------- ---
         border-bottom: 2px solid getColor('light');
         background-color: getColor('background-brand');
         // ! міксін outline
@@ -53,7 +53,7 @@
         gap: 48px;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
-        
+
         @media screen and (min-width: getBreakPoint('desktop')) {
             @include flex-AIcen;
             gap: 0;

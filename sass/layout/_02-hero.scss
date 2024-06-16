@@ -23,18 +23,7 @@
         padding-bottom: 273px;
         // height: 858px; //todo OLD
         // height: 948px;
-
-        //* +
-        // background-color: getColor('background-brand');
         background-image: url(../images/hero_background-1440.jpg);
-        // background-repeat: no-repeat;
-        // background-position: center bottom 0;
-        // //! Адаптивне (adaptive) зображення 
-        // // background-size: auto;
-        // //! Чутливе (responsive) зображення
-        // // background-size: cover;
-        // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-        // background-size: if($adaptive, auto, cover);
     }
 
     @media screen and (min-width: getBreakPoint('desktop')) {
