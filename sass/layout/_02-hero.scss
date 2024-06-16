@@ -144,9 +144,10 @@
         display: none;
         // @media screen and (max-width: 767px) {
         @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+            z-index: 3;
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 25px;
+            top: 44px;
             // @extend %flex-JCcen-AIcen; //! так уже не можна!
             @include flex-JCcen-AIcen;
             padding: 0;

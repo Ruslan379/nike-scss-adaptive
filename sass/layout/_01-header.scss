@@ -2,20 +2,38 @@
 
 // ? header (BEM+SASS)
 .header {
-    display: none;
+    //! --- Фіксований header --- 
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
+    height: 738px;
+    //! --- --------------------- ---
+    background-color: getColor('background-brand-mobile');
+    // ! міксін outline
+    @include outline(1px, solid, red);
+
+
 
     @media screen and (min-width: getBreakPoint('desktop')) {
-        display: block;
+        // display: block;
         padding-top: 15px;
         padding-bottom: 15px;
         //! --- Фіксований header --- 
-        position: fixed;
-        z-index: 2;
-        top: 0;
+        // position: fixed; //* +
+        // z-index: 2; //* +
+        // top: 0; //* +
         left: 0;
-        width: 100%;
+        transform: translateX(0);
+        // width: 100%; //* +
+        max-width: 100%;
+        height: auto;
+        //! --- --------------------- ---
         border-bottom: 2px solid getColor('light');
-        background-color: getColor('background-brand');
         background-color: getColor('background-brand');
         // ! міксін outline
         // @include outline(1px, solid, red);
@@ -23,89 +41,129 @@
     
     .container {
         //! Додаткові flex-властивості до container
-        @include flex-JCsb-AIcen;
-        gap: 8%;
+        text-align: center;
 
-        .navigation {
-            flex-grow: 1;
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            text-align: initial;
             @include flex-JCsb-AIcen;
-
+            gap: 8%;
+        }
+        
+        .navigation {
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                flex-grow: 1;
+                @include flex-JCsb-AIcen;
+            }
+            
             .header-logo {
-                flex-grow: 11;
-                width: 100px;
-                height: 60px;
-                position: relative;
-                //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                opacity: if($lang == ua, 0.7, 1.0);
-                // ! міксін outline
-                // @include outline(1px, dotted, yellowgreen);
+                display: none;
 
-                &__img {
-                    position: absolute;
-                    top: 8px;
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    display: block;
+                    flex-grow: 11;
+                    width: 100px;
+                    height: 60px;
+                    position: relative;
+                    //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                    opacity: if($lang == ua, 0.7, 1.0);
+                    // ! міксін outline
+                    // @include outline(1px, dotted, yellowgreen);
+
+                    &__img {
+                        position: absolute;
+                        top: 8px;
+                    }
                 }
+                
             }
 
             .nav-list {
-                flex-grow: 4;
-                @include flex-AIcen;
-                gap: 29px;
-            
-                &__item:hover .nav-list__link {
-                    color: getColor('brand-hover');
-                    transform: scale(1.1);
-                }
-            
-                &__link {
-                    display: flex;
-                    font-weight: 300;
-                    font-size: 24px;
-                    line-height: 1.25;
-                    color: getColor('font-main');
-                    //? Aнімація-1
-                    transition: 
-                        transform, color, 
-                        300ms 
-                        ease-in-out;
-                    // ! міксін outline
-                    // @include outline(2px, dashed, green);
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    flex-grow: 4;
+                    @include flex-AIcen;
+                    gap: 29px;
                     
+                    &__item:hover .nav-list__link {
+                        
+                        color: getColor('brand-hover');
+                        transform: scale(1.1);
+                    }
+                }
+                
+                &__link {
+                    color: getColor('font-main');
+
                     &--active {
                         font-weight: 400;
                         color: getColor('light');
+                    }
+                    
+                    @media screen and (min-width: getBreakPoint('desktop')) {
+                        display: flex;
+                        font-weight: 300;
+                        font-size: 24px;
+                        line-height: 1.25;
+                        // color: getColor('font-main'); //* +
+                        //? Aнімація-1
+                        transition: 
+                            transform, color, 
+                            300ms 
+                            ease-in-out;
+                        // ! міксін outline
+                        // @include outline(2px, dashed, green);
+
+                        //* +
+                        // &--active {
+                        //     font-weight: 400;
+                        //     color: getColor('light');
+                        // }
                     }
                 }
             }
         }
         
         .lang-list {
-            width: 90px;
-            @include flex-JCsb-AIcen;
-        
-            &__item:hover .lang-list__link {
-                color: getColor('brand-hover');
-                transform: scale(1.1);
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                width: 90px;
+                @include flex-JCsb-AIcen;
+            
+                &__item:hover .lang-list__link {
+                    color: getColor('brand-hover');
+                    transform: scale(1.1);
+                }
             }
-        
+            
             &__link {
-                display: flex;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 1.25;
                 color: getColor('font-second');
-                //? Aнімація-1
-                transition: 
-                    transform, color,
-                    300ms 
-                    ease-in-out;
-                // ! міксін outline
-                // @include outline(2px, dashed, red);
-                
+
                 &--active {
                     font-weight: 400;
                     // color: getColor('light');
                     color: if($lang == ua, getColor('light-ua'), getColor('light-eng'));
                 }
+
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    display: flex;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 1.25;
+                    color: getColor('font-second'); //* +
+                    //? Aнімація-1
+                    transition: 
+                        transform, color,
+                        300ms 
+                        ease-in-out;
+                    // ! міксін outline
+                    // @include outline(2px, dashed, red);
+                    
+                    //* +
+                    // &--active {
+                    //     font-weight: 400;
+                    //     // color: getColor('light');
+                    //     color: if($lang == ua, getColor('light-ua'), getColor('light-eng'));
+                    // }
+                }
+                
             }
         }
     }
