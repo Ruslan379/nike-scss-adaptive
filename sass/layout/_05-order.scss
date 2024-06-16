@@ -15,12 +15,12 @@
     }
 
     .order-form {
-        @extend %flex-FDcol-AIcen;
+        @include flex-FDcol-AIcen;
         gap: 19px;
 
         &__input-email-box {
             position: relative;
-            @extend %flex-AIcen;
+            @include flex-AIcen;
         }
         
         &__input {

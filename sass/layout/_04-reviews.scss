@@ -30,7 +30,7 @@
 
         .reviews-list {
             padding: 0 80px;
-            @extend %flex-JCsb;
+            @include flex-JCsb;
             // ! міксін outline
             // @include outline(1px, dotted, red);
             

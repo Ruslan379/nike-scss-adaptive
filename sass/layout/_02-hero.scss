@@ -147,10 +147,8 @@
             position: absolute;
             right: 0;
             top: 0;
-            // @extend %flex-JCcen-AIcen;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // @extend %flex-JCcen-AIcen; //! так уже не можна!
+            @include flex-JCcen-AIcen;
             padding: 0;
             border: none;
             background-color: transparent;

@@ -23,12 +23,12 @@
     
     .container {
         //! Додаткові flex-властивості до container
-        @extend %flex-JCsb-AIcen;
+        @include flex-JCsb-AIcen;
         gap: 8%;
 
         .navigation {
             flex-grow: 1;
-            @extend %flex-JCsb-AIcen;
+            @include flex-JCsb-AIcen;
 
             .header-logo {
                 flex-grow: 11;
@@ -48,7 +48,7 @@
 
             .nav-list {
                 flex-grow: 4;
-                @extend %flex-AIcen;
+                @include flex-AIcen;
                 gap: 29px;
             
                 &__item:hover .nav-list__link {
@@ -80,7 +80,7 @@
         
         .lang-list {
             width: 90px;
-            @extend %flex-JCsb-AIcen;
+            @include flex-JCsb-AIcen;
         
             &__item:hover .lang-list__link {
                 color: getColor('brand-hover');

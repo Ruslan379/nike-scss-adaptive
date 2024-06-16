@@ -83,34 +83,6 @@ button:hover:disabled {
     transform: translate(166%, -100px) rotate(-37deg);
   }
 }
-.order .order-form__input-email-box, .header .container .navigation .nav-list {
-  display: flex;
-  align-items: center;
-}
-
-.footer__all-box, .footer .footer-list__item, .reviews .container .reviews-list, .advantages .container .advantages-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header .container .lang-list, .header .container .navigation, .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.order .order-form, .advantages .container .advantages-list__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 body {
   font-family: "Roboto";
   color: #FFFFFF;
@@ -144,6 +116,9 @@ body {
 }
 
 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
   border: none;
   border-radius: 10px;
@@ -185,10 +160,16 @@ body {
   }
 }
 .header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 8%;
 }
 .header .container .navigation {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header .container .navigation .header-logo {
   flex-grow: 11;
@@ -203,6 +184,8 @@ body {
 }
 .header .container .navigation .nav-list {
   flex-grow: 4;
+  display: flex;
+  align-items: center;
   gap: 29px;
 }
 .header .container .navigation .nav-list__item:hover .nav-list__link {
@@ -223,6 +206,9 @@ body {
 }
 .header .container .lang-list {
   width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header .container .lang-list__item:hover .lang-list__link {
   color: #c33bde;
@@ -394,12 +380,17 @@ body {
 .advantages .container .advantages-list {
   width: 100%;
   padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
   outline: 5px solid #8e32c6;
 }
 .advantages .container .advantages-list__item {
   position: relative;
   width: 240px;
   height: 346px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -460,6 +451,8 @@ body {
 }
 .reviews .container .reviews-list {
   padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
 }
 .reviews .container .reviews-list__item {
   padding: 49px 11px 29px 18px;
@@ -520,10 +513,15 @@ body {
   margin-bottom: 33px;
 }
 .order .order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 19px;
 }
 .order .order-form__input-email-box {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .order .order-form__input {
   padding-left: 24px;
@@ -585,6 +583,10 @@ body {
 .footer .footer-list {
   margin-bottom: 22px;
 }
+.footer .footer-list__item {
+  display: flex;
+  justify-content: space-between;
+}
 .footer .footer-list__item:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -611,6 +613,10 @@ body {
   height: 2px;
   margin-top: 20px;
   background-color: #9b9b9b;
+}
+.footer__all-box {
+  display: flex;
+  justify-content: space-between;
 }
 .footer__trademark {
   margin-bottom: 7px;

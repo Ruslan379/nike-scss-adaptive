@@ -22,3 +22,32 @@
         }
     }
 }
+
+//! ----------- flex-властивості (flex-контейнери) -----------
+@mixin flex-AIcen {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-JCsb {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-JCcen-AIcen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-JCsb-AIcen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-FDcol-AIcen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

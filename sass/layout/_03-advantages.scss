@@ -18,14 +18,14 @@
         .advantages-list {
             width: 100%;
             padding: 25px 50px;
-            @extend %flex-JCsb;
+            @include flex-JCsb;
             outline: 5px solid getColor('buttons-background');
             
             &__item {
                 position: relative;
                 width: 240px;
                 height: 346px;
-                @extend %flex-FDcol-AIcen;
+                @include flex-FDcol-AIcen;
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline

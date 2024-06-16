@@ -83,23 +83,6 @@ button:hover:disabled {
     transform: translate(166%, -100px) rotate(-37deg);
   }
 }
-.header .container .navigation .nav-list {
-  display: flex;
-  align-items: center;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header .container .lang-list, .header .container .navigation, .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 body {
   font-family: "Roboto";
   color: #ffcdd5;
@@ -133,6 +116,9 @@ body {
 }
 
 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
   border: none;
   border-radius: 10px;
@@ -174,10 +160,16 @@ body {
   }
 }
 .header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 8%;
 }
 .header .container .navigation {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header .container .navigation .header-logo {
   flex-grow: 11;
@@ -192,6 +184,8 @@ body {
 }
 .header .container .navigation .nav-list {
   flex-grow: 4;
+  display: flex;
+  align-items: center;
   gap: 29px;
 }
 .header .container .navigation .nav-list__item:hover .nav-list__link {
@@ -212,6 +206,9 @@ body {
 }
 .header .container .lang-list {
   width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header .container .lang-list__item:hover .lang-list__link {
   color: #c33bde;

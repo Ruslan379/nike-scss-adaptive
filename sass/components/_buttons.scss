@@ -1,6 +1,7 @@
 //! ----------- Загальні стилі для ВСІХ кнопок -----------
 .buttons {
-    @extend %flex-JCcen-AIcen;
+    // @extend %flex-JCcen-AIcen;
+    @include flex-JCcen-AIcen;
     font-size: 24px;
     border: none;
     border-radius: 10px;

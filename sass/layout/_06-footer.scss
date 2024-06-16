@@ -12,7 +12,7 @@
         // @include outline(1px, dashed, yellow);
         
         &__item {
-            @extend %flex-JCsb;
+            @include flex-JCsb;
         }
         &__item:not(:last-child) {
             margin-bottom: 10px;
@@ -51,7 +51,7 @@
     }
 
     &__all-box {
-        @extend %flex-JCsb;
+        @include flex-JCsb;
     }
     
     &__trademark{
