@@ -27,6 +27,12 @@ body {
             //? Колір #FFFFFF;, якщо $lang: "none";
             color: getColor('light');
     }
+
+    &.no-scroll {
+        overflow: hidden;
+        pointer-events: none;
+        // background-color: getColor('background-brand');
+    }
 }
 
 //! Додаткове налаштування $color-light (заміна кольору)

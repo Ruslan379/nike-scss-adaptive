@@ -145,6 +145,7 @@
 
         // @media screen and (max-width: 767px) {
         @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+            pointer-events: all;
             z-index: 3;
             // position: absolute;
             position: fixed;
@@ -157,9 +158,10 @@
             padding: 0;
             border: none;
             background-color: transparent;
-            fill: getColor('buttons-background');
+            fill: getColor('brand-hover');
             stroke: getColor('buttons-background');
-            // stroke-width: 2;
+            // stroke: getColor('red');
+            stroke-width: 2;
             // ! міксін outline
             // @include outline(1px, dashed, wheat);
 
@@ -167,19 +169,19 @@
                 display: none;
             }
 
-            // .icon-burger-menu-button-open {
-            //     display: flex;
-            // }
-
             &.is-open .icon-burger-menu-button-close {
                 display: flex;
+                fill: getColor('buttons-background');
+                stroke-width: 2;
+                stroke: getColor('buttons-background');
+                // fill: red;
+                // stroke: red;
+                
             }
 
             &.is-open .icon-burger-menu-button-open {
                 display: none;
             }
-
-            
         }
     }
     

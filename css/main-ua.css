@@ -87,6 +87,10 @@ body {
   font-family: "Roboto";
   color: #ffffb1;
 }
+body.no-scroll {
+  overflow: hidden;
+  pointer-events: none;
+}
 
 .container {
   width: 100%;
@@ -158,6 +162,7 @@ body {
 }
 .header.is-open {
   display: block;
+  pointer-events: all;
 }
 @media screen and (min-width: 1440px) {
   .header {
@@ -346,6 +351,7 @@ body {
 }
 @media screen and (max-width: calc(768px - 1px)) {
   .hero .burger-menu-buttons {
+    pointer-events: all;
     z-index: 3;
     position: fixed;
     right: calc(25px + (100vw - 360px) / 2);
@@ -357,14 +363,18 @@ body {
     padding: 0;
     border: none;
     background-color: transparent;
-    fill: #8e32c6;
+    fill: #c33bde;
     stroke: #8e32c6;
+    stroke-width: 2;
   }
   .hero .burger-menu-buttons .icon-burger-menu-button-close {
     display: none;
   }
   .hero .burger-menu-buttons.is-open .icon-burger-menu-button-close {
     display: flex;
+    fill: #8e32c6;
+    stroke-width: 2;
+    stroke: #8e32c6;
   }
   .hero .burger-menu-buttons.is-open .icon-burger-menu-button-open {
     display: none;
