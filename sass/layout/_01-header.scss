@@ -2,6 +2,7 @@
 
 // ? header (BEM+SASS)
 .header {
+    display: none;
     padding-top: 91px;
     padding-bottom: 104px;
     //! --- Фіксований header --- 
@@ -19,8 +20,12 @@
     // ! міксін outline
     @include outline(1px, solid, red);
 
+    &.is-open {
+        display: block;
+    }
+
     @media screen and (min-width: getBreakPoint('desktop')) {
-        // display: block;
+        display: block;
         padding-top: 15px;
         padding-bottom: 15px;
         //! --- Фіксований header --- 

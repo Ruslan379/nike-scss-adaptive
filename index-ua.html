@@ -44,7 +44,7 @@
 <body>
     <div class="main-container-">
         <!--? header -->
-        <header class="header">
+        <header class="header" data-burger-menu>
             <div class="container flex">
                 <nav class="navigation">
                     <a class="header-logo header-logo--ua" href="#">
@@ -74,15 +74,32 @@
             <!--? hero -->
             <section class="hero" id="benefits">
                 <div class="container">
+                    <!--! Кнопка burger-menu (open + close) -->
+                    <button 
+                    class="burger-menu-buttons"
+                    type="button"
+                    aria-expanded="false"
+                    data-burger-menu-buttons
+                    >
+                        <svg 
+                            width="45" 
+                            height="25" 
+                            aria-label="Перемикач мобільного бургер-меню"
+                        >
+                            <use
+                                class="icon-burger-menu-button-close"
+                                href="./images/icons-sprite.svg#burger-menu-close">
+                            </use>
+                            <use 
+                                class="icon-burger-menu-button-open"
+                                href="./images/icons-sprite.svg#burger-menu-open">
+                            </use>
+                        </svg>
+                    </button>
+                    <!--! ___________________________________ -->
                     <a class="hero-logo" href="#">
                         <img src="./images/hero_logo.png" alt="logo" width="160">
                     </a>
-                    <button class="burger-menu-buttons">
-                        <svg width="45" height="25">
-                            <use href="./images/icons-sprite.svg#burger-menu-open"></use>
-                            <use href="./images/icons-sprite.svg#burger-menu-close"></use>
-                        </svg>
-                    </button>
                     <p class="hero__logo-text">С&R</p>
                     <h1 class="hero__title">КолоРейв</h1>
                     <h2 class="hero__title-second">Твоя мрія Nike</h2>

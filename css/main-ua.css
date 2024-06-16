@@ -143,6 +143,7 @@ body {
 }
 
 .header {
+  display: none;
   padding-top: 91px;
   padding-bottom: 104px;
   position: fixed;
@@ -155,8 +156,12 @@ body {
   background-color: rgba(2, 22, 53, 0.9);
   outline: 1px solid red;
 }
+.header.is-open {
+  display: block;
+}
 @media screen and (min-width: 1440px) {
   .header {
+    display: block;
     padding-top: 15px;
     padding-bottom: 15px;
     left: 0;
