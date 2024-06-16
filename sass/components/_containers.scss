@@ -33,7 +33,11 @@
     @media screen and (min-width: getBreakPoint('mobile')) {
         max-width: getBreakPoint('mobile');
         // width: 360px;
-        padding: 0 50px;
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
+        // padding: 0 50px;
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        padding: if($adaptive, 0 50px, 0 calc(165px + ((100vw - getBreakPoint('mobile')) * 0.2)));
     }
 
     @media screen and (min-width: getBreakPoint('tablet')) {

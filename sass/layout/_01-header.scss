@@ -4,11 +4,8 @@
 .header {
     display: none;
 
-    @media screen and (min-width: getBreakPoint('tablet')) {
-        display: block;
-    }
-
     @media screen and (min-width: getBreakPoint('desktop')) {
+        display: block;
         padding-top: 15px;
         padding-bottom: 15px;
         //! --- Фіксований header --- 
