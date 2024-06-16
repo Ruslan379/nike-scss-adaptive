@@ -37,12 +37,6 @@
         // background-size: if($adaptive, auto, cover);
     }
 
-    .container {
-        position: relative;
-        // ! міксін outline
-        @include outline(1px, dashed, yellow);
-    }
-
     @media screen and (min-width: getBreakPoint('desktop')) {
         &::after {
             content: "";
@@ -139,6 +133,12 @@
         animation-play-state: paused;
     }
 
+    .container {
+        // position: relative;
+        // ! міксін outline
+        @include outline(1px, dashed, yellow);
+    }
+
     //! Кнопка burger-menu (open + close)
     .burger-menu-buttons {
         display: none;
@@ -146,8 +146,11 @@
         // @media screen and (max-width: 767px) {
         @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
             z-index: 3;
-            position: absolute;
-            right: 25px;
+            // position: absolute;
+            position: fixed;
+            // right: 25px;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            right: if($adaptive, calc(25px + (100vw - #{getBreakPoint('mobile')}) / 2) , 25px);
             top: 44px;
             // @extend %flex-JCcen-AIcen; //! так уже не можна!
             @include flex-JCcen-AIcen;
