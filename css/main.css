@@ -181,22 +181,20 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
   .header .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    gap: 8%;
+    gap: 0;
   }
 }
 @media screen and (min-width: 1440px) {
   .header .container .navigation {
-    flex-grow: 1;
+    flex-grow: 4;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
 }
@@ -206,11 +204,12 @@ body.no-scroll {
 @media screen and (min-width: 1440px) {
   .header .container .navigation .header-logo {
     display: block;
-    flex-grow: 7;
+    flex-grow: 1;
     width: 100px;
     height: 60px;
     position: relative;
     opacity: 1;
+    outline: 1px dotted yellowgreen;
   }
   .header .container .navigation .header-logo__img {
     position: absolute;
@@ -225,11 +224,12 @@ body.no-scroll {
 }
 @media screen and (min-width: 1440px) {
   .header .container .navigation .nav-list {
-    flex-grow: 4;
+    flex-grow: 3;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 29px;
+    gap: 0;
   }
 }
 .header .container .navigation .nav-list__item:hover .nav-list__link {
@@ -254,32 +254,37 @@ body.no-scroll {
   color: #FFFFFF;
 }
 .header .container .lang-list {
-  padding: 10px;
-  width: 101px;
+  flex-grow: 1;
   height: 48px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 10px;
+}
+.header .container .lang-list__item {
+  padding: 5px 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 8px 0px #FFFFFF, 0px 0px 0px 1px #8e32c6;
+  box-shadow: 0px 0px 8px 0px #FFFFFF;
 }
 .header .container .lang-list__item:hover .lang-list__link {
   color: #c33bde;
   transform: scale(1.1);
 }
 .header .container .lang-list__link {
+  padding: 0 5px;
   color: #dcdcdc;
   display: flex;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.25;
   color: #dcdcdc;
+  border-radius: 8px;
   transition: transform, color, 300ms ease-in-out;
 }
 .header .container .lang-list__link--active {
   font-weight: 400;
   color: #ffcdd5;
+  box-shadow: 0px 0px 8px 0px #ffcdd5;
 }
 
 .hero {
