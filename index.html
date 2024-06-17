@@ -10,6 +10,18 @@
     <!--! Завантаження іконки до назви сторінки (вкладки) title -->
     <link href="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/16/external-nike-an-american-multinational-corporation-footwear-apparel-equipment-accessories-and-services-fashion-duo-tal-revivo.png" type="image/x-icon" rel="shortcut icon">
 
+    <!--! Бібліотека анімації animate -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!--! Бібліотека анімації AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+    />
+
     <!--! Завантаження modern-normalize -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" 
@@ -115,7 +127,16 @@
                     </a>
                     <p class="hero__logo-text">С&R</p>
                     <h1 class="hero__title">ColoRawe</h1>
-                    <h2 class="hero__title-second">Your dream Nike</h2>
+                    <!-- <h2 class="hero__title-second">Your dream Nike</h2> -->
+                    <!--? Використання бібліотеки анімації AOS -->
+                    <h2 
+                        class="hero__title-second"
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                    >
+                        Your dream Nike
+                    </h2>
                     <p class="hero__text">
                         On this site you can find custom Nike sneakers of your dreams. 
                         The original company can`t create such beautiful <br>
@@ -389,6 +410,12 @@
 
     <!--! Скріпт  відкриття/закриття модального бургер-меню -->
     <script src="./js/mobile-burger-menu.js"></script>
+
+    <!--! Скрипт бібліотекі анімації AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
