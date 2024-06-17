@@ -28,10 +28,12 @@ body {
             color: getColor('light');
     }
 
-    &.no-scroll {
-        overflow: hidden;
-        pointer-events: none;
-        // background-color: getColor('background-brand');
+    @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+        &.no-scroll {
+            overflow: hidden;
+            pointer-events: none;
+            // background-color: getColor('background-brand');
+        }
     }
 }
 

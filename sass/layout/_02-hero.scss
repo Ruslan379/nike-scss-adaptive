@@ -4,6 +4,7 @@
 // ? section hero (BEM+SASS)
 .hero {
     position: relative;
+    height: 738px;
     background-image: if($adaptive, url(../images/hero_background-360.jpg), url(../images/hero_background-1440.jpg));
     background-color: getColor('background-brand');
         background-repeat: no-repeat;
@@ -22,7 +23,7 @@
         // padding-bottom: 183px; //todo OLD
         padding-bottom: 273px;
         // height: 858px; //todo OLD
-        // height: 948px;
+        height: 948px;
         background-image: url(../images/hero_background-1440.jpg);
     }
 

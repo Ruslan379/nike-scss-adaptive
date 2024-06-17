@@ -66,23 +66,25 @@
                 @include flex-AIcen;
             }
             
-            .header-logo {
+            &__logo-box {
                 display: none;
                 // ! міксін outline
-                @include outline(1px, dotted, yellowgreen);
-                
+                // @include outline(1px, dashed, wheat);
+
                 @media screen and (min-width: getBreakPoint('desktop')) {
-                    display: block;
+                    display: flex;
+                    position: relative;
                     flex-grow: 1;
                     width: 100px;
                     height: 60px;
-                    position: relative;
                     //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
                     opacity: if($lang == ua, 0.7, 1.0);
                     
-                    &__img {
+                    .header-logo {
                         position: absolute;
                         top: 8px;
+                        // ! міксін outline
+                        // @include outline(1px, dotted, yellowgreen);
                     }
                 }
             }
@@ -149,9 +151,15 @@
                 // @include outline(1px, dashed, yellow);
             }
             
-            &__item:hover .lang-list__link {
+            &__item:hover .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('brand-hover');
                 transform: scale(1.1);
+            }
+
+            &__item:hover .lang-list__link--active {
+                // cursor: none;
+                // cursor: not-allowed;
+                pointer-events: none;
             }
 
             &__link {
