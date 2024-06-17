@@ -269,7 +269,10 @@ body {
 .header .container .lang-list__item {
   padding: 5px 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 8px 0px #FFFFFF;
+  box-shadow: 0px 0px 4px 0px #FFFFFF;
+}
+.header .container .lang-list__item:has(.lang-list__link--active) {
+  box-shadow: 0px 0px 12px 0px #FFFFFF;
 }
 .header .container .lang-list__item:hover .lang-list__link:not(.lang-list__link--active) {
   color: #c33bde;
