@@ -22,21 +22,52 @@
     //? Aнімація-1
     transition: 
         all, 
-        300ms 
+        2300ms 
         ease-in-out;
     // ! міксін outline
     @include outline(1px, solid, red);
 
-    &.is-open {
-        @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+    // todo old
+    // &.is-open {
+    //     @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+    //         // display: block;
+    //         opacity: 1;
+    //         transform: translateX(-50%);
+    //         pointer-events: all;
+
+    //         // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active)  {
+    //         //     opacity: 0;
+    //         //     transform: translate(-50%, -100%);
+    //         // }
+    //     }
+    // }
+
+    
+    @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+        &.is-open {
             // display: block;
             opacity: 1;
             transform: translateX(-50%);
             pointer-events: all;
 
             // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active)  {
-
+            //     opacity: 1;
+            //     transform: translateX(-50%);
             // }
+        }
+
+        // !
+        // &:has(.lang-list__item:has(.lang-list__link--active):active)  {
+        //     opacity: 1;
+        //     transform: translateX(-50%);
+        //     background-color: white;
+        // }
+
+        // *
+        &:has(.lang-list__item:not(.lang-list__link--active):active)  {
+            opacity: 0;
+            transform: translate(-50%, -100%);
+            // background-color: white;
         }
     }
 
@@ -175,11 +206,6 @@
             &__item:not(:has(.lang-list__link--active)):active {
                 color: getColor('light');
                 transform: scale(0.9);
-
-                @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
-
-                }
-
             }
 
             &__item:hover .lang-list__link:not(.lang-list__link--active) {
