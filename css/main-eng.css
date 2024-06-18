@@ -149,29 +149,31 @@ body {
 }
 
 .header {
-  display: none;
+  opacity: 0;
   padding-top: 91px;
   padding-bottom: 104px;
   position: fixed;
   z-index: 2;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-150%);
   width: 100%;
   max-width: 100vw;
   background-color: rgba(2, 22, 53, 0.9);
   box-shadow: inset 0px 0px 60px -3px #000000;
+  transition: all, 300ms ease-in-out;
   outline: 1px solid red;
 }
 @media screen and (max-width: calc(768px - 1px)) {
   .header.is-open {
-    display: block;
+    opacity: 1;
+    transform: translateX(-50%);
     pointer-events: all;
   }
 }
 @media screen and (min-width: 1440px) {
   .header {
-    display: block;
+    opacity: 1;
     padding-top: 15px;
     padding-bottom: 15px;
     left: 0;
