@@ -33,6 +33,10 @@
             opacity: 1;
             transform: translateX(-50%);
             pointer-events: all;
+
+            // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active)  {
+
+            // }
         }
     }
 
@@ -160,11 +164,6 @@
                 // @include outline(1px, dashed, yellow);
             }
 
-            // &__item:not(:has(.lang-list__link--active)) {
-            //     // ! міксін outline
-            //     @include outline(1px, dashed, orange);
-            // }
-
             &__item:has(.lang-list__link--active) {
                 box-shadow: 
                     0px 0px 12px 0px getColor('light');
@@ -172,18 +171,30 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, orange);
             }
+            // !
+            &__item:not(:has(.lang-list__link--active)):active {
+                color: getColor('light');
+                transform: scale(0.9);
+
+                @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+
+                }
+
+            }
 
             &__item:hover .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('brand-hover');
                 transform: scale(1.1);
             }
-
+            &__item:active .lang-list__link:not(.lang-list__link--active) {
+                color: getColor('light');
+            }
             &__item:hover .lang-list__link--active {
                 // cursor: none;
                 // cursor: not-allowed;
                 pointer-events: none;
             }
-
+            
             &__link {
                 padding: 0 5px;
                 color: getColor('font-second');

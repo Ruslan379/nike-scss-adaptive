@@ -276,9 +276,16 @@ body {
 .header .container .lang-list__item:has(.lang-list__link--active) {
   box-shadow: 0px 0px 12px 0px #FFFFFF;
 }
+.header .container .lang-list__item:not(:has(.lang-list__link--active)):active {
+  color: #FFFFFF;
+  transform: scale(0.9);
+}
 .header .container .lang-list__item:hover .lang-list__link:not(.lang-list__link--active) {
   color: #c33bde;
   transform: scale(1.1);
+}
+.header .container .lang-list__item:active .lang-list__link:not(.lang-list__link--active) {
+  color: #FFFFFF;
 }
 .header .container .lang-list__item:hover .lang-list__link--active {
   pointer-events: none;
