@@ -64,10 +64,11 @@
         // }
 
         // *
-        &:has(.lang-list__item:not(.lang-list__link--active):active)  {
-            opacity: 0;
-            transform: translate(-50%, -100%);
-            // background-color: white;
+        &:has(.lang-list__item:active) { 
+        // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active) { 
+            // opacity: 0;
+            // transform: translate(-50%, -100%);
+            background-color: white;
         }
     }
 
@@ -202,19 +203,22 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, orange);
             }
-            // !
+            //! Подія :active ТІЛЬКИ на елементі без посилання з класом .lang-list__link--active
             &__item:not(:has(.lang-list__link--active)):active {
                 color: getColor('light');
                 transform: scale(0.9);
             }
-
+            //! При :hover на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
             &__item:hover .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('brand-hover');
                 transform: scale(1.1);
             }
+            //! При :active на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
             &__item:active .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('light');
             }
+            //! При :hover на елементі - блокуэ події ТІЛЬКИ на посиланні з класом .lang-list__link--active
+            // &__item .lang-list__link--active:active,
             &__item:hover .lang-list__link--active {
                 // cursor: none;
                 // cursor: not-allowed;
