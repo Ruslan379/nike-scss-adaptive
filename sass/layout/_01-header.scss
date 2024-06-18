@@ -64,12 +64,12 @@
         // }
 
         // *
-        &:has(.lang-list__item:active) { 
-        // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active) { 
-            // opacity: 0;
-            // transform: translate(-50%, -100%);
-            background-color: white;
-        }
+        // &:has(.lang-list__item:active) { 
+        // // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active) { 
+        //     // opacity: 0;
+        //     // transform: translate(-50%, -100%);
+        //     background-color: white;
+        // }
     }
 
     @media screen and (min-width: getBreakPoint('desktop')) {
@@ -195,34 +195,34 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, yellow);
             }
-
+            //! Спрацює ТІЛЬКИ елементі з посиланням з класом .lang-list__link--active
             &__item:has(.lang-list__link--active) {
                 box-shadow: 
                     0px 0px 12px 0px getColor('light');
-                    // 0px 0px 0px 1px getColor('buttons-background');
                 // ! міксін outline
                 // @include outline(1px, dashed, orange);
-            }
-            //! Подія :active ТІЛЬКИ на елементі без посилання з класом .lang-list__link--active
-            &__item:not(:has(.lang-list__link--active)):active {
-                color: getColor('light');
-                transform: scale(0.9);
             }
             //! При :hover на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
             &__item:hover .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('brand-hover');
                 transform: scale(1.1);
             }
-            //! При :active на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
-            &__item:active .lang-list__link:not(.lang-list__link--active) {
-                color: getColor('light');
-            }
-            //! При :hover на елементі - блокуэ події ТІЛЬКИ на посиланні з класом .lang-list__link--active
-            // &__item .lang-list__link--active:active,
-            &__item:hover .lang-list__link--active {
+            //todo При :hover на елементі - блокуэ події ТІЛЬКИ на посиланні з класом .lang-list__link--active
+            // &__item:hover .lang-list__link--active {
+            //!  При :hover на елементі ТІЛЬКИ з посиланням з класом .lang-list__link--active БЛОКУЭ події на посиланнях з класом .lang-list__link
+            &__item:has(.lang-list__link--active):hover .lang-list__link {
                 // cursor: none;
                 // cursor: not-allowed;
                 pointer-events: none;
+            }
+            //! Подія :active ТІЛЬКИ на елементі без посилання з класом .lang-list__link--active
+            &__item:not(:has(.lang-list__link--active)):active {
+                color: getColor('light');
+                transform: scale(0.9);
+            }
+            //! При :active на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
+            &__item:active .lang-list__link:not(.lang-list__link--active) {
+                color: getColor('light');
             }
             
             &__link {
