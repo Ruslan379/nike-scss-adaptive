@@ -202,7 +202,7 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, orange);
             }
-            //! При :hover на елементі - спрацює ТІЛЬКИ на посиланні без класу .lang-list__link--active
+            //! При :hover на елементі - спрацює ТІЛЬКИ на посиланнях без класу .lang-list__link--active
             &__item:hover .lang-list__link:not(.lang-list__link--active) {
                 color: getColor('brand-hover');
                 transform: scale(1.1);
