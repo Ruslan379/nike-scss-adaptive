@@ -22,7 +22,7 @@
     //? Aнімація-1
     transition: 
         all, 
-        2300ms 
+        500ms 
         ease-in-out;
     // ! міксін outline
     @include outline(1px, solid, red);
@@ -42,7 +42,6 @@
     //     }
     // }
 
-    
     @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
         &.is-open {
             // display: block;
@@ -50,24 +49,37 @@
             transform: translateX(-50%);
             pointer-events: all;
 
-            // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active)  {
-            //     opacity: 1;
-            //     transform: translateX(-50%);
-            // }
+            // //* var.1.1 - Працює, але не всіх елементах
+            &:has(.lang-list__item:active) { 
+                opacity: 0;
+                // transform: translate(-50%, -100%);
+                // background-color: white;
+            }
         }
 
-        // !
-        // &:has(.lang-list__item:has(.lang-list__link--active):active)  {
-        //     opacity: 1;
-        //     transform: translateX(-50%);
+        //! var.2 - НЕ ПРАЦЮЄ
+        // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active) { 
+        //     // opacity: 0;
+        //     // transform: translate(-50%, -100%);
         //     background-color: white;
         // }
 
-        // *
-        // &:has(.lang-list__item:active) { 
-        // // &:has(.lang-list__item:not(:has(.lang-list__link--active)):active) { 
-        //     // opacity: 0;
-        //     // transform: translate(-50%, -100%);
+        //! var.3 - ChatGPT - НЕ ПРАЦЮЄ
+        // .lang-list {
+        //     &__item {
+        //         &:hover {
+        //             background-color: lightblue; // Для визуального эффекта при наведении
+        //         }
+        
+        //         &:hover:not(:has(.lang-list__link--active)) {
+        //             // Этот код не сработает, но показывает намерение
+        //             background-color: lightcoral; // Для визуального эффекта при наведении
+        //         }
+        //     }
+        // }
+
+        //! var.4 - ChatGPT + JS - ПРАЦЮЄ тільки при повному кліку
+        // &.active-bg {
         //     background-color: white;
         // }
     }
