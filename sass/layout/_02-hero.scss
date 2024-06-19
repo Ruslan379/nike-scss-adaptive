@@ -17,7 +17,7 @@
         background-size: if($adaptive, auto, cover);
 
     @media screen and (min-width: getBreakPoint('desktop')) {
-        position: static;
+        // position: static;
         // margin-top: 92px; //! для Фіксований header 
         padding-top: 94px;
         // padding-bottom: 183px; //todo OLD
