@@ -194,6 +194,7 @@
 
     &__logo-text {
         margin-top: -19px;
+        margin-bottom: 5px;
         margin-left: 22px;
         width: 52px;
         height: 27px;
@@ -202,34 +203,41 @@
         line-height: 1.4;
         // ! міксін outline
         @include outline(1px, solid, red);
-    }
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
+        @media screen and (min-width: getBreakPoint('desktop')) {
             margin-top: -35px;
+            margin-bottom: 0;
             margin-left: 30px;
             width: 178px;
             height: 86px;
-            font-family: getFont('third-family');
             font-size: 48px;
-            line-height: 1.4;
             // ! міксін outline
-            // @include outline(1px, solid, yellow);
+            @include outline(1px, solid, yellow);
+        }
     }
-    
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
-        &__title {
+    &__title {
+        // width: 305px;
+        margin-left: 7px;
+        font-family: getFont('second-family');
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 1.4;
+        // ! міксін outline
+        @include outline(1px, dashed, wheat);
+
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            // width: 640px;
             margin-top: -46px;
             margin-left: -9px;
-            font-family: getFont('second-family');
-            font-weight: 400;
+            // font-family: getFont('second-family');
+            // font-weight: 400;
             font-size: 144px;
             line-height: 1.33;
             // ! міксін outline
-            // @include outline(1px, dashed, wheat);
+            @include outline(1px, dashed, orange);
         }
     }
-    
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         &__title-second {
