@@ -239,20 +239,32 @@
         }
     }
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
-        &__title-second {
+    &__title-second {
+        width: 270px;
+        margin-top: -21px;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        font-family: getFont('second-family');
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1.335;
+        // ! міксін outline
+        @include outline(1px, dashed, #b3f5b3);
+
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            // width: 540px;
             margin-top: -36px;
             margin-bottom: 12px;
             margin-left: -1px;
-            font-family: getFont('second-family');
-            font-weight: 400;
+            // font-family: getFont('second-family');
+            // font-weight: 400;
             font-size: 72px;
             line-height: 1.337;
             // ! міксін outline
-            // @include outline(1px, dashed, #b3f5b3);
+            @include outline(1px, dashed, #f5b3b3);
         }
     }
-    
+
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         &__text {
