@@ -487,9 +487,9 @@ body {
   }
 }
 .hero__text {
-  width: 305px;
   margin-bottom: 41px;
   margin-left: -1px;
+  width: 319px;
   font-size: 18px;
   line-height: 1.17;
   outline: 1px dashed #f5b3b3;
