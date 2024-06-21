@@ -485,6 +485,14 @@ body {
     outline: 1px dashed #f5b3b3;
   }
 }
+.hero__text {
+  width: 305px;
+  margin-bottom: 41px;
+  margin-left: -1px;
+  font-size: 18px;
+  line-height: 1.17;
+  outline: 1px dashed #f5b3b3;
+}
 @media screen and (min-width: 1440px) {
   .hero__text {
     margin-bottom: 41px;
@@ -492,6 +500,7 @@ body {
     width: 508px;
     font-size: 18px;
     line-height: 1.17;
+    outline: 1px dashed #b3f5e5;
   }
 }
 @media screen and (min-width: 1440px) {

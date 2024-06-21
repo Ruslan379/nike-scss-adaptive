@@ -230,8 +230,6 @@
             // width: 640px;
             margin-top: -46px;
             margin-left: -9px;
-            // font-family: getFont('second-family');
-            // font-weight: 400;
             font-size: 144px;
             line-height: 1.33;
             // ! міксін outline
@@ -256,8 +254,6 @@
             margin-top: -36px;
             margin-bottom: 12px;
             margin-left: -1px;
-            // font-family: getFont('second-family');
-            // font-weight: 400;
             font-size: 72px;
             line-height: 1.337;
             // ! міксін outline
@@ -265,20 +261,32 @@
         }
     }
 
+    &__text {
+        width: 305px;
+        margin-bottom: 41px;
+        margin-left: -1px;
+        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+        // width: if($lang == ua, 612px, 305px);
+        font-size: 18px;
+        line-height: 1.17;
+        // ! міксін outline
+        @include outline(1px, dashed, #f5b3b3);
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
-        &__text {
-            margin-bottom: 41px;
-            margin-left: -1px;
-            // width: 508px;
-            //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-            width: if($lang == ua, 612px, 508px);
-            font-size: 18px;
-            line-height: 1.17;
-            // ! міксін outline
-            // @include outline(1px, dashed, #f5b3b3);
+        @media screen and (min-width: getBreakPoint('desktop')) {
+                // width: 508px;
+                margin-bottom: 41px;
+                margin-left: -1px;
+                //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                width: if($lang == ua, 612px, 508px);
+                font-size: 18px;
+                line-height: 1.17;
+                // ! міксін outline
+                @include outline(1px, dashed, #b3f5e5);
         }
     }
+
+
+    
     
 
     @media screen and (min-width: getBreakPoint('desktop')) {
