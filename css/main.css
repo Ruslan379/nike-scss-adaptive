@@ -508,8 +508,16 @@ body {
     outline: 1px dashed #b3f5e5;
   }
 }
+.hero__button-link {
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  width: 238px;
+  height: 57px;
+}
 @media screen and (min-width: 1440px) {
   .hero__button-link {
+    margin: 0;
     width: 254px;
     height: 67px;
   }

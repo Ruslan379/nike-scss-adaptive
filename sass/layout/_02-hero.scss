@@ -270,7 +270,7 @@
         line-height: 1.17;
         // ! міксін outline
         @include outline(1px, dashed, #f5b3b3);
-
+        
         @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
             // margin-left: -10px;
             margin-left: if($lang == ua, -14px, -10px);
@@ -289,11 +289,18 @@
         }
     }
 
+    &__button-link {
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+        // @extend %buttons;
+        // @extend .buttons;
+        width: 238px;
+        height: 57px;
+        // padding: 20px 61px 19px;
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
-        &__button-link {
-            // @extend %buttons;
-            // @extend .buttons;
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            margin: 0;
             width: 254px;
             height: 67px;
             // padding: 20px 61px 19px;
