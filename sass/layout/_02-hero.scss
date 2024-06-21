@@ -124,11 +124,10 @@
         animation-play-state: paused;
     }
 
-    .container {
-        // position: relative;
-        // ! міксін outline
-        @include outline(1px, dashed, yellow);
-    }
+    // .container {
+    //     // ! міксін outline
+    //     @include outline(1px, dashed, yellow);
+    // }
 
     //! Кнопка burger-menu (open + close)
     .burger-menu-buttons {
@@ -180,14 +179,14 @@
         width: 96px;
         height: 72px;
         // ! міксін outline
-        @include outline(1px, dashed, yellow);
+        // @include outline(1px, dashed, yellow);
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             margin-left: 5px;
             width: 160px;
             height: 120px;
             // ! міксін outline
-            @include outline(1px, dashed, yellowgreen);
+            // @include outline(1px, dashed, yellowgreen);
         }
     }
 
@@ -201,7 +200,7 @@
         font-size: 24px;
         line-height: 1.4;
         // ! міксін outline
-        @include outline(1px, solid, red);
+        // @include outline(1px, solid, red);
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             margin-top: -35px;
@@ -211,7 +210,7 @@
             height: 86px;
             font-size: 48px;
             // ! міксін outline
-            @include outline(1px, solid, yellow);
+            // @include outline(1px, solid, yellow);
         }
     }
 
@@ -223,7 +222,7 @@
         font-size: 64px;
         line-height: 1.4;
         // ! міксін outline
-        @include outline(1px, dashed, wheat);
+        // @include outline(1px, dashed, wheat);
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             width: 640px;
@@ -232,7 +231,7 @@
             font-size: 144px;
             line-height: 1.33;
             // ! міксін outline
-            @include outline(1px, dashed, orange);
+            // @include outline(1px, dashed, orange);
         }
     }
 
@@ -246,7 +245,7 @@
         font-size: 36px;
         line-height: 1.335;
         // ! міксін outline
-        @include outline(1px, dashed, #b3f5b3);
+        // @include outline(1px, dashed, #b3f5b3);
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             width: 540px;
@@ -256,7 +255,7 @@
             font-size: 72px;
             line-height: 1.337;
             // ! міксін outline
-            @include outline(1px, dashed, #f5b3b3);
+            // @include outline(1px, dashed, #f5b3b3);
         }
     }
 
@@ -269,7 +268,7 @@
         font-size: 18px;
         line-height: 1.17;
         // ! міксін outline
-        @include outline(1px, dashed, #f5b3b3);
+        // @include outline(1px, dashed, #f5b3b3);
         
         @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
             // margin-left: -10px;
@@ -285,13 +284,13 @@
                 // font-size: 18px;
                 // line-height: 1.17;
                 // ! міксін outline
-                @include outline(1px, dashed, #b3f5e5);
+                // @include outline(1px, dashed, #b3f5e5);
         }
     }
 
     &__button-link {
         position: relative;
-        z-index: 3;
+        z-index: 2;
         margin: 0 auto;
         // @extend %buttons;
         // @extend .buttons;

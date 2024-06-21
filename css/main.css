@@ -153,7 +153,7 @@ body {
   padding-top: 91px;
   padding-bottom: 104px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 50%;
   transform: translateX(-150%);
@@ -374,9 +374,6 @@ body {
 .hero:hover::after, .hero:hover::before {
   animation-play-state: paused;
 }
-.hero .container {
-  outline: 1px dashed yellow;
-}
 .hero .burger-menu-buttons {
   display: none;
 }
@@ -415,14 +412,12 @@ body {
   display: block;
   width: 96px;
   height: 72px;
-  outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
   .hero-logo {
     margin-left: 5px;
     width: 160px;
     height: 120px;
-    outline: 1px dashed yellowgreen;
   }
 }
 .hero__logo-text {
@@ -434,7 +429,6 @@ body {
   font-family: "PT Serif";
   font-size: 24px;
   line-height: 1.4;
-  outline: 1px solid red;
 }
 @media screen and (min-width: 1440px) {
   .hero__logo-text {
@@ -444,7 +438,6 @@ body {
     width: 178px;
     height: 86px;
     font-size: 48px;
-    outline: 1px solid yellow;
   }
 }
 .hero__title {
@@ -453,7 +446,6 @@ body {
   font-weight: 400;
   font-size: 64px;
   line-height: 1.4;
-  outline: 1px dashed wheat;
 }
 @media screen and (min-width: 1440px) {
   .hero__title {
@@ -462,7 +454,6 @@ body {
     margin-left: -9px;
     font-size: 144px;
     line-height: 1.33;
-    outline: 1px dashed orange;
   }
 }
 .hero__title-second {
@@ -474,7 +465,6 @@ body {
   font-weight: 400;
   font-size: 36px;
   line-height: 1.335;
-  outline: 1px dashed #b3f5b3;
 }
 @media screen and (min-width: 1440px) {
   .hero__title-second {
@@ -484,7 +474,6 @@ body {
     margin-left: -1px;
     font-size: 72px;
     line-height: 1.337;
-    outline: 1px dashed #f5b3b3;
   }
 }
 .hero__text {
@@ -493,7 +482,6 @@ body {
   margin-left: 10px;
   font-size: 18px;
   line-height: 1.17;
-  outline: 1px dashed #f5b3b3;
 }
 @media screen and (max-width: calc(360px - 1px)) {
   .hero__text {
@@ -505,12 +493,11 @@ body {
     width: 508px;
     margin-bottom: 41px;
     margin-left: -1px;
-    outline: 1px dashed #b3f5e5;
   }
 }
 .hero__button-link {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   margin: 0 auto;
   width: 238px;
   height: 57px;
