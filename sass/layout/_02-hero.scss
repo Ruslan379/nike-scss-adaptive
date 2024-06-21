@@ -250,7 +250,7 @@
         @include outline(1px, dashed, #b3f5b3);
 
         @media screen and (min-width: getBreakPoint('desktop')) {
-            // width: 540px;
+            width: 540px;
             margin-top: -36px;
             margin-bottom: 12px;
             margin-left: -1px;
