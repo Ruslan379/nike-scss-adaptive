@@ -5,6 +5,8 @@
 .hero {
     position: relative;
     height: 738px;
+    padding-top: 33px;
+    padding-bottom: 212px;
     background-image: if($adaptive, url(../images/hero_background-360.jpg), url(../images/hero_background-1440.jpg));
     background-color: getColor('background-brand');
         background-repeat: no-repeat;
@@ -166,7 +168,6 @@
                 stroke: getColor('buttons-background');
                 // fill: red;
                 // stroke: red;
-                
             }
 
             &.is-open .icon-burger-menu-button-open {
@@ -174,19 +175,23 @@
             }
         }
     }
-    
 
-    @media screen and (min-width: getBreakPoint('desktop')) {
-        &-logo {
+    &-logo {
+        display: block;
+        width: 96px;
+        height: 72px;
+        // ! міксін outline
+        @include outline(1px, dashed, yellow);
+
+        @media screen and (min-width: getBreakPoint('desktop')) {
             margin-left: 5px;
             display: block;
             width: 160px;
             height: 120px;
             // ! міксін outline
-            // @include outline(1px, dotted, yellow);
+            @include outline(1px, dashed, yellowgreen);
         }
     }
-    
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         &__logo-text {
