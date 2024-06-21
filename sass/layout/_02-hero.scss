@@ -216,7 +216,7 @@
     }
 
     &__title {
-        width: 305px;
+        // width: 305px;
         margin-left: 7px;
         font-family: getFont('second-family');
         font-weight: 400;
@@ -262,23 +262,28 @@
 
     &__text {
         // width: 305px;
-        margin-bottom: 41px;
-        margin-left: -1px;
         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-        width: if($lang == ua, 319px, 305px);
+        width: if($lang == ua, 314px, 305px);
+        margin-bottom: 71px;
+        margin-left: 10px;
         font-size: 18px;
         line-height: 1.17;
         // ! міксін outline
         @include outline(1px, dashed, #f5b3b3);
+
+        @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
+            // margin-left: -10px;
+            margin-left: if($lang == ua, -14px, -10px);
+        }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
                 // width: 508px;
-                margin-bottom: 41px;
-                margin-left: -1px;
                 //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
                 width: if($lang == ua, 612px, 508px);
-                font-size: 18px;
-                line-height: 1.17;
+                margin-bottom: 41px;
+                margin-left: -1px;
+                // font-size: 18px;
+                // line-height: 1.17;
                 // ! міксін outline
                 @include outline(1px, dashed, #b3f5e5);
         }
