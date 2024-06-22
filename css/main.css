@@ -329,10 +329,12 @@ body {
     background-image: url(../images/hero_background-1440.jpg);
   }
 }
+.hero::after {
+  content: "";
+  position: absolute;
+}
 @media screen and (min-width: 1440px) {
   .hero::after {
-    content: "";
-    position: absolute;
     width: 837px;
     height: 403px;
     bottom: 0;
@@ -348,11 +350,15 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
+}
+.hero::before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  display: none;
+}
+@media screen and (min-width: 1440px) {
   .hero::before {
-    z-index: 1;
-    content: "";
-    display: none;
-    position: absolute;
     width: 115px;
     height: 60px;
     bottom: 0;
