@@ -398,8 +398,10 @@ body {
     animation-direction: alternate;
   }
 }
-.hero:hover::after, .hero:hover::before {
-  animation-play-state: paused;
+@media screen and (min-width: 1440px) {
+  .hero:hover::after, .hero:hover::before {
+    animation-play-state: paused;
+  }
 }
 .hero .burger-menu-buttons {
   display: none;

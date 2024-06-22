@@ -139,10 +139,12 @@
         }
     }
 
-    // ? +++++ Пауза в анімації +++++
-    &:hover::after,
-    &:hover::before {
-        animation-play-state: paused;
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        // ? +++++ Пауза в анімації +++++
+        &:hover::after,
+        &:hover::before {
+            animation-play-state: paused;
+        }
     }
 
     // .container {
