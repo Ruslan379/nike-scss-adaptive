@@ -20,13 +20,12 @@
         background-size: if($adaptive, auto, cover);
 
     @media screen and (min-width: getBreakPoint('desktop')) {
-        // position: static;
-        // margin-top: 92px; //! для Фіксований header 
+        // height: 858px; //todo OLD
+        height: 948px;
+        margin-top: 92px; //! для Фіксований header 
         padding-top: 94px;
         // padding-bottom: 183px; //todo OLD
         padding-bottom: 273px;
-        // height: 858px; //todo OLD
-        height: 948px;
         background-image: url(../images/hero_background-desktop.jpg);
     }
 
@@ -39,18 +38,17 @@
         right: calc(50%);
         bottom: 90px;
         // transform: rotate(-30deg);
-        background-image: url(../images/hero_background-sneaker-mobile.png);
-        background-size: auto;
-        // background-size: cover;
-        background-repeat: no-repeat;
-        // //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
         transform: 
             if(
                 $lang == ua, 
                 translate(43%, 32px) rotate(-53deg) scaleX(-1),
                 translate(53%, 5px) rotate(-33deg)
             );
-        // //todo Анімація-2
+        background-image: url(../images/hero_background-sneaker-mobile.png);
+        background-size: auto;
+        background-repeat: no-repeat;
+        //todo Анімація-2
         //* 1.Назва анімації
         animation-name: pulse-sneaker-after-mobile;
         //* 2.Тривалість анімації/
@@ -66,17 +64,9 @@
         // @include outline(1px, dotted, yellowgreen);
 
         @media screen and (min-width: getBreakPoint('desktop')) {
-            // content: "";
-            // position: absolute;
             width: 837px;
             height: 403px;
-            // left: auto;
-            // right: calc(50%);
             bottom: 0;
-            background-image: url(../images/hero_background-sneaker-desktop.png);
-            // background-size: auto;
-            background-size: cover;
-            // background-repeat: no-repeat;
             // transform-origin: bottom left; //! eng
             // transform-origin: bottom right; //! ua
             //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
@@ -91,6 +81,8 @@
                     translate(10%, -1px) rotate(-41deg) scaleX(-1), 
                     translate(91%, -1px) rotate(-30deg)
                 );
+            background-image: url(../images/hero_background-sneaker-desktop.png);
+            background-size: cover;
             //todo Анімація-2
             //* 1.Назва анімації
             animation-name: pulse-sneaker-after-desktop;
@@ -154,9 +146,6 @@
     }
 
     // .container {
-    //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-    //     position: if($adaptive, relative, static);
-    //     overflow: if($adaptive, hidden, visible);
     //     //! міксін outline
     //     @include outline(1px, dashed, yellow);
     // }

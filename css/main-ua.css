@@ -173,7 +173,6 @@ body {
   background-color: rgba(2, 22, 53, 0.9);
   box-shadow: inset 0px 0px 60px -3px #000000;
   transition: all, 500ms ease-in-out;
-  outline: 1px solid red;
 }
 @media screen and (max-width: calc(768px - 1px)) {
   .header.is-open {
@@ -335,9 +334,10 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .hero {
+    height: 948px;
+    margin-top: 92px;
     padding-top: 94px;
     padding-bottom: 273px;
-    height: 948px;
     background-image: url(../images/hero_background-desktop.jpg);
   }
 }
@@ -348,10 +348,10 @@ body {
   height: 246px;
   right: 50%;
   bottom: 90px;
+  transform: translate(43%, 32px) rotate(-53deg) scaleX(-1);
   background-image: url(../images/hero_background-sneaker-mobile.png);
   background-size: auto;
   background-repeat: no-repeat;
-  transform: translate(43%, 32px) rotate(-53deg) scaleX(-1);
   animation-name: pulse-sneaker-after-mobile;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -363,10 +363,10 @@ body {
     width: 837px;
     height: 403px;
     bottom: 0;
-    background-image: url(../images/hero_background-sneaker-desktop.png);
-    background-size: cover;
     transform-origin: bottom right;
     transform: translate(10%, -1px) rotate(-41deg) scaleX(-1);
+    background-image: url(../images/hero_background-sneaker-desktop.png);
+    background-size: cover;
     animation-name: pulse-sneaker-after-desktop;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
