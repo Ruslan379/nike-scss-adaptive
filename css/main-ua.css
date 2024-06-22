@@ -447,9 +447,16 @@ body {
   font-size: 64px;
   line-height: 1.4;
 }
+@media screen and (max-width: calc(360px - 1px)) {
+  .hero__title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 @media screen and (min-width: 1440px) {
   .hero__title {
-    width: 640px;
+    width: 650px;
     margin-top: -46px;
     margin-left: -9px;
     font-size: 144px;
@@ -465,6 +472,13 @@ body {
   font-weight: 400;
   font-size: 36px;
   line-height: 1.335;
+}
+@media screen and (max-width: calc(360px - 1px)) {
+  .hero__title-second {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1440px) {
   .hero__title-second {
@@ -485,7 +499,7 @@ body {
 }
 @media screen and (max-width: calc(360px - 1px)) {
   .hero__text {
-    margin-left: -14px;
+    margin-left: calc(-15px + (100vw - 320px) * 0.5);
   }
 }
 @media screen and (min-width: 1440px) {

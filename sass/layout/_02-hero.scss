@@ -223,9 +223,17 @@
         line-height: 1.4;
         // ! міксін outline
         // @include outline(1px, dashed, wheat);
+
+        @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
-            width: 640px;
+            // width: 640px;
+            //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+            width: if($lang == ua, 650px, 640px);
             margin-top: -46px;
             margin-left: -9px;
             font-size: 144px;
@@ -246,6 +254,12 @@
         line-height: 1.335;
         // ! міксін outline
         // @include outline(1px, dashed, #b3f5b3);
+
+        @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             width: 540px;
@@ -262,7 +276,7 @@
     &__text {
         // width: 305px;
         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-        width: if($lang == ua, 314px, 305px);
+        width: if($lang == ua, 314px, 304px);
         margin-bottom: 71px;
         margin-left: 10px;
         font-size: 18px;
@@ -271,8 +285,12 @@
         // @include outline(1px, dashed, #f5b3b3);
         
         @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
-            // margin-left: -10px;
-            margin-left: if($lang == ua, -14px, -10px);
+            //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+            margin-left: if(
+                $lang == ua, 
+                calc(-15px + ((100vw - 320px) * 0.5)),
+                calc(-8px + ((100vw - 320px) * 0.5))
+                );
         }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
@@ -281,8 +299,6 @@
                 width: if($lang == ua, 612px, 508px);
                 margin-bottom: 41px;
                 margin-left: -1px;
-                // font-size: 18px;
-                // line-height: 1.17;
                 // ! міксін outline
                 // @include outline(1px, dashed, #b3f5e5);
         }
