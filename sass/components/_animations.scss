@@ -15,8 +15,37 @@
 }
 
 
-//todo Анімація-2 в hero:after
-@keyframes pulse-sneaker-after {
+//todo Анімація-2 в hero:after (mobile)
+@keyframes pulse-sneaker-after-mobile {
+    0% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(43%, 32px) rotate(-53deg) scaleX(-1),
+                translate(53%, 5px) rotate(-33deg)
+            );
+    }
+    50% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(43%, 32px) rotate(-54deg) scaleX(-1),
+                translate(53%, 5px) rotate(-34deg)
+            );
+    }
+    100% {
+        transform: 
+            if(
+                $lang == ua, 
+                translate(43%, 32px) rotate(-53deg) scaleX(-1),
+                translate(53%, 5px) rotate(-33deg)
+            );
+    }
+}
+
+
+//todo Анімація-2 в hero:after (desktop)
+@keyframes pulse-sneaker-after-desktop {
     0% {
         transform: 
             if(
@@ -44,8 +73,8 @@
 }
 
 
-//todo Анімація-2 в hero:before
-@keyframes pulse-sneaker-before {
+//todo Анімація-2 в hero:before (desktop)
+@keyframes pulse-sneaker-before-desktop {
     0% {
         transform: translate(166%, -100px) rotate(-37deg);
     }

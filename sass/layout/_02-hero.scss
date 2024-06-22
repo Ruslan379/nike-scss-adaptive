@@ -3,11 +3,12 @@
 // ? main
 // ? section hero (BEM+SASS)
 .hero {
+    overflow: hidden;
     position: relative;
     height: 738px;
     padding-top: 33px;
     padding-bottom: 212px;
-    background-image: if($adaptive, url(../images/hero_background-360.jpg), url(../images/hero_background-1440.jpg));
+    background-image: if($adaptive, url(../images/hero_background-mobile.jpg), url(../images/hero_background-desktop.jpg));
     background-color: getColor('background-brand');
         background-repeat: no-repeat;
         background-position: center bottom 0;
@@ -26,60 +27,56 @@
         padding-bottom: 273px;
         // height: 858px; //todo OLD
         height: 948px;
-        background-image: url(../images/hero_background-1440.jpg);
+        background-image: url(../images/hero_background-desktop.jpg);
     }
 
     &::after {
         content: "";
         position: absolute;
-        // width: 837px;
-        // height: 403px;
-        // bottom: 0;
-        // right: calc(50%);
-        // background-image: url(../images/hero_background-sneaker.png);
-        // // background-size: auto;
+        width: 510px;
+        height: 246px;
+        // left: -54px;
+        right: calc(50%);
+        bottom: 90px;
+        // transform: rotate(-30deg);
+        background-image: url(../images/hero_background-sneaker-mobile.png);
+        background-size: auto;
         // background-size: cover;
-        // background-repeat: no-repeat;
-        // // transform-origin: bottom left; //! eng
-        // // transform-origin: bottom right; //! ua
+        background-repeat: no-repeat;
         // //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-        // transform-origin: if($lang == ua, bottom right, bottom left);
-        // // transform: translate(40px, -1px) rotate(-30deg); //todo old
-        // // transform: translate(91%, -1px) rotate(-30deg); //! eng
-        // // transform: translate(10%, -1px) rotate(-40deg) scaleX(-1); //! ua
-        // //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-        // transform: 
-        //     if(
-        //         $lang == ua, 
-        //         translate(10%, -1px) rotate(-41deg) scaleX(-1), 
-        //         translate(91%, -1px) rotate(-30deg)
-        //     );
+        transform: 
+            if(
+                $lang == ua, 
+                translate(43%, 32px) rotate(-53deg) scaleX(-1),
+                translate(53%, 5px) rotate(-33deg)
+            );
         // //todo Анімація-2
-        // //* 1.Назва анімації
-        // animation-name: pulse-sneaker-after;
-        // //* 2.Тривалість анімації/
-        // animation-duration: 2s;
-        // //* 3.Функція розподілу часу
-        // animation-timing-function: ease-in-out;
-        // //* 5.Кількість повних повторень анімації - постійно
-        // animation-iteration-count: infinite;
-        // //* 6.Напрямок відтворення анімації
-        // // animation-direction: normal;
-        // animation-direction: alternate;
-        // // ! міксін outline
-        // // @include outline(1px, dotted, yellowgreen);
+        //* 1.Назва анімації
+        animation-name: pulse-sneaker-after-mobile;
+        //* 2.Тривалість анімації/
+        animation-duration: 2s;
+        //* 3.Функція розподілу часу
+        animation-timing-function: ease-in-out;
+        //* 5.Кількість повних повторень анімації - постійно
+        animation-iteration-count: infinite;
+        //* 6.Напрямок відтворення анімації
+        // animation-direction: normal;
+        animation-direction: alternate;
+        // ! міксін outline
+        // @include outline(1px, dotted, yellowgreen);
 
         @media screen and (min-width: getBreakPoint('desktop')) {
             // content: "";
             // position: absolute;
             width: 837px;
             height: 403px;
+            // left: auto;
+            // right: calc(50%);
             bottom: 0;
-            right: calc(50%);
-            background-image: url(../images/hero_background-sneaker.png);
+            background-image: url(../images/hero_background-sneaker-desktop.png);
             // background-size: auto;
             background-size: cover;
-            background-repeat: no-repeat;
+            // background-repeat: no-repeat;
             // transform-origin: bottom left; //! eng
             // transform-origin: bottom right; //! ua
             //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
@@ -96,7 +93,7 @@
                 );
             //todo Анімація-2
             //* 1.Назва анімації
-            animation-name: pulse-sneaker-after;
+            animation-name: pulse-sneaker-after-desktop;
             //* 2.Тривалість анімації/
             animation-duration: 2s;
             //* 3.Функція розподілу часу
@@ -111,56 +108,20 @@
         }
     }
 
-    
-
-    //! Вірний логотип кросівка для сторінки index-ua.html
-    &::before {
-        z-index: 1;
-        position: absolute;
-        content: "";
-        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-        display: if($lang == ua, block, none);
-        // width: 115px;
-        // height: 60px;
-        // bottom: 0;
-        // right: calc(50%);
-        // border-radius: 10px;
-        // background-image: url(../images/hero_background-sneaker.png);
-        // background-size: auto;
-        // background-repeat: no-repeat;
-        // background-position: bottom -35px right -72px;
-        // transform: translate(166%, -100px) rotate(-37deg); //! ua
-        // box-shadow: inset 17px 1px 24px 3px rgba(61, 61, 61, 0.2);
-        // // backdrop-filter: blur(50px);
-        // // filter: blur(1px); 
-        // // opacity: 0.8;
-        // //todo Анімація-2
-        // //* 1.Назва анімації
-        // animation-name: pulse-sneaker-before;
-        // //* 2.Тривалість анімації/
-        // animation-duration: 2s;
-        // //* 3.Функція розподілу часу
-        // animation-timing-function: ease-in-out;
-        // //* 5.Кількість повних повторень анімації - постійно
-        // animation-iteration-count: infinite;
-        // //* 6.Напрямок відтворення анімації
-        // // animation-direction: normal;
-        // animation-direction: alternate;
-        // // ! міксін outline
-        // // @include outline(1px, dashed, violet);
-
-        @media screen and (min-width: getBreakPoint('desktop')) {
-            // z-index: 1;
-            // position: absolute;
-            // content: "";
+    //! Вірний логотип кросівка для сторінки index-ua.html (тільки для 'desktop')
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        &::before {
+            z-index: 1;
+            position: absolute;
+            content: "";
             //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-            // display: if($lang == ua, block, none);
+            display: if($lang == ua, block, none);
             width: 115px;
             height: 60px;
             bottom: 0;
             right: calc(50%);
             border-radius: 10px;
-            background-image: url(../images/hero_background-sneaker.png);
+            background-image: url(../images/hero_background-sneaker-desktop.png);
             background-size: auto;
             background-repeat: no-repeat;
             background-position: bottom -35px right -72px;
@@ -171,7 +132,7 @@
             // opacity: 0.8;
             //todo Анімація-2
             //* 1.Назва анімації
-            animation-name: pulse-sneaker-before;
+            animation-name: pulse-sneaker-before-desktop;
             //* 2.Тривалість анімації/
             animation-duration: 2s;
             //* 3.Функція розподілу часу
@@ -193,7 +154,10 @@
     }
 
     // .container {
-    //     // ! міксін outline
+    //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    //     position: if($adaptive, relative, static);
+    //     overflow: if($adaptive, hidden, visible);
+    //     //! міксін outline
     //     @include outline(1px, dashed, yellow);
     // }
 
