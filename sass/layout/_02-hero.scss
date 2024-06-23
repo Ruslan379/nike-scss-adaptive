@@ -149,7 +149,7 @@
 
     .container {
         //! міксін outline
-        @include outline(1px, dashed, yellow);
+        // @include outline(1px, dashed, yellow);
     }
 
     //! Кнопка burger-menu (open + close)

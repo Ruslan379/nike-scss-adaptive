@@ -403,9 +403,6 @@ body {
     animation-play-state: paused;
   }
 }
-.hero .container {
-  outline: 1px dashed yellow;
-}
 .hero .burger-menu-buttons {
   display: none;
 }
