@@ -618,7 +618,7 @@ body {
 }
 @media screen and (max-width: calc(360px - 1px)) {
   .advantages-2 .container .advantages-list__item-image {
-    max-width: 130%;
+    max-width: 100vw;
   }
 }
 .advantages-2 .container .advantages-list__item:nth-child(1) .advantages-list__item-image {
