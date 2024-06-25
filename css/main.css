@@ -581,7 +581,7 @@ body {
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.advantages .container .advantages-list__item .advantages-list__title {
+.advantages .container .advantages-list__item-title {
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 36px;
@@ -601,13 +601,13 @@ body {
 .advantages .container .advantages-list__item--fast-shipping {
   background-image: url(../images/advantages_fast-shipping.png);
 }
-.advantages .container .advantages-list__item:nth-child(1) .advantages-list__title {
+.advantages .container .advantages-list__item:nth-child(1) .advantages-list__item-title {
   width: 159px;
 }
-.advantages .container .advantages-list__item:nth-child(2) .advantages-list__title {
+.advantages .container .advantages-list__item:nth-child(2) .advantages-list__item-title {
   width: 161px;
 }
-.advantages .container .advantages-list__item:nth-child(3) .advantages-list__title {
+.advantages .container .advantages-list__item:nth-child(3) .advantages-list__item-title {
   width: 151px;
 }
 .advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::before {

@@ -553,16 +553,15 @@ body {
   }
 }
 
-.advantages {
+.advantages-2 {
   height: 1437px;
   border-bottom: 2px solid #FFFFFF;
   background-color: #012d63;
 }
-.advantages .container {
+.advantages-2 .container {
   padding: 0;
-  outline: 1px dashed yellow;
 }
-.advantages .container .advantages-list {
+.advantages-2 .container .advantages-list {
   width: 100%;
   padding: 48px 0 49px;
   display: flex;
@@ -571,7 +570,7 @@ body {
   gap: 96px;
   outline: 1px dashed #7bff00;
 }
-.advantages .container .advantages-list__item {
+.advantages-2 .container .advantages-list__item {
   position: relative;
   width: 238px;
   height: 382px;
@@ -582,28 +581,40 @@ body {
   background-position: center bottom;
   outline: 1px dashed #00ffcc;
 }
-.advantages .container .advantages-list__item .advantages-list__title {
+.advantages-2 .container .advantages-list__item-title {
+  margin-left: auto;
+  margin-right: 41px;
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 36px;
   line-height: 1.42;
-  text-align: center;
 }
-.advantages .container .advantages-list__item--premium-quality {
-  background-image: url(../images/advantages_premium-quality.png);
+.advantages-2 .container .advantages-list__item-border {
+  position: absolute;
+  top: -3px;
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: #8e32c6;
 }
-.advantages .container .advantages-list__item--indelible-paint {
-  background-image: url(../images/advantages_indelible-paint.png);
+.advantages-2 .container .advantages-list__item-number {
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  transform: translateX(-50%);
+  fill: #FFFFFF;
+  outline: 1px dotted wheat;
 }
-.advantages .container .advantages-list__item--fast-shipping {
-  background-image: url(../images/advantages_fast-shipping.png);
+.advantages-2 .container .advantages-list__item-image {
+  position: absolute;
+  bottom: -28px;
+  outline: 1px dotted red;
 }
-.advantages .container .advantages-list__item:nth-child(1) .advantages-list__title {
-  width: 159px;
+.advantages-2 .container .advantages-list__item:nth-child(1) .advantages-list__item-title {
+  width: 148px;
 }
-.advantages .container .advantages-list__item:nth-child(2) .advantages-list__title {
-  width: 161px;
+.advantages-2 .container .advantages-list__item:nth-child(2) .advantages-list__item-title {
+  width: 138px;
 }
-.advantages .container .advantages-list__item:nth-child(3) .advantages-list__title {
-  width: 151px;
+.advantages-2 .container .advantages-list__item:nth-child(3) .advantages-list__item-title {
+  width: 139px;
 }/*# sourceMappingURL=main-eng.css.map */

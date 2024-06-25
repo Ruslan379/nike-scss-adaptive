@@ -31,7 +31,7 @@
                 // ! міксін outline
                 // @include outline(1px, dashed, #00ffcc);
 
-                .advantages-list__title {
+                &-title {
                     // height: 102px;
                     font-family: getFont('second-family');
                     font-weight: 400;
@@ -50,13 +50,13 @@
             //todo         додавання фонових зображень
             @include generateIcons($icons);
 
-            &__item:nth-child(1) .advantages-list__title {
+            &__item:nth-child(1) .advantages-list__item-title {
                 width: 159px;
             }
-            &__item:nth-child(2) .advantages-list__title {
+            &__item:nth-child(2) .advantages-list__item-title {
                 width: 161px;
             }
-            &__item:nth-child(3) .advantages-list__title {
+            &__item:nth-child(3) .advantages-list__item-title {
                 width: 151px;
             }
 

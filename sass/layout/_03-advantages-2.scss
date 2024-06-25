@@ -1,5 +1,5 @@
 // ? advantages-2 (BEM+SASS)
-.advantages {
+.advantages-2 {
     // height: 606px;
     // height: 479px;
     height: 1437px;
@@ -16,7 +16,7 @@
     .container {
         padding: 0;
         // ! міксін outline
-        @include outline(1px, dashed, yellow);
+        // @include outline(1px, dashed, yellow);
 
         .advantages-list {
             width: 100%;
@@ -40,34 +40,65 @@
                 background-position: center bottom;
                 // ! міксін outline
                 @include outline(1px, dashed, #00ffcc);
+                // stroke="#8E32C6" stroke-width="5"
 
-                .advantages-list__title {
+                &-title {
                     // height: 102px;
+                    margin-left: auto;
+                    margin-right: 41px;
                     font-family: getFont('second-family');
                     font-weight: 400;
                     font-size: 36px;
                     line-height: 1.42;
-                    text-align: center;
+                    // text-align: center;
                     // ! міксін outline
                     // @include outline(1px, dotted, red);
                 }
+
+                &-border {
+                    position: absolute;
+                    top: -3px;
+                    fill: transparent;
+                    stroke-width: 5px;
+                    stroke: getColor('buttons-background');
+                    // ! міксін outline
+                    // @include outline(1px, dotted, orange);
+                }
+
+                &-number {
+                    position: absolute;
+                    left: 0px;
+                    top: 3px;
+                    transform: translateX(-50%);
+                    fill: getColor('light');
+                    // ! міксін outline
+                    @include outline(1px, dotted, wheat);
+                }
+
+                &-image {
+                    position: absolute;
+                    bottom: -28px;
+                    // ! міксін outline
+                    @include outline(1px, dotted, red);
+                }
             }
-            // &__item:nth-child(2) {
-            //     justify-content: end;
-            //     background-position: center top;
-            // }
+
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
-            @include generateIcons($icons);
+            // @include generateIcons($icons);
 
-            &__item:nth-child(1) .advantages-list__title {
-                width: 159px;
+            &__item:nth-child(1) .advantages-list__item-title {
+                // width: 159px;
+                width: 148px;
+                
             }
-            &__item:nth-child(2) .advantages-list__title {
-                width: 161px;
+            &__item:nth-child(2) .advantages-list__item-title {
+                // width: 161px;
+                width: 138px;
             }
-            &__item:nth-child(3) .advantages-list__title {
-                width: 151px;
+            &__item:nth-child(3) .advantages-list__item-title {
+                // width: 151px;
+                width: 139px;
             }
 
             // todo var.1 - OLD
