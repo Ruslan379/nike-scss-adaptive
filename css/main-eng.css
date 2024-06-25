@@ -551,4 +551,74 @@ body {
     width: 254px;
     height: 67px;
   }
+}
+
+.advantages {
+  padding-top: 105px;
+  padding-bottom: 105px;
+  border-bottom: 2px solid #FFFFFF;
+  background-color: #012d63;
+  background-image: url(../images/advantages-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+.advantages .container {
+  outline: 1px dashed yellow;
+}
+.advantages .container .advantages-list {
+  width: 100%;
+  padding: 25px 50px;
+  outline: 1px dashed #7bff00;
+}
+.advantages .container .advantages-list__item {
+  position: relative;
+  width: 240px;
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  outline: 1px dashed #00ffcc;
+}
+.advantages .container .advantages-list__item .advantages-list__title {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.42;
+  text-align: center;
+}
+.advantages .container .advantages-list__item:nth-child(2) {
+  justify-content: end;
+  background-position: center top;
+}
+.advantages .container .advantages-list__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.advantages .container .advantages-list__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.advantages .container .advantages-list__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
+}
+.advantages .container .advantages-list__item:nth-child(1) .advantages-list__title {
+  width: 159px;
+}
+.advantages .container .advantages-list__item:nth-child(2) .advantages-list__title {
+  width: 161px;
+}
+.advantages .container .advantages-list__item:nth-child(3) .advantages-list__title {
+  width: 151px;
+}
+.advantages .container .advantages-list__item:first-child::after, .advantages .container .advantages-list__item:last-child::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  right: calc(-50px - (100vw - 1440px) * 0.2);
+  background-color: #FFFFFF;
+}
+.advantages .container .advantages-list__item:last-child::before {
+  left: calc(-50px - (100vw - 1440px) * 0.2);
 }/*# sourceMappingURL=main-eng.css.map */

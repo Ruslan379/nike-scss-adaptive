@@ -1,0 +1,100 @@
+// ? advantages-2 (BEM+SASS)
+.advantages {
+    // height: 606px;
+    // height: 479px;
+    // height: 1437px;
+    padding-top: 105px;
+    padding-bottom: 105px;
+    border-bottom: 2px solid getColor('light');
+    background-color: getColor('background-brand');
+    background-image:url(../images/advantages-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    background-size: if($adaptive, auto, cover);
+
+    .container {
+        // ! міксін outline
+        @include outline(1px, dashed, yellow);
+
+        .advantages-list {
+            width: 100%;
+            padding: 25px 50px;
+            // @include flex-JCsb;
+            // outline: 5px solid getColor('buttons-background');
+            // ! міксін outline
+            @include outline(1px, dashed, #7bff00);
+            
+            &__item {
+                position: relative;
+                width: 240px;
+                height: 346px;
+                @include flex_FDcol-AIcen;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                // ! міксін outline
+                @include outline(1px, dashed, #00ffcc);
+
+                .advantages-list__title {
+                    // height: 102px;
+                    font-family: getFont('second-family');
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 1.42;
+                    text-align: center;
+                    // ! міксін outline
+                    // @include outline(1px, dotted, red);
+                }
+            }
+            &__item:nth-child(2) {
+                justify-content: end;
+                background-position: center top;
+            }
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
+            @include generateIcons($icons);
+
+            &__item:nth-child(1) .advantages-list__title {
+                width: 159px;
+            }
+            &__item:nth-child(2) .advantages-list__title {
+                width: 161px;
+            }
+            &__item:nth-child(3) .advantages-list__title {
+                width: 151px;
+            }
+
+            // todo var.1 - OLD
+            // &__item:first-child::after,
+            // &__item:last-child::after {
+            //     content: "";
+            //     width: 2px;
+            //     height: 100%;
+            //     margin-top: -102px;
+            //     margin-right: -340px;
+            //     background-color: getColor('light');
+            // }
+            // &__item:last-child::after {
+            //     margin-left: -680px;
+            // }
+
+            // todo var.2 - NEW
+            &__item:first-child::after,
+            &__item:last-child::before {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 100%;
+                // right: -50px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
+                background-color: getColor('light');
+            }
+            &__item:last-child::before {
+                // left: -50px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
+            }
+        }
+    }
+}
