@@ -3,10 +3,10 @@
     height: 1437px;
     border-bottom: 2px solid getColor('light');
     background-color: getColor('background-brand');
-    
+
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 606px;
-        padding-top: 103px;
+        padding-top: 102px;
         padding-bottom: 120px;
     }
 
