@@ -14,13 +14,17 @@
     // background-size: if($adaptive, auto, cover);
 
     .container {
+        padding: 0;
         // ! міксін outline
         @include outline(1px, dashed, yellow);
 
         .advantages-list {
             width: 100%;
-            padding: 25px 50px;
+            // padding: 25px 50px;
+            padding: 48px 0 49px;
             // @include flex-JCsb;
+            @include flex_FDcol-AIcen;
+            gap: 96px;
             // outline: 5px solid getColor('buttons-background');
             // ! міксін outline
             @include outline(1px, dashed, #7bff00);

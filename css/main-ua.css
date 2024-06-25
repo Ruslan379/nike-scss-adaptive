@@ -559,11 +559,16 @@ body {
   background-color: #012d63;
 }
 .advantages .container {
+  padding: 0;
   outline: 1px dashed yellow;
 }
 .advantages .container .advantages-list {
   width: 100%;
-  padding: 25px 50px;
+  padding: 48px 0 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
   outline: 1px dashed #7bff00;
 }
 .advantages .container .advantages-list__item {
