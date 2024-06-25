@@ -592,8 +592,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-repeat: no-repeat;
-  background-position: center bottom;
 }
 .advantages-2 .container .advantages-list__item-title {
   font-family: "Playfair Display";
@@ -616,6 +614,7 @@ body {
   fill: #FFFFFF;
 }
 .advantages-2 .container .advantages-list__item-image {
+  max-width: 100%;
   position: absolute;
 }
 .advantages-2 .container .advantages-list__item:nth-child(1) .advantages-list__item-image {

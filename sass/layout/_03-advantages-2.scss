@@ -17,9 +17,7 @@
         
         .advantages-list {
             width: 100%;
-            // padding: 25px 50px;
             padding: 48px 0 49px;
-            // @include flex-JCsb;
             @include flex_FDcol-AIcen;
             gap: 96px;
             // outline: 5px solid getColor('buttons-background');
@@ -39,8 +37,6 @@
                 // height: 346px;
                 height: 382px;
                 @include flex_FDcol-AIcen;
-                background-repeat: no-repeat;
-                background-position: center bottom;
                 // ! міксін outline
                 // @include outline(1px, dashed, #00ffcc);
                 
@@ -78,6 +74,7 @@
                 }
                 
                 &-image {
+                    max-width: 100%;
                     position: absolute;
                     // bottom: -28px;
                     // ! міксін outline
