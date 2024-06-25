@@ -614,8 +614,12 @@ body {
   fill: #FFFFFF;
 }
 .advantages-2 .container .advantages-list__item-image {
-  max-width: 100%;
   position: absolute;
+}
+@media screen and (max-width: calc(360px - 1px)) {
+  .advantages-2 .container .advantages-list__item-image {
+    max-width: 130%;
+  }
 }
 .advantages-2 .container .advantages-list__item:nth-child(1) .advantages-list__item-image {
   bottom: -28px;

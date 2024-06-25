@@ -74,11 +74,14 @@
                 }
                 
                 &-image {
-                    max-width: 100%;
                     position: absolute;
                     // bottom: -28px;
                     // ! міксін outline
                     // @include outline(1px, dotted, red);
+
+                    @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
+                        max-width: 130%;
+                    }
                 }
             }
 
