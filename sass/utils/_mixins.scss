@@ -36,6 +36,12 @@
     justify-content: space-between;
 }
 
+@mixin flex-JCse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 @mixin flex-JCcen-AIcen {
     display: flex;
     flex-direction: row;

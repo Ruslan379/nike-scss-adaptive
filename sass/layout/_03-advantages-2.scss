@@ -1,23 +1,20 @@
 // ? advantages-2 (BEM+SASS)
 .advantages-2 {
-    // height: 606px;
-    // height: 479px;
     height: 1437px;
-    // padding-top: 105px;
-    // padding-bottom: 105px;
     border-bottom: 2px solid getColor('light');
     background-color: getColor('background-brand');
-    // background-image:url(../images/advantages-background.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center 0;
-    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-    // background-size: if($adaptive, auto, cover);
+    
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        height: 606px;
+        padding-top: 103px;
+        padding-bottom: 120px;
+    }
 
     .container {
         padding: 0;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
-
+        
         .advantages-list {
             width: 100%;
             // padding: 25px 50px;
@@ -27,7 +24,13 @@
             gap: 96px;
             // outline: 5px solid getColor('buttons-background');
             // ! міксін outline
-            @include outline(1px, dashed, #7bff00);
+            // @include outline(1px, dashed, #7bff00);
+            
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                padding: 0;
+                @include flex-JCse;
+                gap: 0;
+            }
             
             &__item {
                 position: relative;
@@ -39,13 +42,12 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline
-                @include outline(1px, dashed, #00ffcc);
-                // stroke="#8E32C6" stroke-width="5"
-
+                // @include outline(1px, dashed, #00ffcc);
+                
                 &-title {
                     // height: 102px;
-                    margin-left: auto;
-                    margin-right: 41px;
+                    // margin-left: auto;
+                    // margin-right: 41px;
                     font-family: getFont('second-family');
                     font-weight: 400;
                     font-size: 36px;
@@ -54,7 +56,7 @@
                     // ! міксін outline
                     // @include outline(1px, dotted, red);
                 }
-
+                
                 &-border {
                     position: absolute;
                     top: -3px;
@@ -64,7 +66,7 @@
                     // ! міксін outline
                     // @include outline(1px, dotted, orange);
                 }
-
+                
                 &-number {
                     position: absolute;
                     left: 0px;
@@ -72,15 +74,25 @@
                     transform: translateX(-50%);
                     fill: getColor('light');
                     // ! міксін outline
-                    @include outline(1px, dotted, wheat);
+                    // @include outline(1px, dotted, wheat);
                 }
-
+                
                 &-image {
                     position: absolute;
-                    bottom: -28px;
+                    // bottom: -28px;
                     // ! міксін outline
-                    @include outline(1px, dotted, red);
+                    // @include outline(1px, dotted, red);
                 }
+            }
+
+            &__item:nth-child(1) .advantages-list__item-image {
+                bottom: -28px;
+            }
+            &__item:nth-child(2) .advantages-list__item-image {
+                bottom: -40px;
+            }
+            &__item:nth-child(3) .advantages-list__item-image {
+                bottom: -56px;
             }
 
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
@@ -100,38 +112,6 @@
                 // width: 151px;
                 width: 139px;
             }
-
-            // todo var.1 - OLD
-            // &__item:first-child::after,
-            // &__item:last-child::after {
-            //     content: "";
-            //     width: 2px;
-            //     height: 100%;
-            //     margin-top: -102px;
-            //     margin-right: -340px;
-            //     background-color: getColor('light');
-            // }
-            // &__item:last-child::after {
-            //     margin-left: -680px;
-            // }
-
-            // // todo var.2 - NEW
-            // &__item:first-child::after,
-            // &__item:last-child::before {
-            //     position: absolute;
-            //     content: "";
-            //     width: 2px;
-            //     height: 100%;
-            //     // right: -50px;
-            //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            //     right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
-            //     background-color: getColor('light');
-            // }
-            // &__item:last-child::before {
-            //     // left: -50px;
-            //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            //     left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
-            // }
         }
     }
 }
