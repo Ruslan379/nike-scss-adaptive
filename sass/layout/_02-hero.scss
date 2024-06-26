@@ -171,10 +171,12 @@
             padding: 0;
             border: none;
             background-color: transparent;
-            fill: getColor('brand-hover');
-            stroke: getColor('buttons-background');
-            // stroke: getColor('red');
-            stroke-width: 2;
+            fill: getColor('brand-hover-light');
+            // stroke-width: 1;
+            // stroke: getColor('buttons-background');
+            // stroke: black;
+            //? Aнімація-1
+            transition: 0.5s;
             // ! міксін outline
             // @include outline(1px, dashed, wheat);
             
@@ -193,6 +195,10 @@
             
             &.is-open .icon-burger-menu-button-open {
                 display: none;
+            }
+            
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }

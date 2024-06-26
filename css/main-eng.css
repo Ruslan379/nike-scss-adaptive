@@ -420,9 +420,8 @@ body {
     padding: 0;
     border: none;
     background-color: transparent;
-    fill: #c33bde;
-    stroke: #8e32c6;
-    stroke-width: 2;
+    fill: #e044ff;
+    transition: 0.5s;
   }
   .hero .burger-menu-buttons .icon-burger-menu-button-close {
     display: none;
@@ -435,6 +434,9 @@ body {
   }
   .hero .burger-menu-buttons.is-open .icon-burger-menu-button-open {
     display: none;
+  }
+  .hero .burger-menu-buttons:hover {
+    transform: scale(1.1);
   }
 }
 .hero-logo {
