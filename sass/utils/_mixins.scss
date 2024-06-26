@@ -36,6 +36,12 @@
     justify-content: space-between;
 }
 
+@mixin flex-JCsa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 @mixin flex-JCse {
     display: flex;
     flex-direction: row;

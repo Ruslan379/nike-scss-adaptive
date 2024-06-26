@@ -38,12 +38,18 @@
         .input-switcher:checked+.label-switcher ~ .advantages-list svg {
             display: flex;
         }
-        //! так не працює!!!
-        // .input-switcher:checked+.label-switcher ~ .advantages-list {
-        //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-        //     //todo         додавання фонових зображень
-        //     @include generateIcons($icons);
-        // }
+        .input-switcher:checked+.label-switcher ~ .advantages-list {
+            outline: none;
+            //! так не працює!!!
+            // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            // //todo         додавання фонових зображень
+            // @include generateIcons($icons);
+        }
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            .input-switcher:checked+.label-switcher ~ .advantages-list {
+                @include flex-JCsb;
+            }
+        }
         .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
             background-image: none;
         }
@@ -58,7 +64,7 @@
             // gap: 5px;
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
-
+            
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
@@ -110,13 +116,11 @@
             // @include outline(1px, dashed, #7bff00);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
-                padding: 0;
-                // padding: 0 50px;
+                padding: 0 50px;
                 // padding: 25px 50px;
-                @include flex-JCse;
-                // @include flex-JCsb;
+                @include flex-JCsa;
                 gap: 0;
-                // outline: 5px solid getColor('buttons-background');
+                outline: 5px solid getColor('buttons-background');
 
                 // todo var.2 - NEW
                 // &__item:first-child::after,
