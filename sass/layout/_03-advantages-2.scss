@@ -16,9 +16,29 @@
     }
 
     .container {
+        position: relative;
         padding: 0;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
+
+        .switch-list {
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            transform: translateX(-50%);
+            @include flex-AIcen;
+            gap: 5px;
+
+            // &__item:first-child {
+            //     margin-bottom: 3px;
+            // }
+
+            &__switcher {
+                @include flex-JCcen-AIcen;
+                fill: transparent;
+                transform: rotate(180deg);
+            }
+        }
         
         .advantages-list {
             width: 100%;
