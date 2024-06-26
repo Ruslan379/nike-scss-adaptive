@@ -30,10 +30,10 @@
         }
         //! Події :checked
         .input-switcher:checked+.label-switcher>.label-switcher__svg {
-            transform: rotate(180deg);
+            transform: rotate(0);
         }
         .input-switcher:checked+.label-switcher ~ .advantages-list svg {
-            display: none;
+            display: flex;
         }
         //! так не працює!!!
         // .input-switcher:checked+.label-switcher ~ .advantages-list {
@@ -41,11 +41,9 @@
         //     //todo         додавання фонових зображень
         //     @include generateIcons($icons);
         // }
-        // .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
-        //     // background-image: none;
-        //     background-repeat: no-repeat;
-        //     background-position: center bottom;
-        // }
+        .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
+            background-image: none;
+        }
 
         .label-switcher {
             z-index: 1;
@@ -66,9 +64,8 @@
                 margin-right: 4px;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
-                transform: rotate(0);
+                transform: rotate(180deg);
             }
-            
         }
 
         .switch-list {
@@ -78,39 +75,37 @@
             transform: translateX(-50%);
             @include flex-AIcen;
             gap: 5px;
-
-            // &__item:first-child {
-            //     margin-bottom: 3px;
-            // }
-
+            
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
-
+            
             &__switcher {
-                // visibility: hidden;
-                opacity: 0.3;
+                visibility: hidden;
+                // opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(0);
             }
         }
-        
+
         .advantages-list {
             width: 100%;
             padding: 48px 0 49px;
             @include flex_FDcol-AIcen;
             gap: 96px;
             // outline: 5px solid getColor('buttons-background');
-            // ! міксін outline
-            // @include outline(1px, dashed, #7bff00);
+            //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //     //todo         додавання фонових зображень
             @include generateIcons($icons);
             //! так не працює!!!
             // .input-switcher:checked+.label-switcher ~ & {
-            //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            //     //todo         додавання фонових зображень
+            // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            // //todo         додавання фонових зображень
             //     @include generateIcons($icons);
             // }
+            // ! міксін outline
+            // @include outline(1px, dashed, #7bff00);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 padding: 0;
@@ -129,18 +124,11 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline
-                @include outline(1px, dashed, #00ffcc);
+                // @include outline(1px, dashed, #00ffcc);
 
-                // .input-switcher:checked+.label-switcher ~ .advantages-list>& {
-                //     // background-image: none;
-                //     background-image: initial;
-                //     background-repeat: no-repeat;
-                //     background-position: center bottom;
-                // }
-
-                // & svg {
-                //     display: none;
-                // }
+                & svg {
+                    display: none;
+                }
                 
                 &-title {
                     // height: 102px;

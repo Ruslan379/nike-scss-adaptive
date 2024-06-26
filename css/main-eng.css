@@ -583,10 +583,13 @@ body {
   display: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list svg {
-  display: none;
+  display: flex;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
+  background-image: none;
 }
 .advantages-2 .container .label-switcher {
   z-index: 1;
@@ -611,7 +614,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: transparent;
-  transform: rotate(0);
+  transform: rotate(180deg);
 }
 .advantages-2 .container .switch-list {
   position: absolute;
@@ -629,7 +632,7 @@ body {
   }
 }
 .advantages-2 .container .switch-list__switcher {
-  opacity: 0.3;
+  visibility: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -672,7 +675,9 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-position: center bottom;
-  outline: 1px dashed #00ffcc;
+}
+.advantages-2 .container .advantages-list__item svg {
+  display: none;
 }
 .advantages-2 .container .advantages-list__item-title {
   font-family: "Playfair Display";
