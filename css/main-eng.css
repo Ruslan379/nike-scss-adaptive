@@ -575,6 +575,32 @@ body {
   position: relative;
   padding: 0;
 }
+.advantages-2 .container .input-switcher {
+  display: none;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
+  transform: rotate(0);
+}
+.advantages-2 .container .label-switcher {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.advantages-2 .container .label-switcher__svg {
+  margin-right: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  transform: rotate(180deg);
+}
 .advantages-2 .container .switch-list {
   position: absolute;
   left: 50%;
@@ -586,6 +612,7 @@ body {
   gap: 5px;
 }
 .advantages-2 .container .switch-list__switcher {
+  opacity: 0.3;
   display: flex;
   flex-direction: row;
   justify-content: center;

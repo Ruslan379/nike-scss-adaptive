@@ -20,6 +20,34 @@
         padding: 0;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
+        
+        .input-switcher {
+            display: none;
+        }
+        
+        .input-switcher:checked+.label-switcher>.label-switcher__svg {
+            transform: rotate(0);
+        }
+
+        .label-switcher {
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            transform: translateX(-50%);
+            @include flex-JCcen-AIcen;
+            // gap: 5px;
+            // ! міксін outline
+            // @include outline(1px, dashed, #7bff00);
+            
+            &__svg {
+                margin-right: 4px;
+                @include flex-JCcen-AIcen;
+                fill: transparent;
+                transform: rotate(180deg);
+            }
+            
+        }
 
         .switch-list {
             position: absolute;
@@ -34,6 +62,8 @@
             // }
 
             &__switcher {
+                // visibility: hidden;
+                opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(180deg);
