@@ -8,6 +8,11 @@
         height: 606px;
         padding-top: 102px;
         padding-bottom: 120px;
+        background-image:url(../images/advantages-background.jpg);
+        background-repeat: no-repeat;
+        background-position: center 0;
+        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+        background-size: if($adaptive, auto, cover);
     }
 
     .container {

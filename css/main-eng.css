@@ -563,6 +563,10 @@ body {
     height: 606px;
     padding-top: 102px;
     padding-bottom: 120px;
+    background-image: url(../images/advantages-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
   }
 }
 .advantages-2 .container {
