@@ -21,14 +21,17 @@
 
     .container {
         position: relative;
-        padding: 0;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
-        
+
+        @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
+            padding: 0;
+        }
+
         .input-switcher {
             display: none;
         }
-        //! Події :checked
+        //! Події :checked на input-switcher
         .input-switcher:checked+.label-switcher>.label-switcher__svg {
             transform: rotate(0);
         }
@@ -94,7 +97,6 @@
             padding: 48px 0 49px;
             @include flex_FDcol-AIcen;
             gap: 96px;
-            // outline: 5px solid getColor('buttons-background');
             //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //     //todo         додавання фонових зображень
             @include generateIcons($icons);
@@ -109,8 +111,30 @@
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 padding: 0;
+                // padding: 0 50px;
+                // padding: 25px 50px;
                 @include flex-JCse;
+                // @include flex-JCsb;
                 gap: 0;
+                // outline: 5px solid getColor('buttons-background');
+
+                // todo var.2 - NEW
+                // &__item:first-child::after,
+                // &__item:last-child::before {
+                //     position: absolute;
+                //     content: "";
+                //     width: 2px;
+                //     height: 100%;
+                //     // right: -50px;
+                //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                //     right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
+                //     background-color: getColor('light');
+                // }
+                // &__item:last-child::before {
+                //     // left: -50px;
+                //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                //     left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
+                // }
             }
             
             &__item {
