@@ -555,6 +555,10 @@ body {
   }
 }
 
+.advantages {
+  display: none;
+}
+
 .advantages-2 {
   height: 1437px;
   border-bottom: 2px solid #FFFFFF;
@@ -579,19 +583,10 @@ body {
   display: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
-  transform: rotate(0);
+  transform: rotate(180deg);
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list svg {
   display: none;
-}
-.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--premium-quality {
-  background-image: url(../images/advantages_premium-quality.png);
-}
-.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--indelible-paint {
-  background-image: url(../images/advantages_indelible-paint.png);
-}
-.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--fast-shipping {
-  background-image: url(../images/advantages_fast-shipping.png);
 }
 .advantages-2 .container .label-switcher {
   z-index: 1;
@@ -616,7 +611,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: transparent;
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .advantages-2 .container .switch-list {
   position: absolute;
@@ -640,7 +635,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: transparent;
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .advantages-2 .container .advantages-list {
   width: 100%;
@@ -649,6 +644,15 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 96px;
+}
+.advantages-2 .container .advantages-list__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.advantages-2 .container .advantages-list__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.advantages-2 .container .advantages-list__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
 }
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .advantages-list {
@@ -666,6 +670,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   outline: 1px dashed #00ffcc;
 }
 .advantages-2 .container .advantages-list__item-title {

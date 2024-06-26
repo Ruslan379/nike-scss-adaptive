@@ -1,4 +1,8 @@
 // ? advantages-2 (BEM+SASS)
+.advantages {
+    display: none;
+}
+
 .advantages-2 {
     height: 1437px;
     border-bottom: 2px solid getColor('light');
@@ -26,16 +30,22 @@
         }
         //! Події :checked
         .input-switcher:checked+.label-switcher>.label-switcher__svg {
-            transform: rotate(0);
+            transform: rotate(180deg);
         }
         .input-switcher:checked+.label-switcher ~ .advantages-list svg {
             display: none;
         }
-        .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
-            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            //todo         додавання фонових зображень
-            @include generateIcons($icons);
-        }
+        //! так не працює!!!
+        // .input-switcher:checked+.label-switcher ~ .advantages-list {
+        //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+        //     //todo         додавання фонових зображень
+        //     @include generateIcons($icons);
+        // }
+        // .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
+        //     // background-image: none;
+        //     background-repeat: no-repeat;
+        //     background-position: center bottom;
+        // }
 
         .label-switcher {
             z-index: 1;
@@ -56,7 +66,7 @@
                 margin-right: 4px;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
-                transform: rotate(180deg);
+                transform: rotate(0);
             }
             
         }
@@ -82,7 +92,7 @@
                 opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
-                transform: rotate(180deg);
+                transform: rotate(0);
             }
         }
         
@@ -94,6 +104,13 @@
             // outline: 5px solid getColor('buttons-background');
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
+            @include generateIcons($icons);
+            //! так не працює!!!
+            // .input-switcher:checked+.label-switcher ~ & {
+            //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //     //todo         додавання фонових зображень
+            //     @include generateIcons($icons);
+            // }
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 padding: 0;
@@ -108,8 +125,22 @@
                 // height: 346px;
                 height: 382px;
                 @include flex_FDcol-AIcen;
+                // background-image: none;
+                background-repeat: no-repeat;
+                background-position: center bottom;
                 // ! міксін outline
                 @include outline(1px, dashed, #00ffcc);
+
+                // .input-switcher:checked+.label-switcher ~ .advantages-list>& {
+                //     // background-image: none;
+                //     background-image: initial;
+                //     background-repeat: no-repeat;
+                //     background-position: center bottom;
+                // }
+
+                // & svg {
+                //     display: none;
+                // }
                 
                 &-title {
                     // height: 102px;

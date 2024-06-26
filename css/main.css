@@ -555,6 +555,10 @@ body {
   }
 }
 
+.advantages-2 {
+  display: none;
+}
+
 .advantages {
   padding-top: 105px;
   padding-bottom: 105px;
@@ -572,6 +576,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
   outline: 5px solid #8e32c6;
+}
+.advantages .container .advantages-list__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.advantages .container .advantages-list__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.advantages .container .advantages-list__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
 }
 .advantages .container .advantages-list__item {
   position: relative;
@@ -593,15 +606,6 @@ body {
 .advantages .container .advantages-list__item:nth-child(2) {
   justify-content: end;
   background-position: center top;
-}
-.advantages .container .advantages-list__item--premium-quality {
-  background-image: url(../images/advantages_premium-quality.png);
-}
-.advantages .container .advantages-list__item--indelible-paint {
-  background-image: url(../images/advantages_indelible-paint.png);
-}
-.advantages .container .advantages-list__item--fast-shipping {
-  background-image: url(../images/advantages_fast-shipping.png);
 }
 .advantages .container .advantages-list__item:nth-child(1) .advantages-list__item-title {
   width: 159px;

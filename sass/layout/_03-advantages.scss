@@ -1,4 +1,8 @@
 // ? advantages (BEM+SASS)
+.advantages-2 {
+    display: none;
+}
+
 .advantages {
     // height: 606px;
     padding-top: 105px;
@@ -20,6 +24,9 @@
             padding: 25px 50px;
             @include flex-JCsb;
             outline: 5px solid getColor('buttons-background');
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
+            @include generateIcons($icons);
             
             &__item {
                 position: relative;
@@ -48,7 +55,7 @@
             }
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
-            @include generateIcons($icons);
+            // @include generateIcons($icons);
 
             &__item:nth-child(1) .advantages-list__item-title {
                 width: 159px;
