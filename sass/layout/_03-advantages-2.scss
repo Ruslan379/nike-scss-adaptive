@@ -24,9 +24,17 @@
         .input-switcher {
             display: none;
         }
-        
+        //! Події :checked
         .input-switcher:checked+.label-switcher>.label-switcher__svg {
             transform: rotate(0);
+        }
+        .input-switcher:checked+.label-switcher ~ .advantages-list svg {
+            display: none;
+        }
+        .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
+            @include generateIcons($icons);
         }
 
         .label-switcher {
@@ -39,6 +47,10 @@
             // gap: 5px;
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
+
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                top: -60px;
+            }
             
             &__svg {
                 margin-right: 4px;
@@ -60,6 +72,10 @@
             // &__item:first-child {
             //     margin-bottom: 3px;
             // }
+
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                top: -60px;
+            }
 
             &__switcher {
                 // visibility: hidden;
@@ -93,7 +109,7 @@
                 height: 382px;
                 @include flex_FDcol-AIcen;
                 // ! міксін outline
-                // @include outline(1px, dashed, #00ffcc);
+                @include outline(1px, dashed, #00ffcc);
                 
                 &-title {
                     // height: 102px;

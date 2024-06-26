@@ -581,6 +581,18 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
   transform: rotate(0);
 }
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list svg {
+  display: none;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
+}
 .advantages-2 .container .label-switcher {
   z-index: 1;
   position: absolute;
@@ -591,6 +603,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .advantages-2 .container .label-switcher {
+    top: -60px;
+  }
 }
 .advantages-2 .container .label-switcher__svg {
   margin-right: 4px;
@@ -610,6 +627,11 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .advantages-2 .container .switch-list {
+    top: -60px;
+  }
 }
 .advantages-2 .container .switch-list__switcher {
   opacity: 0.3;
@@ -644,6 +666,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  outline: 1px dashed #00ffcc;
 }
 .advantages-2 .container .advantages-list__item-title {
   font-family: "Playfair Display";
