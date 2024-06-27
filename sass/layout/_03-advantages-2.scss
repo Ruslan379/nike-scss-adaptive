@@ -11,12 +11,17 @@
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 606px;
         padding-top: 102px;
-        padding-bottom: 120px;
+        // padding-bottom: 120px;
+        padding-bottom: 80px;
         background-image:url(../images/advantages-background.jpg);
         background-repeat: no-repeat;
         background-position: center 0;
         //! Вибір адаптивної чи респонсивної (чутливої) верстки.
         background-size: if($adaptive, auto, cover);
+        
+        &:has(.input-switcher:checked) {
+            padding-bottom: 120px;
+        }
     }
 
     .container {
@@ -35,24 +40,30 @@
         .input-switcher:checked + .label-switcher>.label-switcher__svg {
             transform: rotate(0);
         }
-        .input-switcher:checked + .label-switcher ~ .advantages-list svg {
-            display: flex;
-        }
         .input-switcher:checked + .label-switcher ~ .advantages-list {
             outline: none;
             //! так не працює!!!
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
             // @include generateIcons($icons);
+            // ! міксін outline
+            @include outline(1px, dashed, #7bff00);
+        }
+        .input-switcher:checked + .label-switcher ~ .advantages-list svg {
+            display: flex;
         }
         @media screen and (min-width: getBreakPoint('desktop')) {
             .input-switcher:checked + .label-switcher ~ .advantages-list {
-                @include flex-JCsb;
+                padding: 0;
+                // @include flex-JCsb;
+                @include flex-JCsa;
             }
         }
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
+            width: 238px;
             background-image: none;
             text-align: left;
+            border: none;
         }
         //? Зміщення кнопки-перемикача при перемиканні
         .input-switcher:checked + .label-switcher {
@@ -75,7 +86,7 @@
                 color: getColor('brand-hover');
                 transform: scale(1.1);
             }
-            .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child{
+            .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
                 transform: scale(1);
             }
         }
@@ -177,12 +188,14 @@
             //     @include generateIcons($icons);
             // }
             // ! міксін outline
-            // @include outline(1px, dashed, #7bff00);
+            @include outline(1px, dashed, #7bff00);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
-                padding: 0 50px;
                 // padding: 25px 50px;
-                @include flex-JCsa;
+                // padding: 0 50px;
+                padding: 20px 0 20px;
+                // @include flex-JCsa;
+                @include flex-JCsb;
                 gap: 0;
                 outline: 5px solid getColor('buttons-background');
                 
@@ -216,7 +229,16 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline
-                // @include outline(1px, dashed, #00ffcc);
+                @include outline(1px, dashed, #00ffcc);
+                
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    width: calc(100% / 3);
+
+                    &:nth-last-child(2) {
+                        border-left: 2px solid getColor('light');
+                        border-right: 2px solid getColor('light');
+                    }
+                }
                 
                 & svg {
                     display: none;

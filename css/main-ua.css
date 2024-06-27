@@ -568,11 +568,14 @@ body {
   .advantages-2 {
     height: 606px;
     padding-top: 102px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
     background-image: url(../images/advantages-background.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
     background-size: auto;
+  }
+  .advantages-2:has(.input-switcher:checked) {
+    padding-bottom: 120px;
   }
 }
 .advantages-2 .container {
@@ -589,22 +592,26 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
   transform: rotate(0);
 }
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list {
+  outline: none;
+  outline: 1px dashed #7bff00;
+}
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list svg {
   display: flex;
 }
-.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list {
-  outline: none;
-}
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list {
+    padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
+  width: 238px;
   background-image: none;
   text-align: left;
+  border: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher {
   transform: translateX(calc(-50% - 24px));
@@ -707,6 +714,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 96px;
+  outline: 1px dashed #7bff00;
 }
 .advantages-2 .container .advantages-list__item--premium-quality {
   background-image: url(../images/advantages_premium-quality.png);
@@ -719,10 +727,10 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .advantages-list {
-    padding: 0 50px;
+    padding: 20px 0 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 0;
     outline: 5px solid #8e32c6;
   }
@@ -737,6 +745,16 @@ body {
   text-align: center;
   background-repeat: no-repeat;
   background-position: center bottom;
+  outline: 1px dashed #00ffcc;
+}
+@media screen and (min-width: 1440px) {
+  .advantages-2 .container .advantages-list__item {
+    width: 33.3333333333%;
+  }
+  .advantages-2 .container .advantages-list__item:nth-last-child(2) {
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+  }
 }
 .advantages-2 .container .advantages-list__item svg {
   display: none;
