@@ -201,7 +201,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
   .header .container {

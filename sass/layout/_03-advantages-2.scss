@@ -18,7 +18,7 @@
         background-position: center 0;
         //! Вибір адаптивної чи респонсивної (чутливої) верстки.
         background-size: if($adaptive, auto, cover);
-        
+
         &:has(.input-switcher:checked) {
             padding-bottom: 120px;
         }
@@ -47,7 +47,7 @@
             //todo         додавання фонових зображень
             // @include generateIcons($icons);
             // ! міксін outline
-            @include outline(1px, dashed, #7bff00);
+            // @include outline(1px, dashed, #7bff00);
         }
         .input-switcher:checked + .label-switcher ~ .advantages-list svg {
             display: flex;
@@ -65,12 +65,17 @@
             text-align: left;
             border: none;
         }
-        //? Зміщення кнопки-перемикача при перемиканні
+        //? Вимикаємо Горизонтальні планки між елементами
+        .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::before,
+        .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::after {
+            display: none;
+        }
+        //? Зміщення кнопки-перемикача 
         .input-switcher:checked + .label-switcher {
             transform: translateX(calc(-50% - 24px));
             @include flex-JCfe-AIcen;
         }
-        //? Зміна властивостей текста OLD/NEW при перемиканні
+        //? Зміна властивостей текста OLD/NEW 
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
             font-weight: 400;
             color: getColor('light');
@@ -188,7 +193,7 @@
             //     @include generateIcons($icons);
             // }
             // ! міксін outline
-            @include outline(1px, dashed, #7bff00);
+            // @include outline(1px, dashed, #7bff00);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 // padding: 25px 50px;
@@ -198,24 +203,6 @@
                 @include flex-JCsb;
                 gap: 0;
                 outline: 5px solid getColor('buttons-background');
-                
-                // todo var.2 - NEW
-                // &__item:first-child::after,
-                // &__item:last-child::before {
-                //     position: absolute;
-                //     content: "";
-                //     width: 2px;
-                //     height: 100%;
-                //     // right: -50px;
-                //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                //     right: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
-                //     background-color: getColor('light');
-                // }
-                // &__item:last-child::before {
-                //     // left: -50px;
-                //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                //     left: if($adaptive, -50px, calc(-50px - ((100vw - getBreakPoint('desktop')) * 0.2)));
-                // }
             }
             
             &__item {
@@ -229,11 +216,27 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline
-                @include outline(1px, dashed, #00ffcc);
+                // @include outline(1px, dashed, #00ffcc);
+
+                //? Горизонтальні планки між елементами
+                @media screen and (max-width: calc(#{getBreakPoint('desktop')} - 1px)) {
+                    &:nth-last-child(2)::before ,
+                    &:nth-last-child(2)::after {
+                        position: absolute;
+                        top: -49px;
+                        content: "";
+                        width: 100%;
+                        height: 2px ;
+                        background-color: getColor('light');
+                    }
+                    &:nth-last-child(2)::after  {
+                        top: calc(100% + 49px);
+                    }
+                }
                 
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     width: calc(100% / 3);
-
+                    
                     &:nth-last-child(2) {
                         border-left: 2px solid getColor('light');
                         border-right: 2px solid getColor('light');

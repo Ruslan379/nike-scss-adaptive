@@ -110,7 +110,7 @@
         @include flex_FDcol-AIcen;
         gap: 48px;
         // ! міксін outline
-        @include outline(1px, dashed, yellow);
+        // @include outline(1px, dashed, yellow);
 
         @media screen and (min-width: getBreakPoint('desktop')) {
             @include flex-AIcen;
