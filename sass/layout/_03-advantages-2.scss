@@ -65,10 +65,12 @@
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
             font-weight: 400;
             color: inherit;
+            text-shadow: none;
         }
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
             font-weight: 700;
             color: getColor('light');
+            text-shadow: 2px 2px 2px getColor('brand-hover-light');
         }
 
         .label-switcher {
@@ -81,7 +83,7 @@
             @include flex-JCfs-AIcen;
             cursor: pointer;
             // ! міксін outline
-            @include outline(1px, dashed, #7bff00);
+            // @include outline(1px, dashed, #7bff00);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
@@ -112,6 +114,7 @@
             &__item:first-child {
                 font-weight: 700;
                 color: getColor('light');
+                text-shadow: -2px 2px 2px getColor('brand-hover-light');
             }
             
             //? Іконка кнопки-перемикача (тимчасова, не використовувається, прихована)

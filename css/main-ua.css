@@ -850,10 +850,12 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
   font-weight: 400;
   color: inherit;
+  text-shadow: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
   font-weight: 700;
   color: #FFFFFF;
+  text-shadow: 2px 2px 2px #e044ff;
 }
 .advantages-2 .container .label-switcher {
   z-index: 1;
@@ -878,7 +880,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  outline: 1px dashed #7bff00;
 }
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .label-switcher {
@@ -932,6 +933,7 @@ body {
 .advantages-2 .container .switch-list__item:first-child {
   font-weight: 700;
   color: #FFFFFF;
+  text-shadow: -2px 2px 2px #e044ff;
 }
 .advantages-2 .container .switch-list__svg {
   visibility: hidden;
