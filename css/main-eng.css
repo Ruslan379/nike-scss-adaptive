@@ -847,6 +847,14 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
   margin-right: 3px;
 }
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
+  font-weight: 400;
+  color: inherit;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
+  font-weight: 700;
+  color: #FFFFFF;
+}
 .advantages-2 .container .label-switcher {
   z-index: 1;
   width: 80px;
@@ -920,6 +928,10 @@ body {
   .advantages-2 .container .switch-list {
     top: -60px;
   }
+}
+.advantages-2 .container .switch-list__item:first-child {
+  font-weight: 700;
+  color: #FFFFFF;
 }
 .advantages-2 .container .switch-list__svg {
   visibility: hidden;

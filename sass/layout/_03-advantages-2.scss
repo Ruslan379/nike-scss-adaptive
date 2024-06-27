@@ -61,6 +61,15 @@
         .input-switcher:checked + .label-switcher > .label-switcher__svg {
             margin-right: 3px;
         }
+        //? Зміна властивостей текста OLD/NEW при перемиканні
+        .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
+            font-weight: 400;
+            color: inherit;
+        }
+        .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
+            font-weight: 700;
+            color: getColor('light');
+        }
 
         .label-switcher {
             z-index: 1;
@@ -99,7 +108,12 @@
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
-
+            
+            &__item:first-child {
+                font-weight: 700;
+                color: getColor('light');
+            }
+            
             //? Іконка кнопки-перемикача (тимчасова, не використовувається, прихована)
             &__svg  {
                 visibility: hidden;
