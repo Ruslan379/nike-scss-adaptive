@@ -826,14 +826,10 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
   background-image: none;
 }
-.advantages-2 .container .label-switcher {
-  z-index: 1;
-  position: absolute;
-  left: 50%;
-  top: 15px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+.advantages-2 .container .input-switcher:checked + .label-switcher {
+  -webkit-transform: translateX(calc(-50% - 21px));
+      -ms-transform: translateX(calc(-50% - 21px));
+          transform: translateX(calc(-50% - 21px));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -841,12 +837,39 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
+  margin-right: 3px;
+}
+.advantages-2 .container .label-switcher {
+  z-index: 1;
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  -webkit-transform: translateX(calc(-50% + 17px));
+      -ms-transform: translateX(calc(-50% + 17px));
+          transform: translateX(calc(-50% + 17px));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
   outline: 1px dashed #7bff00;
 }
 @media screen and (min-width: 1440px) {
@@ -855,7 +878,7 @@ body {
   }
 }
 .advantages-2 .container .label-switcher__svg {
-  margin-right: 4px;
+  margin-left: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,9 +911,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 5px;
 }
 @media screen and (min-width: 1440px) {
@@ -899,7 +922,7 @@ body {
   }
 }
 .advantages-2 .container .switch-list__svg {
-  opacity: 0.3;
+  visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

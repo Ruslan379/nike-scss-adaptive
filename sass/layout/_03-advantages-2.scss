@@ -32,13 +32,13 @@
             display: none;
         }
         //! Події :checked на input-switcher
-        .input-switcher:checked+.label-switcher>.label-switcher__svg {
+        .input-switcher:checked + .label-switcher>.label-switcher__svg {
             transform: rotate(0);
         }
-        .input-switcher:checked+.label-switcher ~ .advantages-list svg {
+        .input-switcher:checked + .label-switcher ~ .advantages-list svg {
             display: flex;
         }
-        .input-switcher:checked+.label-switcher ~ .advantages-list {
+        .input-switcher:checked + .label-switcher ~ .advantages-list {
             outline: none;
             //! так не працює!!!
             // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
@@ -46,31 +46,41 @@
             // @include generateIcons($icons);
         }
         @media screen and (min-width: getBreakPoint('desktop')) {
-            .input-switcher:checked+.label-switcher ~ .advantages-list {
+            .input-switcher:checked + .label-switcher ~ .advantages-list {
                 @include flex-JCsb;
             }
         }
-        .input-switcher:checked+.label-switcher ~ .advantages-list>.advantages-list__item {
+        .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
             background-image: none;
+        }
+        //? Зміщення кнопки-перемикача при перемиканні
+        .input-switcher:checked + .label-switcher {
+            transform: translateX(calc(-50% - 21px));
+            @include flex-JCfe-AIcen;
+        }
+        .input-switcher:checked + .label-switcher > .label-switcher__svg {
+            margin-right: 3px;
         }
 
         .label-switcher {
             z-index: 1;
+            width: 80px;
             position: absolute;
             left: 50%;
             top: 15px;
-            transform: translateX(-50%);
-            @include flex-JCcen-AIcen;
-            // gap: 5px;
+            transform: translateX(calc(-50% + 17px));
+            @include flex-JCfs-AIcen;
+            cursor: pointer;
             // ! міксін outline
             @include outline(1px, dashed, #7bff00);
-
+            
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
+            
             //? Іконка кнопки-перемикача (ВИКОРИСТОВУВАЄТЬСЯ!)
             &__svg {
-                margin-right: 4px;
+                margin-left: 3px;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(180deg);
@@ -82,16 +92,18 @@
             left: 50%;
             top: 15px;
             transform: translateX(-50%);
-            @include flex-AIcen;
+            // @include flex-AIcen;
+            @include flex-AIfe;
             gap: 5px;
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
+
             //? Іконка кнопки-перемикача (тимчасова, не використовувається, прихована)
             &__svg  {
-                // visibility: hidden;
-                opacity: 0.3;
+                visibility: hidden;
+                // opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(0);
