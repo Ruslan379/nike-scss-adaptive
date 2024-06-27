@@ -23,7 +23,7 @@
         position: relative;
         // ! міксін outline
         // @include outline(1px, dashed, yellow);
-
+        
         @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
             padding: 0;
         }
@@ -41,8 +41,8 @@
         .input-switcher:checked + .label-switcher ~ .advantages-list {
             outline: none;
             //! так не працює!!!
-            // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            // //todo         додавання фонових зображень
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
             // @include generateIcons($icons);
         }
         @media screen and (min-width: getBreakPoint('desktop')) {
@@ -52,14 +52,12 @@
         }
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
             background-image: none;
+            text-align: left;
         }
         //? Зміщення кнопки-перемикача при перемиканні
         .input-switcher:checked + .label-switcher {
-            transform: translateX(calc(-50% - 21px));
+            transform: translateX(calc(-50% - 24px));
             @include flex-JCfe-AIcen;
-        }
-        .input-switcher:checked + .label-switcher > .label-switcher__svg {
-            margin-right: 3px;
         }
         //? Зміна властивостей текста OLD/NEW при перемиканні
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
@@ -79,7 +77,7 @@
             position: absolute;
             left: 50%;
             top: 15px;
-            transform: translateX(calc(-50% + 17px));
+            transform: translateX(calc(-50% + 20px));
             @include flex-JCfs-AIcen;
             cursor: pointer;
             // ! міксін outline
@@ -91,7 +89,6 @@
             
             //? Іконка кнопки-перемикача (ВИКОРИСТОВУВАЄТЬСЯ!)
             &__svg {
-                margin-left: 3px;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(180deg);
@@ -99,16 +96,23 @@
         }
 
         .switch-list {
+            width: 111px;
             position: absolute;
             left: 50%;
             top: 15px;
             transform: translateX(-50%);
+            @include flex-JCsb;
+            //! Як що .switch-list__item-switcher не відключен, то:
             // @include flex-AIcen;
-            @include flex-AIfe;
-            gap: 5px;
+            // gap: 5px;
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
+            }
+            
+            &__item {
+                font-size: 16px;
+                line-height: 1.25;
             }
             
             &__item:first-child {
@@ -117,10 +121,15 @@
                 text-shadow: -2px 2px 2px getColor('brand-hover-light');
             }
             
+            //todo Елемент li з кнопокою-перемикачем OLD/NEW за допомогою svg (відключен)
+            &__item-switcher {
+                display: none;
+            }
+            
             //? Іконка кнопки-перемикача (тимчасова, не використовувається, прихована)
             &__svg  {
-                visibility: hidden;
-                // opacity: 0.3;
+                // visibility: hidden;
+                opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(0);
@@ -132,8 +141,8 @@
             padding: 48px 0 49px;
             @include flex_FDcol-AIcen;
             gap: 96px;
-            //     //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            //     //todo         додавання фонових зображень
+            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
+            //todo         додавання фонових зображень
             @include generateIcons($icons);
             //! так не працює!!!
             // .input-switcher:checked+.label-switcher ~ & {
@@ -150,7 +159,7 @@
                 @include flex-JCsa;
                 gap: 0;
                 outline: 5px solid getColor('buttons-background');
-
+                
                 // todo var.2 - NEW
                 // &__item:first-child::after,
                 // &__item:last-child::before {
@@ -177,12 +186,12 @@
                 // height: 346px;
                 height: 382px;
                 @include flex_FDcol-AIcen;
-                // background-image: none;
+                text-align: center;
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 // ! міксін outline
                 // @include outline(1px, dashed, #00ffcc);
-
+                
                 & svg {
                     display: none;
                 }
@@ -225,14 +234,14 @@
                     // bottom: -28px;
                     // ! міксін outline
                     // @include outline(1px, dotted, red);
-
+                    
                     @media screen and (max-width: calc(#{getBreakPoint('mobile')} - 1px)) {
                         // max-width: 130%;
                         max-width: 100vw;
                     }
                 }
             }
-
+            
             &__item:nth-child(1) .advantages-list__item-image {
                 bottom: -28px;
             }
@@ -242,11 +251,7 @@
             &__item:nth-child(3) .advantages-list__item-image {
                 bottom: -56px;
             }
-
-            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            //todo         додавання фонових зображень
-            // @include generateIcons($icons);
-
+            
             &__item:nth-child(1) .advantages-list__item-title {
                 // width: 159px;
                 width: 148px;
@@ -258,7 +263,8 @@
             }
             &__item:nth-child(3) .advantages-list__item-title {
                 // width: 151px;
-                width: 139px;
+                // width: 139px;
+                width: 153px;
             }
         }
     }

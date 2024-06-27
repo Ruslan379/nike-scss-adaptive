@@ -35,6 +35,13 @@
     flex-direction: row;
     align-items: flex-end;
 }
+//todo поки не  використовувається
+// @mixin flex-JCsb-AIfe {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: flex-end;
+// }
 
 @mixin flex-JCsb {
     display: flex;
