@@ -180,9 +180,6 @@ body {
     transform: translateX(-50%);
     pointer-events: all;
   }
-  .header.is-open:has(.lang-list__item:active) {
-    opacity: 0;
-  }
 }
 @media screen and (min-width: 1440px) {
   .header {
