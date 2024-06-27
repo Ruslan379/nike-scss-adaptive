@@ -615,13 +615,20 @@ body {
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
   font-weight: 400;
-  color: inherit;
+  color: #FFFFFF;
   text-shadow: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
   font-weight: 700;
-  color: #FFFFFF;
+  color: inherit;
   text-shadow: 2px 2px 2px #e044ff;
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
+  color: #c33bde;
+  transform: scale(1.1);
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
+  transform: scale(1);
 }
 .advantages-2 .container .label-switcher {
   z-index: 1;
@@ -635,6 +642,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+}
+.advantages-2 .container .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
+  color: #c33bde;
+  transform: scale(1.1);
 }
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .label-switcher {
@@ -667,10 +678,12 @@ body {
 .advantages-2 .container .switch-list__item {
   font-size: 16px;
   line-height: 1.25;
+  color: #FFFFFF;
+  transition: transform, color, 300ms ease-in-out;
 }
 .advantages-2 .container .switch-list__item:first-child {
   font-weight: 700;
-  color: #FFFFFF;
+  color: inherit;
   text-shadow: -2px 2px 2px #e044ff;
 }
 .advantages-2 .container .switch-list__item-switcher {

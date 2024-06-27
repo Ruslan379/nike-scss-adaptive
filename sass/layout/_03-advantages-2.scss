@@ -62,13 +62,20 @@
         //? Зміна властивостей текста OLD/NEW при перемиканні
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
             font-weight: 400;
-            color: inherit;
+            color: getColor('light');
             text-shadow: none;
         }
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:last-child {
             font-weight: 700;
-            color: getColor('light');
+            color: inherit;
             text-shadow: 2px 2px 2px getColor('brand-hover-light');
+        }
+        .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
+            color: getColor('brand-hover');
+            transform: scale(1.1);
+        }
+        .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child{
+            transform: scale(1);
         }
 
         .label-switcher {
@@ -83,6 +90,11 @@
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
             
+            &:hover ~  .switch-list > .switch-list__item:last-child {
+                color: getColor('brand-hover');
+                transform: scale(1.1);
+            }
+
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
@@ -113,11 +125,17 @@
             &__item {
                 font-size: 16px;
                 line-height: 1.25;
+                color: getColor('light');
+                //? Aнімація-1
+                transition: 
+                    transform, color,
+                    300ms 
+                    ease-in-out;
             }
             
             &__item:first-child {
                 font-weight: 700;
-                color: getColor('light');
+                color: inherit;
                 text-shadow: -2px 2px 2px getColor('brand-hover-light');
             }
             
