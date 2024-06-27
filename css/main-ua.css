@@ -847,6 +847,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  outline: 1px dashed #7bff00;
 }
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .label-switcher {
@@ -897,8 +898,8 @@ body {
     top: -60px;
   }
 }
-.advantages-2 .container .switch-list__switcher {
-  visibility: hidden;
+.advantages-2 .container .switch-list__svg {
+  opacity: 0.3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

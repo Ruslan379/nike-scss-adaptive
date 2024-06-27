@@ -63,12 +63,12 @@
             @include flex-JCcen-AIcen;
             // gap: 5px;
             // ! міксін outline
-            // @include outline(1px, dashed, #7bff00);
-            
+            @include outline(1px, dashed, #7bff00);
+
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
-            
+            //? Іконка кнопки-перемикача (ВИКОРИСТОВУВАЄТЬСЯ!)
             &__svg {
                 margin-right: 4px;
                 @include flex-JCcen-AIcen;
@@ -88,10 +88,10 @@
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
             }
-            
-            &__switcher {
-                visibility: hidden;
-                // opacity: 0.3;
+            //? Іконка кнопки-перемикача (тимчасова, не використовувається, прихована)
+            &__svg  {
+                // visibility: hidden;
+                opacity: 0.3;
                 @include flex-JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(0);
