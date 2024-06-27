@@ -623,12 +623,14 @@ body {
   color: inherit;
   text-shadow: 2px 2px 2px #e044ff;
 }
-.advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
-  color: #c33bde;
-  transform: scale(1.1);
-}
-.advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
-  transform: scale(1);
+@media screen and (min-width: 1440px) {
+  .advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
+    color: #c33bde;
+    transform: scale(1.1);
+  }
+  .advantages-2 .container .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
+    transform: scale(1);
+  }
 }
 .advantages-2 .container .label-switcher {
   z-index: 1;
@@ -643,13 +645,13 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.advantages-2 .container .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
-  color: #c33bde;
-  transform: scale(1.1);
-}
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .label-switcher {
     top: -60px;
+  }
+  .advantages-2 .container .label-switcher:hover ~ .switch-list > .switch-list__item:last-child {
+    color: #c33bde;
+    transform: scale(1.1);
   }
 }
 .advantages-2 .container .label-switcher__svg {

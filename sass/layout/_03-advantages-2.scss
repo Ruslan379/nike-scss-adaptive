@@ -70,13 +70,16 @@
             color: inherit;
             text-shadow: 2px 2px 2px getColor('brand-hover-light');
         }
-        .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
-            color: getColor('brand-hover');
-            transform: scale(1.1);
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:first-child {
+                color: getColor('brand-hover');
+                transform: scale(1.1);
+            }
+            .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child{
+                transform: scale(1);
+            }
         }
-        .input-switcher:checked + .label-switcher:hover ~ .switch-list > .switch-list__item:last-child{
-            transform: scale(1);
-        }
+        
 
         .label-switcher {
             z-index: 1;
@@ -90,13 +93,18 @@
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
             
-            &:hover ~  .switch-list > .switch-list__item:last-child {
-                color: getColor('brand-hover');
-                transform: scale(1.1);
-            }
+            // &:hover ~  .switch-list > .switch-list__item:last-child {
+            //     color: getColor('brand-hover');
+            //     transform: scale(1.1);
+            // }
 
             @media screen and (min-width: getBreakPoint('desktop')) {
                 top: -60px;
+
+                &:hover ~  .switch-list > .switch-list__item:last-child {
+                    color: getColor('brand-hover');
+                    transform: scale(1.1);
+                }
             }
             
             //? Іконка кнопки-перемикача (ВИКОРИСТОВУВАЄТЬСЯ!)
