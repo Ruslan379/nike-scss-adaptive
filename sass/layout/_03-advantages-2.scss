@@ -6,7 +6,9 @@
 .advantages-2 {
     height: 1437px;
     border-bottom: 2px solid getColor('light');
-    background-color: getColor('background-brand');
+    // background-color: getColor('background-brand');
+    //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+    background-color: if($lang == ua, getColor('background-brand'), getColor('background-brand-2'));
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 606px;
