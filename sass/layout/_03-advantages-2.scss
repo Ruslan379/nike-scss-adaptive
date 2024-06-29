@@ -5,16 +5,14 @@
 
 .advantages-2 {
     height: 1437px;
-    border-bottom: 2px solid getColor('light');
-    // background-color: getColor('background-brand');
+    padding: 50px 0 49px;
     //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
     background-color: if($lang == ua, getColor('background-brand'), getColor('background-brand-2'));
 
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 606px;
-        padding-top: 102px;
-        // padding-bottom: 120px;
-        padding-bottom: 80px;
+        padding: 102px 0 80px;
+        border-bottom: 2px solid getColor('light');
         background-image:url(../images/advantages-background.jpg);
         background-repeat: no-repeat;
         background-position: center 0;
@@ -104,7 +102,8 @@
             width: 80px;
             position: absolute;
             left: 50%;
-            top: 15px;
+            // top: 15px;
+            top: -35px;
             transform: translateX(calc(-50% + 20px));
             @include flex-JCfs-AIcen;
             cursor: pointer;
@@ -137,7 +136,8 @@
             width: 111px;
             position: absolute;
             left: 50%;
-            top: 15px;
+            // top: 15px;
+            top: -35px;
             transform: translateX(-50%);
             @include flex-JCsb;
             //! Як що .switch-list__item-switcher не відключен, то:
@@ -182,7 +182,7 @@
 
         .advantages-list {
             width: 100%;
-            padding: 48px 0 49px;
+            // padding: 48px 0 49px;
             @include flex_FDcol-AIcen;
             gap: 96px;
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 

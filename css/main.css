@@ -625,6 +625,82 @@ body {
   left: -50px;
 }
 
+.benefits {
+  height: 417px;
+  padding: 21px 0 37px;
+  background-color: #021635;
+  background-image: url(../images/benefits_background-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto;
+}
+@media screen and (min-width: 1440px) {
+  .benefits {
+    height: 665px;
+    padding: 0px 0 0px;
+    border-bottom: 2px solid #FFFFFF;
+    background-image: url(../images/benefits_background-desktop.jpg);
+  }
+}
+.benefits .container .advantages-list {
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  outline: 5px solid #8e32c6;
+}
+.benefits .container .advantages-list__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.benefits .container .advantages-list__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.benefits .container .advantages-list__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
+}
+.benefits .container .advantages-list__item {
+  position: relative;
+  width: 240px;
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.benefits .container .advantages-list__item-title {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.42;
+  text-align: center;
+}
+.benefits .container .advantages-list__item:nth-child(2) {
+  justify-content: end;
+  background-position: center top;
+}
+.benefits .container .advantages-list__item:nth-child(1) .advantages-list__item-title {
+  width: 159px;
+}
+.benefits .container .advantages-list__item:nth-child(2) .advantages-list__item-title {
+  width: 161px;
+}
+.benefits .container .advantages-list__item:nth-child(3) .advantages-list__item-title {
+  width: 151px;
+}
+.benefits .container .advantages-list__item:first-child::after, .benefits .container .advantages-list__item:last-child::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  right: -50px;
+  background-color: #FFFFFF;
+}
+.benefits .container .advantages-list__item:last-child::before {
+  left: -50px;
+}
+
 .reviews {
   height: 522px;
   padding-top: 25px;
