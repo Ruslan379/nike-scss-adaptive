@@ -9,7 +9,7 @@
     background-position: center 0;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     background-size: if($adaptive, auto, cover);
-
+    
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 665px;
         padding: 0px 0 0px;
@@ -18,10 +18,57 @@
     }
 
     .container {
+        position: relative;
+        overflow: hidden;
         height: 100%;
         // ! міксін outline
         @include outline(1px, dashed, yellow);
-
         
+        &::before {
+            content: '';
+            width: 96px;
+            height: 197px;
+            position: absolute;
+            left: 0;
+            bottom: 19px;
+            background-image:url(../images/benefits_background-mobile-image-left.png);
+            background-repeat: no-repeat;
+        }
+        
+        &::after {
+            content: '';
+            width: 162px;
+            height: 193px;
+            position: absolute;
+            right: -65px;
+            bottom: 33px;
+            transform: rotate(-41deg);
+            background-image:url(../images/benefits_background-mobile-image-right.png);
+            background-repeat: no-repeat;
+        }
+        
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        .benefits-background-image-box {
+            width: 297px;
+            height: 143px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(calc(-50% - 6px));
+            background-image:url(../images/benefits_background-mobile-image.png);
+            background-repeat: no-repeat;
+            background-position: center 0;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            background-size: if($adaptive, auto, cover);
+            // ! міксін outline
+            @include outline(1px, dotted, yellowgreen);
+
+        }
     }
 }

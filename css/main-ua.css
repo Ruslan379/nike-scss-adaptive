@@ -834,6 +834,47 @@ body {
   }
 }
 .benefits .container {
+  position: relative;
+  overflow: hidden;
   height: 100%;
   outline: 1px dashed yellow;
+}
+.benefits .container::before {
+  content: "";
+  width: 96px;
+  height: 197px;
+  position: absolute;
+  left: 0;
+  bottom: 19px;
+  background-image: url(../images/benefits_background-mobile-image-left.png);
+  background-repeat: no-repeat;
+}
+.benefits .container::after {
+  content: "";
+  width: 162px;
+  height: 193px;
+  position: absolute;
+  right: -65px;
+  bottom: 33px;
+  transform: rotate(-41deg);
+  background-image: url(../images/benefits_background-mobile-image-right.png);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1440px) {
+  .benefits .container::before, .benefits .container::after {
+    display: none;
+  }
+}
+.benefits .container .benefits-background-image-box {
+  width: 297px;
+  height: 143px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 6px));
+  background-image: url(../images/benefits_background-mobile-image.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto;
+  outline: 1px dotted yellowgreen;
 }/*# sourceMappingURL=main-ua.css.map */
