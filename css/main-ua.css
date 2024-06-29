@@ -866,6 +866,8 @@ body {
   }
 }
 .benefits .container .benefits-background-image-box {
+  min-width: 297px;
+  min-height: 143px;
   width: 297px;
   height: 143px;
   position: absolute;
@@ -877,4 +879,9 @@ body {
   background-position: center 0;
   background-size: auto;
   outline: 1px dotted yellowgreen;
+}
+@media screen and (min-width: 1440px) {
+  .benefits .container .benefits-background-image-box {
+    display: none;
+  }
 }/*# sourceMappingURL=main-ua.css.map */

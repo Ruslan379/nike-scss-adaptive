@@ -55,8 +55,12 @@
         }
 
         .benefits-background-image-box {
-            width: 297px;
-            height: 143px;
+            min-width: 297px;
+            min-height: 143px;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            width: if($adaptive, 297px, 70%);
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            height: if($adaptive, 143px, calc(143px + 15vw));
             position: absolute;
             left: 50%;
             top: 0;
@@ -65,9 +69,15 @@
             background-repeat: no-repeat;
             background-position: center 0;
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            background-size: if($adaptive, auto, cover);
+            background-size: if($adaptive, auto, 100%);
             // ! міксін outline
             @include outline(1px, dotted, yellowgreen);
+            
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                & {
+                    display: none;
+                }
+            }
 
         }
     }

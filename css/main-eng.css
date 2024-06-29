@@ -866,8 +866,10 @@ body {
   }
 }
 .benefits .container .benefits-background-image-box {
-  width: 297px;
-  height: 143px;
+  min-width: 297px;
+  min-height: 143px;
+  width: 70%;
+  height: calc(143px + 15vw);
   position: absolute;
   left: 50%;
   top: 0;
@@ -875,6 +877,11 @@ body {
   background-image: url(../images/benefits_background-mobile-image.png);
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: cover;
+  background-size: 100%;
   outline: 1px dotted yellowgreen;
+}
+@media screen and (min-width: 1440px) {
+  .benefits .container .benefits-background-image-box {
+    display: none;
+  }
 }/*# sourceMappingURL=main-eng.css.map */
