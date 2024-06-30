@@ -58,9 +58,11 @@
             min-width: 297px;
             min-height: 143px;
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            width: if($adaptive, 297px, 70%);
+            // width: if($adaptive, 297px, 70%);
+            width: if($adaptive, 297px, 70vw);
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            height: if($adaptive, 143px, calc(143px + 15vw));
+            // height: if($adaptive, 143px, calc(143px + 15vw));
+            height: if($adaptive, 143px, calc(70vw / 2.07 ));
             position: absolute;
             left: 50%;
             top: 0;

@@ -868,8 +868,8 @@ body {
 .benefits .container .benefits-background-image-box {
   min-width: 297px;
   min-height: 143px;
-  width: 70%;
-  height: calc(143px + 15vw);
+  width: 70vw;
+  height: 33.8164251208vw;
   position: absolute;
   left: 50%;
   top: 0;
