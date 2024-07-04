@@ -12,13 +12,23 @@
 // }
 
 
-//!--- 02.Міксін для 01.@each - цикла для додавання фонових зображень в advantages -----------
+//!--- 02.Міксін для 01.@each - цикла для додавання фонових зображень advantages_...в advantages -----------
 //todo var.2
 @mixin generateIcons($iconList) {
     @each $iconName in $iconList {
         &__item--#{$iconName} {
             background-image: 
             url(../images/advantages_#{$iconName}.png);
+        }
+    }
+}
+
+//!--- Міксін-цикл - для додавання фонових advantages-item-number_... зображень в advantages-2 -----------
+@mixin generateIconsItemNumber($iconList) {
+    @each $iconName in $iconList {
+        &__item--#{$iconName} {
+            background-image: 
+            url(../images/advantages-item-number_#{$iconName}.svg);
         }
     }
 }

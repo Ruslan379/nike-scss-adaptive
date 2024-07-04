@@ -45,7 +45,8 @@
             //* так теж працює!!!
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
-            @include generateIcons($icons);
+            // @include generateIcons($icons);
+            // @include generateIconsItemNumber($icons);
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
         }
@@ -62,9 +63,12 @@
         }
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
             width: 238px;
-            background-image: none;
             text-align: left;
             border: none;
+            // background-image: none;
+            background-repeat: no-repeat;
+            background-position: 1px 5px;
+            
         }
         //? Вимикаємо Горизонтальні планки між елементами
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::before,
@@ -188,7 +192,8 @@
             gap: 96px;
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
-            @include generateIcons($icons);
+            // @include generateIcons($icons);
+            @include generateIconsItemNumber($icons);
             //! так не працює!!!
             // .input-switcher:checked+.label-switcher ~ & {
             // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
@@ -220,7 +225,7 @@
                 background-position: center bottom;
                 // ! міксін outline
                 // @include outline(1px, dashed, #00ffcc);
-                
+
                 //? Горизонтальні планки між елементами
                 @media screen and (max-width: calc(#{getBreakPoint('desktop')} - 1px)) {
                     &:nth-last-child(2)::before ,
