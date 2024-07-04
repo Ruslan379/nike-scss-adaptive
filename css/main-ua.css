@@ -589,8 +589,14 @@ body {
 .advantages-2 .container .input-switcher:checked + .label-switcher > .label-switcher__svg {
   transform: rotate(0);
 }
-.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list {
-  outline: none;
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list__item--premium-quality {
+  background-image: url(../images/advantages_premium-quality.png);
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list__item--indelible-paint {
+  background-image: url(../images/advantages_indelible-paint.png);
+}
+.advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list__item--fast-shipping {
+  background-image: url(../images/advantages_fast-shipping.png);
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list svg {
   display: flex;
@@ -598,6 +604,7 @@ body {
 @media screen and (min-width: 1440px) {
   .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list {
     padding: 0;
+    outline: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
