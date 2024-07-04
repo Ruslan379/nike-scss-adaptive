@@ -40,13 +40,14 @@
         .input-switcher:checked + .label-switcher>.label-switcher__svg {
             transform: rotate(0);
         }
+        
         .input-switcher:checked + .label-switcher ~ .advantages-list {
-            // outline: none;
-            //* так теж працює!!!
-            //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
-            //todo         додавання фонових зображень
+            visibility: visible;
+            //* так працює, але треба задаті по іншому класи!!!
+            //todo  Міксін-цикл - для додавання фонових 
+            //todo  advantages-item-number_... зображень в advantages-2
             // @include generateIcons($icons);
-            // @include generateIconsItemNumber($icons);
+            @include generateIconsItemNumber($icons);
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
         }
@@ -66,8 +67,11 @@
             text-align: left;
             border: none;
             // background-image: none;
+            //!
+            overflow: visible;
             background-repeat: no-repeat;
-            background-position: 1px 5px;
+            background-position: left -35px top 3px;
+            // background-position: -35px 3px;
             
         }
         //? Вимикаємо Горизонтальні планки між елементами
@@ -193,12 +197,12 @@
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень
             // @include generateIcons($icons);
-            @include generateIconsItemNumber($icons);
+            // @include generateIconsItemNumber($icons);
             //! так не працює!!!
             // .input-switcher:checked+.label-switcher ~ & {
             // //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             // //todo         додавання фонових зображень
-            //     @include generateIcons($icons);
+                @include generateIcons($icons);
             // }
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);

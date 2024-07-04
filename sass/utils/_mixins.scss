@@ -26,7 +26,7 @@
 //!--- Міксін-цикл - для додавання фонових advantages-item-number_... зображень в advantages-2 -----------
 @mixin generateIconsItemNumber($iconList) {
     @each $iconName in $iconList {
-        &__item--#{$iconName} {
+        &>.advantages-list__item--#{$iconName} {
             background-image: 
             url(../images/advantages-item-number_#{$iconName}.svg);
         }
