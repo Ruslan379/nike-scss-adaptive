@@ -824,6 +824,7 @@ body {
 }
 .advantages-2 .container .advantages-list__item:nth-child(3) .advantages-list__item-title {
   width: 153px;
+  margin-left: 24px;
 }
 
 .benefits {
