@@ -617,9 +617,7 @@ body {
   width: 238px;
   text-align: left;
   border: none;
-  overflow: visible;
-  background-repeat: no-repeat;
-  background-position: left -35px top 3px;
+  background-image: none;
 }
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::before,
 .advantages-2 .container .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::after {

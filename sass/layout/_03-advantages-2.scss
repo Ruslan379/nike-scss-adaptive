@@ -66,11 +66,12 @@
             width: 238px;
             text-align: left;
             border: none;
-            // background-image: none;
-            //! Сп
-            overflow: visible;
-            background-repeat: no-repeat;
-            background-position: left -35px top 3px;
+            background-image: none;
+            //! Підключення svg-зображень як фонові зображення
+            // overflow: visible;
+            // fill: getColor('light-eng');
+            // background-repeat: no-repeat;
+            // background-position: left -35px top 3px;
         }
         //? Вимикаємо Горизонтальні планки між елементами
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::before,
