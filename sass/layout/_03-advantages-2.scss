@@ -67,9 +67,22 @@
             text-align: left;
             border: none;
             background-image: none;
-            //! Підключення svg-зображень як фонові зображення
+            
+            //todo Підключення svg-зображень як фонові зображення
             // background-repeat: no-repeat;
-            // background-position: left -35px top 3px;
+            // // background-position: left -35px top 3px;
+            // // +++
+            // //! Як SVG це зображення НЕ ПРАЦЮЄ!
+            // // background-image: url(../images/advantages-image_premium-quality.svg);
+            // //* Як PNG це зображення ПРАЦЮЄ!
+            // // background-image: url(../images/advantages-image_premium-quality.png);
+            // // +++
+            // background-position:
+            // //* Це для item-number-2:
+            // left -35px top 3px,
+            // //* Це для image-1:
+            // // center bottom -29px;
+            // center bottom -23px;
         }
         //? Вимикаємо Горизонтальні планки між елементами
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item:nth-last-child(2)::before,

@@ -28,7 +28,8 @@
     @each $iconName in $iconList {
         &>.advantages-list__item--#{$iconName} {
             background-image: 
-            url(../images/advantages-item-number_#{$iconName}.svg);
+            url(../images/advantages-item-number_#{$iconName}.svg),
+            url(../images/advantages-image_#{$iconName}.png);
         }
     }
 }
