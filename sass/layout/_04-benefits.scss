@@ -62,7 +62,7 @@
             width: if($adaptive, 297px, 70vw);
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
             // height: if($adaptive, 143px, calc(143px + 15vw));
-            height: if($adaptive, 143px, calc(70vw / 2.07 ));
+            height: if($adaptive, 143px, calc(70vw / 2.077 ));
             position: absolute;
             left: 50%;
             top: 0;
@@ -74,16 +74,22 @@
             background-size: if($adaptive, auto, 100%);
             // ! міксін outline
             @include outline(1px, dotted, yellowgreen);
-
-            &__svg-point {
+            
+            &__svg-box {
                 position: absolute;
-                min-width: 11px;
+                min-width: 47px;
+                min-height: 43px;
                 //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                width: if($adaptive, 11px, calc(70vw * 0.037));
-                height: auto;
-                fill: transparent;
+                width: if($adaptive, 47px, calc(70vw * 0.158));
+                height: if($adaptive, 43px, calc(100% * 0.301));
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                @include flex-JCcen-AIcen;
+                border-radius: 50%;
+                // fill: transparent;
                 // ! міксін outline
-                @include outline(1px, dotted, #ffef5f);
+                @include outline(1px, dashed, #ff5f5f);
 
                 &--shoelace {
                     // left: 141,5*100/297;
@@ -120,6 +126,17 @@
                     top: 69.93%;
                     transform: translate(-50%, -50%);
                 }
+            }
+            
+            &__svg-point {
+                // position: absolute;
+                min-width: 11px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                width: if($adaptive, 11px, calc(70vw * 0.037));
+                height: auto;
+                fill: transparent;
+                // ! міксін outline
+                // @include outline(1px, dotted, #ffef5f);
             }
             
             @media screen and (min-width: getBreakPoint('desktop')) {

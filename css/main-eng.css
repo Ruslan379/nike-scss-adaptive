@@ -880,7 +880,7 @@ body {
   min-width: 297px;
   min-height: 143px;
   width: 70vw;
-  height: 33.8164251208vw;
+  height: 33.7024554646vw;
   position: absolute;
   left: 50%;
   top: 0;
@@ -891,38 +891,49 @@ body {
   background-size: 100%;
   outline: 1px dotted yellowgreen;
 }
-.benefits .container .benefits-background-image-box__svg-point {
+.benefits .container .benefits-background-image-box__svg-box {
   position: absolute;
-  min-width: 11px;
-  width: 2.59vw;
-  height: auto;
-  fill: transparent;
-  outline: 1px dotted #ffef5f;
+  min-width: 47px;
+  min-height: 43px;
+  width: 11.06vw;
+  height: 30.1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: 1px dashed #ff5f5f;
 }
-.benefits .container .benefits-background-image-box__svg-point--shoelace {
+.benefits .container .benefits-background-image-box__svg-box--shoelace {
   left: 47.64%;
   top: 29.02%;
   transform: translate(-50%, -50%);
 }
-.benefits .container .benefits-background-image-box__svg-point--lining {
+.benefits .container .benefits-background-image-box__svg-box--lining {
   left: 88.05%;
   top: 23.43%;
   transform: translate(-50%, -50%);
 }
-.benefits .container .benefits-background-image-box__svg-point--logo {
+.benefits .container .benefits-background-image-box__svg-box--logo {
   left: 56.4%;
   top: 52.8%;
   transform: translate(-50%, -50%);
 }
-.benefits .container .benefits-background-image-box__svg-point--mesh {
+.benefits .container .benefits-background-image-box__svg-box--mesh {
   left: 31.81%;
   top: 58.39%;
   transform: translate(-50%, -50%);
 }
-.benefits .container .benefits-background-image-box__svg-point--sole {
+.benefits .container .benefits-background-image-box__svg-box--sole {
   left: 81.14%;
   top: 69.93%;
   transform: translate(-50%, -50%);
+}
+.benefits .container .benefits-background-image-box__svg-point {
+  min-width: 11px;
+  width: 2.59vw;
+  height: auto;
+  fill: transparent;
 }
 @media screen and (min-width: 1440px) {
   .benefits .container .benefits-background-image-box {
