@@ -85,9 +85,33 @@
                 // ! міксін outline
                 @include outline(1px, dotted, #ffef5f);
 
+                &--shoelace {
+                    // left: 141,5px*100/297;
+                    // top: 41,5px*100/143;
+                    left: 81.14%;
+                    top: 69.93%;
+                }
+                &--lining {
+                    // left: 261,5px*100/297;
+                    // top: 33,5x*100/143;
+                    left: 81.14%;
+                    top: 69.93%;
+                }
+                &--logo {
+                    // left: 167,5px*100/297;
+                    // top: 75,5px*100/143;
+                    left: 81.14%;
+                    top: 69.93%;
+                }
+                &--mesh {
+                    // left: 94,5px*100/297;
+                    // top: 83,5px*100/143;
+                    left: 81.14%;
+                    top: 69.93%;
+                }
                 &--sole {
-                    // left: 241px;
-                    // top: 100px;
+                    // left: 241px*100/297;
+                    // top: 100px*100/143;
                     left: 81.14%;
                     top: 69.93%;
                 }
