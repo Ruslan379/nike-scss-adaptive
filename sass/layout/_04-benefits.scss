@@ -74,6 +74,13 @@
             background-size: if($adaptive, auto, 100%);
             // ! міксін outline
             @include outline(1px, dotted, yellowgreen);
+
+            &__svg-point {
+                width: 44px;
+                height: 44px;
+                // ! міксін outline
+                @include outline(1px, dotted, #ffef5f);
+            }
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 & {

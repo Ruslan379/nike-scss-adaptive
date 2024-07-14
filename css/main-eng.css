@@ -891,6 +891,11 @@ body {
   background-size: 100%;
   outline: 1px dotted yellowgreen;
 }
+.benefits .container .benefits-background-image-box__svg-point {
+  width: 44px;
+  height: 44px;
+  outline: 1px dotted #ffef5f;
+}
 @media screen and (min-width: 1440px) {
   .benefits .container .benefits-background-image-box {
     display: none;
