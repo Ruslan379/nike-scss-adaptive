@@ -892,9 +892,16 @@ body {
   outline: 1px dotted yellowgreen;
 }
 .benefits .container .benefits-background-image-box__svg-point {
-  width: 44px;
-  height: 44px;
+  position: absolute;
+  min-width: 11px;
+  width: 2.59vw;
+  height: auto;
+  fill: transparent;
   outline: 1px dotted #ffef5f;
+}
+.benefits .container .benefits-background-image-box__svg-point--sole {
+  left: 241px;
+  top: 100px;
 }
 @media screen and (min-width: 1440px) {
   .benefits .container .benefits-background-image-box {

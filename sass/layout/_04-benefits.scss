@@ -76,10 +76,19 @@
             @include outline(1px, dotted, yellowgreen);
 
             &__svg-point {
-                width: 44px;
-                height: 44px;
+                position: absolute;
+                min-width: 11px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                width: if($adaptive, 11px, calc(70vw * 0.037));
+                height: auto;
+                fill: transparent;
                 // ! міксін outline
                 @include outline(1px, dotted, #ffef5f);
+
+                &--sole {
+                    left: 241px;
+                    top: 100px;
+                }
             }
             
             @media screen and (min-width: getBreakPoint('desktop')) {
