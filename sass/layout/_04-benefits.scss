@@ -61,7 +61,6 @@
             // width: if($adaptive, 297px, 70%);
             width: if($adaptive, 297px, 70vw);
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            // height: if($adaptive, 143px, calc(143px + 15vw));
             height: if($adaptive, 143px, calc(70vw / 2.077 ));
             position: absolute;
             left: 50%;
@@ -82,15 +81,12 @@
                 //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 width: if($adaptive, 47px, calc(70vw * 0.158));
                 height: if($adaptive, 43px, calc(100% * 0.301));
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
                 @include flex-JCcen-AIcen;
                 border-radius: 50%;
                 // fill: transparent;
                 // ! міксін outline
                 @include outline(1px, dashed, #ff5f5f);
-
+                
                 &--shoelace {
                     // left: 141,5*100/297;
                     // top: 41,5*100/143;
@@ -129,7 +125,6 @@
             }
             
             &__svg-point {
-                // position: absolute;
                 min-width: 11px;
                 //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 width: if($adaptive, 11px, calc(70vw * 0.037));
@@ -144,7 +139,6 @@
                     display: none;
                 }
             }
-
         }
     }
 }
