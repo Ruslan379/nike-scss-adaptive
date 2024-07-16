@@ -86,6 +86,12 @@
                 // fill: transparent;
                 // ! міксін outline
                 @include outline(1px, dashed, #ff5f5f);
+                background-image: 
+                    url(../../images/benefits_point-zoom.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                background-size: if($adaptive, auto, cover);
                 
                 &--shoelace {
                     // left: 141,5*100/297;

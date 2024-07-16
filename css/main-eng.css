@@ -903,6 +903,10 @@ body {
   align-items: center;
   border-radius: 50%;
   outline: 1px dashed #ff5f5f;
+  background-image: url(../../images/benefits_point-zoom.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .benefits .container .benefits-background-image-box__svg-box--shoelace {
   left: 47.64%;
