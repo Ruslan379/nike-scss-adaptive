@@ -691,20 +691,23 @@ body {
 }
 .benefits .container .benefits-background-image-box__svg-box {
   position: absolute;
-  min-width: 47px;
-  min-height: 43px;
-  width: 47px;
-  height: 43px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   outline: 1px dashed #ff5f5f;
-  background-image: url(../../images/benefits_point-zoom.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
+  transition: 1.5s;
+}
+.benefits .container .benefits-background-image-box__svg-box:hover {
+  min-width: 47px;
+  min-height: 43px;
+  width: 47px;
+  height: 43px;
+  cursor: pointer;
+}
+.benefits .container .benefits-background-image-box__svg-box:hover > svg {
+  display: none;
 }
 .benefits .container .benefits-background-image-box__svg-box--shoelace {
   left: 47.64%;
@@ -730,6 +733,10 @@ body {
   left: 81.14%;
   top: 69.93%;
   transform: translate(-50%, -50%);
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-sole.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-point {
   min-width: 11px;

@@ -76,23 +76,38 @@
             
             &__svg-box {
                 position: absolute;
-                min-width: 47px;
-                min-height: 43px;
-                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                width: if($adaptive, 47px, calc(70vw * 0.158));
-                height: if($adaptive, 43px, calc(100% * 0.301));
+                // min-width: 47px;
+                // min-height: 43px;
+                // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                // width: if($adaptive, 47px, calc(70vw * 0.158));
+                // height: if($adaptive, 43px, calc(100% * 0.301));
                 @include flex-JCcen-AIcen;
                 border-radius: 50%;
                 // fill: transparent;
                 // ! міксін outline
                 @include outline(1px, dashed, #ff5f5f);
-                background-image: 
-                    url(../../images/benefits_point-zoom.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                background-size: if($adaptive, auto, cover);
-                
+                //todo Фонове зображення - коло
+                // background-image: 
+                //     url(../images/benefits_point-zoom.svg);
+                // background-repeat: no-repeat;
+                // background-position: center;
+                // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                // background-size: if($adaptive, auto, cover);
+                //? Aнімація-1
+                transition: 1.5s;
+
+                &:hover {
+                    min-width: 47px;
+                    min-height: 43px;
+                    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                    width: if($adaptive, 47px, calc(70vw * 0.158));
+                    height: if($adaptive, 43px, calc(100% * 0.301));
+                    cursor: pointer;
+                }
+                &:hover > svg {
+                    display: none;
+                }
+
                 &--shoelace {
                     // left: 141,5*100/297;
                     // top: 41,5*100/143;
@@ -100,6 +115,7 @@
                     top: 29.02%;
                     transform: translate(-50%, -50%);
                 }
+
                 &--lining {
                     // left: 261,5*100/297;
                     // top: 33,5*100/143;
@@ -107,6 +123,7 @@
                     top: 23.43%;
                     transform: translate(-50%, -50%);
                 }
+
                 &--logo {
                     // left: 167,5*100/297;
                     // top: 75,5*100/143;
@@ -114,6 +131,7 @@
                     top: 52.80%;
                     transform: translate(-50%, -50%);
                 }
+
                 &--mesh {
                     // left: 94,5*100/297;
                     // top: 83,5*100/143;
@@ -121,12 +139,21 @@
                     top: 58.39%;
                     transform: translate(-50%, -50%);
                 }
+                
                 &--sole {
                     // left: 241*100/297;
                     // top: 100*100/143;
                     left: 81.14%;
                     top: 69.93%;
                     transform: translate(-50%, -50%);
+                    //todo Фонові зображення - збільшення і коло
+                    background-image:
+                        url(../images/benefits_point-circle.svg),
+                        url(../images/benefits_point-sole.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                    background-size: if($adaptive, auto, cover);
                 }
             }
             
