@@ -95,7 +95,7 @@
                 // background-size: if($adaptive, auto, cover);
                 //? Aнімація-1
                 transition: 1.5s;
-
+                
                 &:hover {
                     min-width: 48px;
                     min-height: 44px;
@@ -107,6 +107,9 @@
                 &:hover > .benefits-background-image-box__svg-point {
                     display: none;
                 }
+                &:hover > .benefits-background-image-box__pointer-underlining-sole-box {
+                    display: block;
+                }
 
                 &--shoelace {
                     // left: 141,5*100/297;
@@ -115,7 +118,7 @@
                     top: 29.02%;
                     transform: translate(-50%, -50%);
                 }
-
+                
                 &--lining {
                     // left: 261,5*100/297;
                     // top: 33,5*100/143;
@@ -123,7 +126,7 @@
                     top: 23.43%;
                     transform: translate(-50%, -50%);
                 }
-
+                
                 &--logo {
                     // left: 167,5*100/297;
                     // top: 75,5*100/143;
@@ -131,7 +134,7 @@
                     top: 52.80%;
                     transform: translate(-50%, -50%);
                 }
-
+                
                 &--mesh {
                     // left: 94,5*100/297;
                     // top: 83,5*100/143;
@@ -139,7 +142,7 @@
                     top: 58.39%;
                     transform: translate(-50%, -50%);
                 }
-
+                
                 &--sole {
                     // left: 241*100/297;
                     // top: 100*100/143;
@@ -165,6 +168,29 @@
                 fill: transparent;
                 // ! міксін outline
                 // @include outline(1px, dotted, #ffef5f);
+            }
+            
+            &__pointer-underlining-sole-box {
+                display: none;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-107%, 96%);
+                fill: transparent;
+                // ! міксін outline
+                // @include outline(1px, dotted, #5fff82);
+                
+                .benefits-background-image-box__pointer-underlining-sole-text {
+                    position: absolute;
+                    left: 7px;
+                    bottom: 9px;
+                    fill: transparent;
+                    font-family: getFont("second-family");
+                    font-size: 14px;
+                    // color: #fff;
+                    // ! міксін outline
+                    // @include outline(1px, dotted, #5fff82);
+                }
             }
             
             @media screen and (min-width: getBreakPoint('desktop')) {
