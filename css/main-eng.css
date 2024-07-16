@@ -902,13 +902,13 @@ body {
   transition: 1.5s;
 }
 .benefits .container .benefits-background-image-box__svg-box:hover {
-  min-width: 47px;
-  min-height: 43px;
+  min-width: 48px;
+  min-height: 44px;
   width: 11.06vw;
   height: 30.1%;
   cursor: pointer;
 }
-.benefits .container .benefits-background-image-box__svg-box:hover > svg {
+.benefits .container .benefits-background-image-box__svg-box:hover > .benefits-background-image-box__svg-point {
   display: none;
 }
 .benefits .container .benefits-background-image-box__svg-box--shoelace {

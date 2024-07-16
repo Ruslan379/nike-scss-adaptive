@@ -97,14 +97,14 @@
                 transition: 1.5s;
 
                 &:hover {
-                    min-width: 47px;
-                    min-height: 43px;
+                    min-width: 48px;
+                    min-height: 44px;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                     width: if($adaptive, 47px, calc(70vw * 0.158));
                     height: if($adaptive, 43px, calc(100% * 0.301));
                     cursor: pointer;
                 }
-                &:hover > svg {
+                &:hover > .benefits-background-image-box__svg-point {
                     display: none;
                 }
 
@@ -139,7 +139,7 @@
                     top: 58.39%;
                     transform: translate(-50%, -50%);
                 }
-                
+
                 &--sole {
                     // left: 241*100/297;
                     // top: 100*100/143;
