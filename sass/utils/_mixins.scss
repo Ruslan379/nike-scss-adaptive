@@ -35,72 +35,53 @@
 }
 
 //! ----------- flex-властивості (flex-контейнери) -----------
-@mixin flex-AIcen {
+@mixin flex_AIcen {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-@mixin flex-AIfe {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-//todo поки не  використовувається
-// @mixin flex-JCsb-AIfe {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: flex-end;
-// }
-
-@mixin flex-JCsb {
+@mixin flex_JCsb {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-@mixin flex-JCsa {
+@mixin flex_JCsa {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-@mixin flex-JCse {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-@mixin flex-JCcen-AIcen {
+@mixin flex_JCcen-AIcen {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-@mixin flex-JCfs-AIcen {
+@mixin flex_JCfs-AIcen {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-@mixin flex-JCfe-AIcen {
+@mixin flex_JCfe-AIcen {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
 
-@mixin flex-JCsb-AIcen {
+@mixin flex_JCsb-AIcen {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-@mixin flex-JCfe-AIcen {
+@mixin flex_JCfe-AIcen {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -112,3 +93,21 @@
     flex-direction: column;
     align-items: center;
 }
+
+//todo поки не  використовувається
+// @mixin flex_AIfe {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: flex-end;
+// }
+// @mixin flex_JCsb-AIfe {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: flex-end;
+// }
+// @mixin flex_JCse {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+// }

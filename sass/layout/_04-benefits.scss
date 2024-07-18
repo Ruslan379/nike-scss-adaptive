@@ -81,7 +81,7 @@
                 // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 // width: if($adaptive, 47px, calc(70vw * 0.158));
                 // height: if($adaptive, 43px, calc(100% * 0.301));
-                @include flex-JCcen-AIcen;
+                @include flex_JCcen-AIcen;
                 border-radius: 50%;
                 // fill: transparent;
                 // ! міксін outline

@@ -166,8 +166,8 @@
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
             right: if($adaptive, calc(25px + (100vw - #{getBreakPoint('mobile')}) / 2) , 25px);
             top: 44px;
-            // @extend %flex-JCcen-AIcen; //! так уже не можна!
-            @include flex-JCcen-AIcen;
+            // @extend %flex_JCcen-AIcen; //! так уже не можна!
+            @include flex_JCcen-AIcen;
             padding: 0;
             border: none;
             background-color: transparent;

@@ -58,8 +58,8 @@
             .input-switcher:checked + .label-switcher ~ .advantages-list {
                 padding: 0;
                 outline: none;
-                // @include flex-JCsb;
-                @include flex-JCsa;
+                // @include flex_JCsb;
+                @include flex_JCsa;
             }
         }
         .input-switcher:checked + .label-switcher ~ .advantages-list > .advantages-list__item {
@@ -92,7 +92,7 @@
         //? Зміщення кнопки-перемикача 
         .input-switcher:checked + .label-switcher {
             transform: translateX(calc(-50% - 24px));
-            @include flex-JCfe-AIcen;
+            @include flex_JCfe-AIcen;
         }
         //? Зміна властивостей текста OLD/NEW 
         .input-switcher:checked + .label-switcher ~ .switch-list > .switch-list__item:first-child {
@@ -124,7 +124,7 @@
             // top: 15px;
             top: -35px;
             transform: translateX(calc(-50% + 20px));
-            @include flex-JCfs-AIcen;
+            @include flex_JCfs-AIcen;
             cursor: pointer;
             // ! міксін outline
             // @include outline(1px, dashed, #7bff00);
@@ -145,7 +145,7 @@
             
             //? Іконка кнопки-перемикача (ВИКОРИСТОВУВАЄТЬСЯ!)
             &__svg {
-                @include flex-JCcen-AIcen;
+                @include flex_JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(180deg);
             }
@@ -158,9 +158,9 @@
             // top: 15px;
             top: -35px;
             transform: translateX(-50%);
-            @include flex-JCsb;
+            @include flex_JCsb;
             //! Як що .switch-list__item-switcher не відключен, то:
-            // @include flex-AIcen;
+            // @include flex_AIcen;
             // gap: 5px;
             
             @media screen and (min-width: getBreakPoint('desktop')) {
@@ -193,7 +193,7 @@
             &__svg  {
                 // visibility: hidden;
                 opacity: 0.3;
-                @include flex-JCcen-AIcen;
+                @include flex_JCcen-AIcen;
                 fill: transparent;
                 transform: rotate(0);
             }
@@ -221,8 +221,8 @@
                 // padding: 25px 50px;
                 // padding: 0 50px;
                 padding: 20px 0 20px;
-                // @include flex-JCsa;
-                @include flex-JCsb;
+                // @include flex_JCsa;
+                @include flex_JCsb;
                 gap: 0;
                 outline: 5px solid getColor('buttons-background');
             }

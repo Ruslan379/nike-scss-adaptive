@@ -113,14 +113,14 @@
         // @include outline(1px, dashed, yellow);
 
         @media screen and (min-width: getBreakPoint('desktop')) {
-            @include flex-AIcen;
+            @include flex_AIcen;
             gap: 0;
         }
         
         .navigation {
             @media screen and (min-width: getBreakPoint('desktop')) {
                 flex-grow: 4;
-                @include flex-AIcen;
+                @include flex_AIcen;
             }
             
             &__logo-box {
@@ -152,7 +152,7 @@
 
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     flex-grow: 3;
-                    @include flex-JCsb-AIcen;
+                    @include flex_JCsb-AIcen;
                     gap: 0;
                 }
 
@@ -190,7 +190,7 @@
         .lang-list {
             flex-grow: 1;
             height: 48px;
-            @include flex-JCfe-AIcen;
+            @include flex_JCfe-AIcen;
             gap: 10px;
             // border-radius: 10px;
             // box-shadow: 

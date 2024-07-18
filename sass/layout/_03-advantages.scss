@@ -22,7 +22,7 @@
         .advantages-list {
             width: 100%;
             padding: 25px 50px;
-            @include flex-JCsb;
+            @include flex_JCsb;
             outline: 5px solid getColor('buttons-background');
             //todo var.2 - Використання 02.Міксін для 01.@each - цикла для 
             //todo         додавання фонових зображень

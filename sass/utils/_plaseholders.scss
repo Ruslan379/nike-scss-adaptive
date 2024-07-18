@@ -1,21 +1,21 @@
 //! ----------- flex-властивості (flex-контейнери) -----------
-%flex-AIcen {
+%flex_AIcen {
     display: flex;
     align-items: center;
 }
 
-%flex-JCsb {
+%flex_JCsb {
     display: flex;
     justify-content: space-between;
 }
 
-%flex-JCcen-AIcen {
+%flex_JCcen-AIcen {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-%flex-JCsb-AIcen {
+%flex_JCsb-AIcen {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@
 
 //! ----------- Загальні стилі для ВСІХ кнопок -----------
 %buttons {
-    @extend %flex-JCcen-AIcen;
+    @extend %flex_JCcen-AIcen;
     font-size: 24px;
     border: none;
     border-radius: 10px;
