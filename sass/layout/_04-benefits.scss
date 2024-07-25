@@ -204,9 +204,9 @@
             width: 305px;
             height: 37px;
             position: absolute;
+            left: 0;
             left: 50%;
             transform: translate(-50%);
-            // margin: 0 auto;
             bottom: 0;
             @include flex_JCcen-AIcen;
             font-size: 14px;

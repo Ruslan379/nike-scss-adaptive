@@ -974,6 +974,7 @@ body {
   width: 305px;
   height: 37px;
   position: absolute;
+  left: 0;
   left: 50%;
   transform: translate(-50%);
   bottom: 0;
