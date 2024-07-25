@@ -224,31 +224,45 @@
                 );
             // ! міксін outline
             // @include outline(1px, dashed, yellow);
-
-            &::before {
-                z-index: -2;
+            
+            &::before,
+            &::after {
+                // z-index: -2;
                 content: '';
-                width: 299px;
+                // width: 299px;
                 height: 36px;
                 position: absolute;
                 left: 50%;
                 transform: translate(-50%);
+                // bottom: -6px;
+                // background-image:url(../images/benefits_background-main-text-first.svg);
+                background-repeat: no-repeat;
+            }
+            
+            &::before {
+                z-index: -2;
+                // content: '';
+                width: 299px;
+                // height: 36px;
+                // position: absolute;
+                // left: 50%;
+                // transform: translate(-50%);
                 bottom: -6px;
                 background-image:url(../images/benefits_background-main-text-first.svg);
-                background-repeat: no-repeat;
+                // background-repeat: no-repeat;
             }
             
             &::after {
                 z-index: -1;
-                content: '';
+                // content: '';
                 width: 301px;
-                height: 36px;
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%);
+                // height: 36px;
+                // position: absolute;
+                // left: 50%;
+                // transform: translate(-50%);
                 bottom: -3px;
                 background-image:url(../images/benefits_background-main-text-second.svg);
-                background-repeat: no-repeat;
+                // background-repeat: no-repeat;
             }
         }
     }
