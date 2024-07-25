@@ -76,11 +76,11 @@
             
             &__svg-box {
                 position: absolute;
-                // min-width: 47px;
-                // min-height: 43px;
+                // min-width: 48px;
+                // min-height: 44px;
                 // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                // width: if($adaptive, 47px, calc(70vw * 0.158));
-                // height: if($adaptive, 43px, calc(100% * 0.301));
+                // width: if($adaptive, 48px, calc(70vw * 0.158));
+                // height: if($adaptive, 44px, calc(100% * 0.301));
                 @include flex_JCcen-AIcen;
                 border-radius: 50%;
                 // fill: transparent;
@@ -100,8 +100,8 @@
                     min-width: 48px;
                     min-height: 44px;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    width: if($adaptive, 47px, calc(70vw * 0.158));
-                    height: if($adaptive, 43px, calc(100% * 0.301));
+                    width: if($adaptive, 48px, calc(70vw * 0.158));
+                    height: if($adaptive, 443px, calc(100% * 0.301));
                     cursor: pointer;
                 }
                 &:hover > .benefits-background-image-box__svg-point {
@@ -169,7 +169,7 @@
                 // ! міксін outline
                 // @include outline(1px, dotted, #ffef5f);
             }
-            
+
             &__pointer-underlining-sole-box {
                 display: none;
                 position: absolute;
@@ -198,6 +198,27 @@
                     display: none;
                 }
             }
+        }
+
+        .benefits-main-text {
+            width: 305px;
+            height: 37px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            // margin: 0 auto;
+            bottom: 0;
+            @include flex_JCcen-AIcen;
+            font-size: 14px;
+            border-radius: 5px;
+            background-image: 
+                linear-gradient(
+                    148deg, 
+                    #8e32c6 0%, 
+                    #d600c0 100%
+                );
+            // ! міксін outline
+            @include outline(1px, dashed, yellow);
         }
     }
 }
