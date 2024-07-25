@@ -1,7 +1,7 @@
 // ? benefits (BEM+SASS)
 .benefits {
     height: 417px;
-    padding: 21px 0 37px;
+    padding: 21px 0 31px;
     //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
     background-color: if($lang == ua, getColor('background-brand'), getColor('background-brand-2'));
     background-image:url(../images/benefits_background-mobile.jpg);
@@ -208,10 +208,9 @@
             width: 305px;
             height: 37px;
             position: absolute;
-            left: 0;
             left: 50%;
             transform: translate(-50%);
-            bottom: 0;
+            bottom: 6px;
             @include flex_JCcen-AIcen;
             // font-size: 14px;
             //! Вибір властивості для сторінки index-ua.html або index.html (eng)
@@ -224,7 +223,33 @@
                     #d600c0 100%
                 );
             // ! міксін outline
-            @include outline(1px, dashed, yellow);
+            // @include outline(1px, dashed, yellow);
+
+            &::before {
+                z-index: -2;
+                content: '';
+                width: 299px;
+                height: 36px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                bottom: -6px;
+                background-image:url(../images/benefits_background-main-text-first.svg);
+                background-repeat: no-repeat;
+            }
+            
+            &::after {
+                z-index: -1;
+                content: '';
+                width: 301px;
+                height: 36px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                bottom: -3px;
+                background-image:url(../images/benefits_background-main-text-second.svg);
+                background-repeat: no-repeat;
+            }
         }
     }
 }

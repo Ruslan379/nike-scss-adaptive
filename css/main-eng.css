@@ -829,7 +829,7 @@ body {
 
 .benefits {
   height: 417px;
-  padding: 21px 0 37px;
+  padding: 21px 0 31px;
   background-color: #021635;
   background-image: url(../images/benefits_background-mobile.jpg);
   background-repeat: no-repeat;
@@ -974,10 +974,9 @@ body {
   width: 305px;
   height: 37px;
   position: absolute;
-  left: 0;
   left: 50%;
   transform: translate(-50%);
-  bottom: 0;
+  bottom: 6px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -985,5 +984,28 @@ body {
   font-size: 14px;
   border-radius: 5px;
   background-image: linear-gradient(148deg, #8e32c6 0%, #d600c0 100%);
-  outline: 1px dashed yellow;
+}
+.benefits .container .benefits-main-text::before {
+  z-index: -2;
+  content: "";
+  width: 299px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -6px;
+  background-image: url(../images/benefits_background-main-text-first.svg);
+  background-repeat: no-repeat;
+}
+.benefits .container .benefits-main-text::after {
+  z-index: -1;
+  content: "";
+  width: 301px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -3px;
+  background-image: url(../images/benefits_background-main-text-second.svg);
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main-eng.css.map */
