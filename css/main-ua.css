@@ -905,7 +905,7 @@ body {
   min-width: 48px;
   min-height: 44px;
   width: 48px;
-  height: 443px;
+  height: 43px;
   cursor: pointer;
 }
 .benefits .container .benefits-background-image-box__svg-box:hover > .benefits-background-image-box__svg-point {
@@ -959,11 +959,11 @@ body {
 }
 .benefits .container .benefits-background-image-box__pointer-underlining-sole-box .benefits-background-image-box__pointer-underlining-sole-text {
   position: absolute;
-  left: 7px;
+  left: 5px;
   bottom: 9px;
   fill: transparent;
   font-family: "Playfair Display";
-  font-size: 14px;
+  font-size: 12px;
 }
 @media screen and (min-width: 1440px) {
   .benefits .container .benefits-background-image-box {
@@ -982,7 +982,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 5px;
   background-image: linear-gradient(148deg, #8e32c6 0%, #d600c0 100%);
   outline: 1px dashed yellow;

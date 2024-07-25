@@ -101,7 +101,7 @@
                     min-height: 44px;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                     width: if($adaptive, 48px, calc(70vw * 0.158));
-                    height: if($adaptive, 443px, calc(100% * 0.301));
+                    height: if($adaptive, 43px, calc(100% * 0.301));
                     cursor: pointer;
                 }
                 &:hover > .benefits-background-image-box__svg-point {
@@ -182,11 +182,15 @@
                 
                 .benefits-background-image-box__pointer-underlining-sole-text {
                     position: absolute;
-                    left: 7px;
+                    // left: 7px;
+                    //! Вибір властивості для сторінки index-ua.html або index.html (eng)
+                    left: if($lang == ua, 5px, 7px);
                     bottom: 9px;
                     fill: transparent;
                     font-family: getFont("second-family");
-                    font-size: 14px;
+                    // font-size: 14px;
+                    //! Вибір властивості для сторінки index-ua.html або index.html (eng)
+                    font-size: if($lang == ua, 12px, 14px);
                     // color: #fff;
                     // ! міксін outline
                     // @include outline(1px, dotted, #5fff82);
@@ -209,7 +213,9 @@
             transform: translate(-50%);
             bottom: 0;
             @include flex_JCcen-AIcen;
-            font-size: 14px;
+            // font-size: 14px;
+            //! Вибір властивості для сторінки index-ua.html або index.html (eng)
+            font-size: if($lang == ua, 12px, 14px);
             border-radius: 5px;
             background-image: 
                 linear-gradient(
