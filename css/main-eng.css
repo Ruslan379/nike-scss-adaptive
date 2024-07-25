@@ -898,7 +898,6 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  outline: 1px dashed #ff5f5f;
   transition: 1.5s;
 }
 .benefits .container .benefits-background-image-box__svg-box:hover {
@@ -918,21 +917,37 @@ body {
   left: 47.64%;
   top: 29.02%;
   transform: translate(-50%, -50%);
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-shoelace.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .benefits .container .benefits-background-image-box__svg-box--lining {
   left: 88.05%;
   top: 23.43%;
   transform: translate(-50%, -50%);
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-lining.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .benefits .container .benefits-background-image-box__svg-box--logo {
   left: 56.4%;
   top: 52.8%;
   transform: translate(-50%, -50%);
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .benefits .container .benefits-background-image-box__svg-box--mesh {
   left: 31.81%;
   top: 58.39%;
   transform: translate(-50%, -50%);
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-mesh.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .benefits .container .benefits-background-image-box__svg-box--sole {
   left: 81.14%;
