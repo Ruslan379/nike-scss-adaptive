@@ -18,7 +18,7 @@
     @each $iconName in $iconList {
         &__item--#{$iconName} {
             background-image: 
-            url(../images/advantages_#{$iconName}.png);
+                url(../images/advantages_#{$iconName}.png);
         }
     }
 }
@@ -28,8 +28,19 @@
     @each $iconName in $iconList {
         &>.advantages-list__item--#{$iconName} {
             background-image: 
-            url(../images/advantages-item-number_#{$iconName}.svg),
-            url(../images/advantages-image_#{$iconName}.png);
+                url(../images/advantages-item-number_#{$iconName}.svg),
+                url(../images/advantages-image_#{$iconName}.png);
+        }
+    }
+}
+
+//!--- Міксін-цикл - для додавання фонових benefits_point-... зображень в benefits -----------
+@mixin generatePointImages($imageList) {
+    @each $imageName in $imageList {
+        &--#{$imageName} {
+            background-image: 
+                url(../images/benefits_point-circle.svg),
+                url(../images/benefits_point-#{$imageName}.png);
         }
     }
 }

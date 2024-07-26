@@ -118,9 +118,9 @@
                     top: 29.02%;
                     transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
-                    background-image:
-                        url(../images/benefits_point-circle.svg),
-                        url(../images/benefits_point-shoelace.png);
+                    // background-image:
+                    //     url(../images/benefits_point-circle.svg),
+                    //     url(../images/benefits_point-shoelace.png);
                     background-repeat: no-repeat;
                     background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
@@ -134,9 +134,9 @@
                     top: 23.43%;
                     transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
-                    background-image:
-                        url(../images/benefits_point-circle.svg),
-                        url(../images/benefits_point-lining.png);
+                    // background-image:
+                    //     url(../images/benefits_point-circle.svg),
+                    //     url(../images/benefits_point-lining.png);
                     background-repeat: no-repeat;
                     background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
@@ -150,9 +150,9 @@
                     top: 52.80%;
                     transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
-                    background-image:
-                        url(../images/benefits_point-circle.svg),
-                        url(../images/benefits_point-logo.png);
+                    // background-image:
+                    //     url(../images/benefits_point-circle.svg),
+                    //     url(../images/benefits_point-logo.png);
                     background-repeat: no-repeat;
                     background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
@@ -166,9 +166,9 @@
                     top: 58.39%;
                     transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
-                    background-image:
-                        url(../images/benefits_point-circle.svg),
-                        url(../images/benefits_point-mesh.png);
+                    // background-image:
+                    //     url(../images/benefits_point-circle.svg),
+                    //     url(../images/benefits_point-mesh.png);
                     background-repeat: no-repeat;
                     background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
@@ -182,14 +182,19 @@
                     top: 69.93%;
                     transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
-                    background-image:
-                        url(../images/benefits_point-circle.svg),
-                        url(../images/benefits_point-sole.png);
+                    // background-image:
+                    //     url(../images/benefits_point-circle.svg),
+                    //     url(../images/benefits_point-sole.png);
                     background-repeat: no-repeat;
                     background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                     background-size: if($adaptive, auto, cover);
                 }
+                
+                //todo  Міксін-цикл - для додавання фонових 
+                //todo  benefits_point-... зображень в benefits
+                // @include generateIcons($icons);
+                @include generatePointImages($images-benefits);
             }
             
             &__svg-point {
@@ -201,7 +206,7 @@
                 // ! міксін outline
                 // @include outline(1px, dotted, #ffef5f);
             }
-
+            
             &__pointer-underlining-sole-box {
                 display: none;
                 position: absolute;
