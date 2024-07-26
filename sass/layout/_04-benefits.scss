@@ -121,10 +121,10 @@
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
                     //     url(../images/benefits_point-shoelace.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    background-size: if($adaptive, auto, cover);
+                    // background-size: if($adaptive, auto, cover);
                 }
                 
                 &--lining {
@@ -137,10 +137,10 @@
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
                     //     url(../images/benefits_point-lining.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    background-size: if($adaptive, auto, cover);
+                    // background-size: if($adaptive, auto, cover);
                 }
                 
                 &--logo {
@@ -153,10 +153,10 @@
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
                     //     url(../images/benefits_point-logo.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    background-size: if($adaptive, auto, cover);
+                    // background-size: if($adaptive, auto, cover);
                 }
                 
                 &--mesh {
@@ -169,10 +169,10 @@
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
                     //     url(../images/benefits_point-mesh.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    background-size: if($adaptive, auto, cover);
+                    // background-size: if($adaptive, auto, cover);
                 }
                 
                 &--sole {
@@ -185,15 +185,14 @@
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
                     //     url(../images/benefits_point-sole.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                    background-size: if($adaptive, auto, cover);
+                    // background-size: if($adaptive, auto, cover);
                 }
                 
                 //todo  Міксін-цикл - для додавання фонових 
                 //todo  benefits_point-... зображень в benefits
-                // @include generateIcons($icons);
                 @include generatePointImages($images-benefits);
             }
             

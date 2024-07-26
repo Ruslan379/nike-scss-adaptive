@@ -41,6 +41,10 @@
             background-image: 
                 url(../images/benefits_point-circle.svg),
                 url(../images/benefits_point-#{$imageName}.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            background-size: if($adaptive, auto, cover);
         }
     }
 }

@@ -715,56 +715,56 @@ body {
   left: 47.64%;
   top: 29.02%;
   transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--lining {
   left: 88.05%;
   top: 23.43%;
   transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--logo {
   left: 56.4%;
   top: 52.8%;
   transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--mesh {
   left: 31.81%;
   top: 58.39%;
   transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--sole {
   left: 81.14%;
   top: 69.93%;
   transform: translate(-50%, -50%);
+}
+.benefits .container .benefits-background-image-box__svg-box--shoelace {
+  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-shoelace.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
 }
-.benefits .container .benefits-background-image-box__svg-box--shoelace {
-  background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-shoelace.png);
-}
 .benefits .container .benefits-background-image-box__svg-box--lining {
   background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-lining.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--logo {
   background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--mesh {
   background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-mesh.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-box--sole {
   background-image: url(../images/benefits_point-circle.svg), url(../images/benefits_point-sole.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 .benefits .container .benefits-background-image-box__svg-point {
   min-width: 11px;
