@@ -101,7 +101,7 @@
                     min-height: 44px;
                     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                     width: if($adaptive, 48px, calc(70vw * 0.158));
-                    height: if($adaptive, 43px, calc(100% * 0.301));
+                    height: if($adaptive, 44px, calc(100% * 0.301));
                     cursor: pointer;
                 }
                 &:hover > .benefits-background-image-box__svg-point {
