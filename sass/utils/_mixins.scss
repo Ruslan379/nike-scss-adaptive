@@ -34,17 +34,19 @@
     }
 }
 
-//!--- Міксін-цикл - для додавання фонових benefits_point-... зображень в benefits -----------
+//!--- Міксін-цикл - для додавання фонових benefits_point-... зображень в benefits ПРИ ХОВЕРІ -----------
 @mixin generatePointImages($imageList) {
     @each $imageName in $imageList {
-        &--#{$imageName} {
+        // &--#{$imageName} {
+            &:hover.benefits-background-image-box__svg-box--#{$imageName} {
+            // transform: translate(-50%, -50%);
             background-image: 
                 url(../images/benefits_point-circle.svg),
                 url(../images/benefits_point-#{$imageName}.png);
-            background-repeat: no-repeat;
-            background-position: center;
+            // background-repeat: no-repeat;
+            // background-position: center;
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-            background-size: if($adaptive, auto, cover);
+            // background-size: if($adaptive, auto, cover);
         }
     }
 }

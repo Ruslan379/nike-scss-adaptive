@@ -62,6 +62,7 @@
             width: if($adaptive, 297px, 70vw);
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
             height: if($adaptive, 143px, calc(70vw / 2.077 ));
+            // z-index: 2;
             position: absolute;
             left: 50%;
             top: 0;
@@ -78,6 +79,7 @@
                 position: absolute;
                 // min-width: 48px;
                 // min-height: 44px;
+                transform: translate(-50%, -50%);
                 // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 // width: if($adaptive, 48px, calc(70vw * 0.158));
                 // height: if($adaptive, 44px, calc(100% * 0.301));
@@ -87,12 +89,12 @@
                 //todo Фонове зображення - коло
                 // background-image: 
                 //     url(../images/benefits_point-zoom.svg);
-                // background-repeat: no-repeat;
-                // background-position: center;
+                background-repeat: no-repeat;
+                background-position: center;
                 // //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-                // background-size: if($adaptive, auto, cover);
+                background-size: if($adaptive, auto, cover);
                 //? Aнімація-1
-                transition: 1.5s;
+                transition: 1s;
                 // ! міксін outline
                 // @include outline(1px, dashed, #ff5f5f);
                 
@@ -110,13 +112,18 @@
                 &:hover > .benefits-background-image-box__pointer-underlining-sole-box {
                     display: block;
                 }
-
+                // &:hover{
+                    //todo  Міксін-цикл - для додавання фонових 
+                    //todo  benefits_point-... зображень в benefits ПРИ ХОВЕРІ
+                    @include generatePointImages($images-benefits);
+                // }
+                
                 &--shoelace {
                     // left: 141,5*100/297;
                     // top: 41,5*100/143;
                     left: 47.64%;
                     top: 29.02%;
-                    transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
@@ -132,7 +139,7 @@
                     // top: 33,5*100/143;
                     left: 88.05%;
                     top: 23.43%;
-                    transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
@@ -148,7 +155,7 @@
                     // top: 75,5*100/143;
                     left: 56.40%;
                     top: 52.80%;
-                    transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
@@ -164,7 +171,7 @@
                     // top: 83,5*100/143;
                     left: 31.81%;
                     top: 58.39%;
-                    transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
@@ -180,7 +187,7 @@
                     // top: 100*100/143;
                     left: 81.14%;
                     top: 69.93%;
-                    transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
                     //todo Фонові зображення - збільшення і коло
                     // background-image:
                     //     url(../images/benefits_point-circle.svg),
@@ -193,7 +200,7 @@
                 
                 //todo  Міксін-цикл - для додавання фонових 
                 //todo  benefits_point-... зображень в benefits
-                @include generatePointImages($images-benefits);
+                // @include generatePointImages($images-benefits);
             }
             
             &__svg-point {
@@ -235,6 +242,7 @@
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 & {
+                    // Тимчасово
                     display: none;
                 }
             }
