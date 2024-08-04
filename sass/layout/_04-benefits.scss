@@ -65,8 +65,8 @@
             position: absolute;
             left: 50%;
             top: 0;
-            // transform: translateX(calc(-50% - 6px));
-            transform: translateX(calc(-50% - 1.66vw));
+            //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+            transform: if($adaptive, translateX(calc(-50% - 6px)), translateX(calc(-50% - 1.66vw)));
             background-image:url(../images/benefits_background-mobile-image.png);
             background-repeat: no-repeat;
             background-position: center 0;
@@ -88,7 +88,8 @@
                 width: if($adaptive, 835px, 57.9vw);
                 //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 height: if($adaptive, 400px, calc(57.9vw / 2.0875 ));
-                transform: translateX(calc(-50% - 9.96vw));
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                transform: if($adaptive, translateX(calc(-50% - 144px)), translateX(calc(-50% - 9.96vw)));
                 background-image:url(../images/benefits_background-desktop-image.png);
                 //! Вибір адаптивної чи респонсивної (чутливої) верстки.
                 // ! міксін outline
