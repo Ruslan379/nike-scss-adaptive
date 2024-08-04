@@ -62,11 +62,11 @@
             width: if($adaptive, 297px, 70vw);
             //! Вибір адаптивної чи респонсивної (чутливої) верстки.
             height: if($adaptive, 143px, calc(70vw / 2.077 ));
-            // z-index: 2;
             position: absolute;
             left: 50%;
             top: 0;
-            transform: translateX(calc(-50% - 6px));
+            // transform: translateX(calc(-50% - 6px));
+            transform: translateX(calc(-50% - 1.66vw));
             background-image:url(../images/benefits_background-mobile-image.png);
             background-repeat: no-repeat;
             background-position: center 0;
@@ -74,6 +74,26 @@
             background-size: if($adaptive, auto, 100%);
             // ! міксін outline
             @include outline(1px, dotted, yellowgreen);
+
+            @media screen and (min-width: getBreakPoint('tablet')) {
+                // Тимчасово
+                visibility: hidden;
+            }
+
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                visibility: visible; // Тимчасово
+                min-width: 835px;
+                min-height: 400px;
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                width: if($adaptive, 835px, 57.9vw);
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                height: if($adaptive, 400px, calc(57.9vw / 2.0875 ));
+                transform: translateX(calc(-50% - 9.96vw));
+                background-image:url(../images/benefits_background-desktop-image.png);
+                //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                // ! міксін outline
+                @include outline(1px, dotted, yellow);
+            }
             
             &__svg-box {
                 position: absolute;
@@ -237,13 +257,6 @@
                     // color: #fff;
                     // ! міксін outline
                     // @include outline(1px, dotted, #5fff82);
-                }
-            }
-            
-            @media screen and (min-width: getBreakPoint('desktop')) {
-                & {
-                    // Тимчасово
-                    display: none;
                 }
             }
         }

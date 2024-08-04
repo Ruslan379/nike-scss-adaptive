@@ -884,12 +884,29 @@ body {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% - 6px));
+  transform: translateX(calc(-50% - 1.66vw));
   background-image: url(../images/benefits_background-mobile-image.png);
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100%;
   outline: 1px dotted yellowgreen;
+}
+@media screen and (min-width: 768px) {
+  .benefits .container .benefits-background-image-box {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits .container .benefits-background-image-box {
+    visibility: visible;
+    min-width: 835px;
+    min-height: 400px;
+    width: 57.9vw;
+    height: 27.7365269461vw;
+    transform: translateX(calc(-50% - 9.96vw));
+    background-image: url(../images/benefits_background-desktop-image.png);
+    outline: 1px dotted yellow;
+  }
 }
 .benefits .container .benefits-background-image-box__svg-box {
   position: absolute;
@@ -973,11 +990,6 @@ body {
   fill: transparent;
   font-family: "Playfair Display";
   font-size: 14px;
-}
-@media screen and (min-width: 1440px) {
-  .benefits .container .benefits-background-image-box {
-    display: none;
-  }
 }
 .benefits .container .benefits-main-text {
   width: 305px;
