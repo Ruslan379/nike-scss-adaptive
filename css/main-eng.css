@@ -928,6 +928,13 @@ body {
   height: 30.1%;
   cursor: pointer;
 }
+@media screen and (min-width: 1440px) {
+  .benefits .container .benefits-background-image-box__svg-box:hover {
+    width: 9.03vw;
+    height: 30.1%;
+    outline: 1px solid red;
+  }
+}
 .benefits .container .benefits-background-image-box__svg-box:hover > .benefits-background-image-box__svg-point {
   display: none;
 }
