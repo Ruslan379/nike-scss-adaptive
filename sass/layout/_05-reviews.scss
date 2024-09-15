@@ -1,11 +1,12 @@
 // ? reviews (BEM+SASS)
 .reviews {
-    // height: 522px; //! desktop!!!
+    // height: 522px; //todo desktop!!!
     height: 418px;
-    // padding-top: 25px; //! desktop!!!
-    // padding-bottom: 114px; //! desktop!!!
-    padding: 50px 28px 0;
-    // border-bottom: 2px solid getColor('light'); //! desktop!!!
+    // padding-top: 25px; //todo desktop!!!
+    // padding-bottom: 114px; //todo desktop!!!
+    // padding: 50px 28px 0; 
+    padding-top: 50px;
+    // border-bottom: 2px solid getColor('light'); //todo desktop!!!
     //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
     background-color: if($lang == ua, getColor('background-brand'), getColor('background-brand-2'));
     background-image:
@@ -18,8 +19,15 @@
     background-position: center bottom;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
     background-size: if($adaptive, auto, cover);
+    
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        height: 532px;
+        padding: 45px 0 70px; 
+        border-bottom: 2px solid getColor('light');
+        background-image:url(../images/reviews_background-desktop.jpg);
+    }
 
-    //! desktop!!!
+    //todo desktop!!!
     // background-color: getColor('background-brand');
     // background-image:
     //     // url(../images/reviews_background-image-left-mobile.png),

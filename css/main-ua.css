@@ -1036,12 +1036,20 @@ body {
 
 .reviews {
   height: 418px;
-  padding: 50px 28px 0;
+  padding-top: 50px;
   background-color: #012d63;
   background-image: url(../images/reviews_background-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: auto;
+}
+@media screen and (min-width: 1440px) {
+  .reviews {
+    height: 532px;
+    padding: 45px 0 70px;
+    border-bottom: 2px solid #FFFFFF;
+    background-image: url(../images/reviews_background-desktop.jpg);
+  }
 }
 .reviews .container {
   outline: 1px dashed yellow;
