@@ -1,34 +1,51 @@
 // ? reviews (BEM+SASS)
 .reviews {
-    height: 522px;
-    padding-top: 25px;
-    padding-bottom: 114px;
-    border-bottom: 2px solid getColor('light');
-    background-color: getColor('background-brand');
+    // height: 522px; //! desktop!!!
+    height: 418px;
+    // padding-top: 25px; //! desktop!!!
+    // padding-bottom: 114px; //! desktop!!!
+    padding: 50px 28px 0;
+    // border-bottom: 2px solid getColor('light'); //! desktop!!!
+    //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+    background-color: if($lang == ua, getColor('background-brand'), getColor('background-brand-2'));
     background-image:
-        url(../images/reviews-background-image.png),
-        url(../images/reviews-background.jpg);
+        // url(../images/reviews_background-image-left-mobile.png),
+        // url(../images/reviews_background-image-right-mobile.png),
+        url(../images/reviews_background-mobile.jpg);
     background-repeat: no-repeat;
-    background-position:
-        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-        if($adaptive, calc(50% - 607px) bottom, left bottom),
-        center 0;
-    background-size: 
-        auto,
-        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-        if($adaptive, auto, cover);
+    // background-position: center 0;
+    // background-position: center -6px;
+    background-position: center bottom;
+    //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    background-size: if($adaptive, auto, cover);
+
+    //! desktop!!!
+    // background-color: getColor('background-brand');
+    // background-image:
+    //     // url(../images/reviews_background-image-left-mobile.png),
+    //     // url(../images/reviews_background-image-right-mobile.png),
+    //     url(../images/reviews_background-mobile.jpg);
+    // background-repeat: no-repeat;
+    // background-position:
+    //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    //     if($adaptive, calc(50% - 607px) bottom, left bottom),
+    //     center 0;
+    // background-size: 
+    //     auto,
+    //     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+    //     if($adaptive, auto, cover);
 
 
     .container {
         // ! міксін outline
-        // @include outline(1px, dashed, yellow);
+        @include outline(1px, dashed, yellow);
 
         .section-title {
             margin-bottom: 24px;
             // @extend .section-title;
         }
 
-        .reviews-list {
+        .reviews-list- {
             padding: 0 80px;
             @include flex_JCsb;
             // ! міксін outline
