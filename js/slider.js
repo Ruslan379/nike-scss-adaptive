@@ -3,7 +3,7 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 // Задаємо початковий стан (колір) кнопок < та >
 prevBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
-nextBtn.querySelector('path').setAttribute('stroke', '#FF6E30');
+nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
 prevBtn.disabled = true; // Робимо кнопку < неактивной
 const slides = document.querySelectorAll('.slider .team-item');
 // Пагінація
@@ -38,13 +38,13 @@ function updateSlider() {
     if (currentIndex === 0) {
         // зміна кольору:
         prevBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
-        nextBtn.querySelector('path').setAttribute('stroke', '#FF6E30');
+        nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
         // зміна стану:
         prevBtn.disabled = true; // Делаем кнопку неактивной
         nextBtn.disabled = false; // Разблокируем следующую кнопку
         // Пагінація:
         paginationFirst.style.height = '8px';
-        paginationFirst.style.backgroundColor = '#FF6E30';
+        paginationFirst.style.backgroundColor = '#FFB549';
         paginationSecond.style.height = '6px';
         paginationSecond.style.backgroundColor = '#283036';
         paginationThird.style.height = '6px';
@@ -52,8 +52,8 @@ function updateSlider() {
 
     } else if (currentIndex === 1) {
         // зміна кольору:
-        prevBtn.querySelector('path').setAttribute('stroke', '#FF6E30');
-        nextBtn.querySelector('path').setAttribute('stroke', '#FF6E30');
+        prevBtn.querySelector('path').setAttribute('stroke', '#FFB549');
+        nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
         // зміна стану:
         prevBtn.disabled = false; // Разблокируем предыдущую кнопку
         nextBtn.disabled = false; // Разблокируем следующую кнопку
@@ -61,12 +61,12 @@ function updateSlider() {
         paginationFirst.style.height = '6px';
         paginationFirst.style.backgroundColor = '#283036';
         paginationSecond.style.height = '8px';
-        paginationSecond.style.backgroundColor = '#FF6E30';
+        paginationSecond.style.backgroundColor = '#FFB549';
         paginationThird.style.height = '6px';
         paginationThird.style.backgroundColor = '#283036';
     } else if (currentIndex === 2) {
         // зміна кольору:
-        prevBtn.querySelector('path').setAttribute('stroke', '#FF6E30');
+        prevBtn.querySelector('path').setAttribute('stroke', '#FFB549');
         nextBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
         // зміна стану:
         prevBtn.disabled = false; // Разблокируем предыдущую кнопку
@@ -77,7 +77,7 @@ function updateSlider() {
         paginationSecond.style.height = '6px';
         paginationSecond.style.backgroundColor = '#283036';
         paginationThird.style.height = '8px';
-        paginationThird.style.backgroundColor = '#FF6E30';
+        paginationThird.style.backgroundColor = '#FFB549';
     }
     // +++++
 }

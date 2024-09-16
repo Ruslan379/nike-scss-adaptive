@@ -171,6 +171,22 @@
                 /* align-items: center; */
                 /* outline: 1px dashed teal; */
                 @include outline($type: dashed, $color: green);
+
+                &__left,
+                &__right {
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background-color: inherit;
+                    /* outline: 1px dotted green; */
+                }
+
+                &__left:disabled,
+                &__right:disabled {
+                    cursor: not-allowed; 
+                }
             }
         }
     }

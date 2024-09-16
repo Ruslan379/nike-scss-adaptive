@@ -956,6 +956,18 @@ body {
   /* outline: 1px dashed teal; */
   outline: 1px dashed green;
 }
+.reviews .container .slider-box .slider-buttons__left, .reviews .container .slider-box .slider-buttons__right {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  /* outline: 1px dotted green; */
+}
+.reviews .container .slider-box .slider-buttons__left:disabled, .reviews .container .slider-box .slider-buttons__right:disabled {
+  cursor: not-allowed;
+}
 
 .order {
   padding-top: 20px;
