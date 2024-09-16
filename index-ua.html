@@ -297,7 +297,8 @@
             <section class="reviews" id="reviews">
                 <div class="container">
                     <h2 class="section-title">Відгуки</h2>
-                    <ul class="reviews-list">
+                    <div class="slider-box">
+                        <ul class="reviews-list reviews-list--slider">
                         <li class="reviews-list__item">
                             <p class="reviews-list__review reviews-list__review--ua">
                                 Кросівки дуже зручні
@@ -379,7 +380,61 @@
                                 </div>
                             </div>
                         </li>
-                    </ul>
+                        </ul>
+                        <ul class="slider-buttons">
+                            <li class="slider-buttons__item">
+                                <button class="slider-buttons__left" id="prevBtn" type="button" disabled="">
+                                    <!-- <img src="./images/reviews_slider-button-left.svg" alt="slider button left"> -->
+                                    <svg 
+                                        width="45" 
+                                        height="45" 
+                                        viewBox="0 0 45 45" 
+                                        fill="none" 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <circle 
+                                            cx="22.5" 
+                                            cy="22.5" 
+                                            r="22.5" 
+                                            transform="matrix(-1 0 0 1 45 0)" 
+                                            fill="#8E32C6"
+                                        />
+                                        <path 
+                                            d="M27 8.99988L13.5 22.4999L27 35.9999" 
+                                            stroke="#FFB549" 
+                                            stroke-width="3" 
+                                            stroke-linecap="round"
+                                        />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="slider-buttons__item">
+                                <button class="slider-buttons__right" id="nextBtn" type="button">
+                                    <!-- <img src="./images/reviews_slider-button-right.svg" alt="slider button right"> -->
+                                    <svg 
+                                        width="45" 
+                                        height="45" 
+                                        viewBox="0 0 45 45" 
+                                        fill="none" 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <circle 
+                                            cx="22.5" 
+                                            cy="22.5" 
+                                            r="22.5" 
+                                            fill="#8E32C6"
+                                        />
+                                        <path 
+                                            d="M18 9L31.5 22.5L18 36" 
+                                            stroke="#FFB549" 
+                                            stroke-width="3" 
+                                            stroke-linecap="round"
+                                        />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <!--? order -->
@@ -551,6 +606,9 @@
     <!--! Скрипт - Зміна стану при кліку на НЕАКТИВНОМУ посиланні -->
     <!--? ChatGPT var.2 + JS - ПРАЦЮЄ тільки при повному кліку -->
     <!-- <script src="./js/action- an-inactive-link.js"></script> -->
+
+    <!--! Скрипт слайдера -->
+    <script src="./js/slider.js"></script>
 
 </body>
 

@@ -1,0 +1,21 @@
+<svg 
+    width="45" 
+    height="45" 
+    viewBox="0 0 45 45" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <circle 
+        cx="22.5" 
+        cy="22.5" 
+        r="22.5" 
+        transform="matrix(-1 0 0 1 45 0)" 
+        fill="#8E32C6"
+    />
+    <path 
+        d="M27 8.99988L13.5 22.4999L27 35.9999" 
+        stroke="#FFB549" 
+        stroke-width="3" 
+        stroke-linecap="round"
+    />
+</svg>

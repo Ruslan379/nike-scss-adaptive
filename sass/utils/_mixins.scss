@@ -2,14 +2,14 @@
 // outline: 1px dotted yellowgreen;
 
 //todo var.1 
-@mixin outline($size: 1px, $type: solid, $color) {
-    outline: $size $type $color;
-}
-
-//todo var.2 
-// @mixin outline($size: 1px, $type: solid, $color: tomato) {
+// @mixin outline($size: 1px, $type: solid, $color) {
 //     outline: $size $type $color;
 // }
+
+//todo var.2 
+@mixin outline($size: 1px, $type: solid, $color: tomato) {
+    outline: $size $type $color;
+}
 
 
 //!--- 02.Міксін для 01.@each - цикла для додавання фонових зображень advantages_...в advantages -----------
