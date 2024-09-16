@@ -1,15 +1,23 @@
-const slider = document.querySelector('.slider');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+// Задаємо коліри для кнопок < (prevBtn), > (nextBtn) та пагінації
+const colorArrowBtnFirst = '#FFB549';
+const colorArrowBtnSecond = 'rgba(255, 255, 255, 0.28)';
+const colorPaginationBtn = '#283036';
+
+const slider = document.querySelector("[data-slider]");
+const prevBtn = document.querySelector("[data-slider-prevBtn]");
+const nextBtn = document.querySelector("[data-slider-nextBtn]");
+
 // Задаємо початковий стан (колір) кнопок < та >
-prevBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
-nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
+prevBtn.querySelector('path').setAttribute('stroke', colorArrowBtnSecond);
+nextBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
 prevBtn.disabled = true; // Робимо кнопку < неактивной
-const slides = document.querySelectorAll('.slider .team-item');
+const slides = document.querySelectorAll("[data-slider] [data-slider-item]");
+// console.log("slides:", slides);
+
 // Пагінація
-const paginationFirst = document.getElementById('first');
-const paginationSecond = document.getElementById('second');
-const paginationThird = document.getElementById('third');
+const paginationFirst = document.querySelector("[data-slider-pagination-first]");
+const paginationSecond = document.querySelector("[data-slider-pagination-second]");
+const paginationThird = document.querySelector("[data-slider-pagination-third]");
 const slideWidth = slides[0].clientWidth;
 // console.log("slideWidth:", slideWidth);
 let currentIndex = 0;
@@ -37,47 +45,47 @@ function updateSlider() {
     // +++++ зміна стану та кольору копок "<" і ">" та Пагінація
     if (currentIndex === 0) {
         // зміна кольору:
-        prevBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
-        nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
+        prevBtn.querySelector('path').setAttribute('stroke', colorArrowBtnSecond);
+        nextBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
         // зміна стану:
         prevBtn.disabled = true; // Делаем кнопку неактивной
         nextBtn.disabled = false; // Разблокируем следующую кнопку
         // Пагінація:
         paginationFirst.style.height = '8px';
-        paginationFirst.style.backgroundColor = '#FFB549';
+        paginationFirst.style.backgroundColor = colorArrowBtnFirst;
         paginationSecond.style.height = '6px';
-        paginationSecond.style.backgroundColor = '#283036';
+        paginationSecond.style.backgroundColor = colorPaginationBtn;
         paginationThird.style.height = '6px';
-        paginationThird.style.backgroundColor = '#283036';
+        paginationThird.style.backgroundColor = colorPaginationBtn;
 
     } else if (currentIndex === 1) {
         // зміна кольору:
-        prevBtn.querySelector('path').setAttribute('stroke', '#FFB549');
-        nextBtn.querySelector('path').setAttribute('stroke', '#FFB549');
+        prevBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
+        nextBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
         // зміна стану:
         prevBtn.disabled = false; // Разблокируем предыдущую кнопку
         nextBtn.disabled = false; // Разблокируем следующую кнопку
         // Пагінація:
         paginationFirst.style.height = '6px';
-        paginationFirst.style.backgroundColor = '#283036';
+        paginationFirst.style.backgroundColor = colorPaginationBtn;
         paginationSecond.style.height = '8px';
-        paginationSecond.style.backgroundColor = '#FFB549';
+        paginationSecond.style.backgroundColor = colorArrowBtnFirst;
         paginationThird.style.height = '6px';
-        paginationThird.style.backgroundColor = '#283036';
+        paginationThird.style.backgroundColor = colorPaginationBtn;
     } else if (currentIndex === 2) {
         // зміна кольору:
-        prevBtn.querySelector('path').setAttribute('stroke', '#FFB549');
-        nextBtn.querySelector('path').setAttribute('stroke', 'rgba(255, 255, 255, 0.28)');
+        prevBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
+        nextBtn.querySelector('path').setAttribute('stroke', colorArrowBtnSecond);
         // зміна стану:
         prevBtn.disabled = false; // Разблокируем предыдущую кнопку
         nextBtn.disabled = true; // Делаем кнопку неактивной
         // Пагінація:
         paginationFirst.style.height = '6px';
-        paginationFirst.style.backgroundColor = '#283036';
+        paginationFirst.style.backgroundColor = colorPaginationBtn;
         paginationSecond.style.height = '6px';
-        paginationSecond.style.backgroundColor = '#283036';
+        paginationSecond.style.backgroundColor = colorPaginationBtn;
         paginationThird.style.height = '8px';
-        paginationThird.style.backgroundColor = '#FFB549';
+        paginationThird.style.backgroundColor = colorArrowBtnFirst;
     }
     // +++++
 }

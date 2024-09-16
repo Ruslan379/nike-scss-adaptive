@@ -298,8 +298,8 @@
                 <div class="container">
                     <h2 class="section-title">Відгуки</h2>
                     <div class="slider-box">
-                        <ul class="reviews-list reviews-list--slider">
-                        <li class="reviews-list__item">
+                        <ul class="reviews-list" data-slider >
+                        <li class="reviews-list__item" data-slider-item >
                             <p class="reviews-list__review reviews-list__review--ua">
                                 Кросівки дуже зручні
                                 і добре пофарбовані,<br> 
@@ -326,7 +326,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="reviews-list__item">
+                        <li class="reviews-list__item" data-slider-item >
                             <p class="reviews-list__review reviews-list__review--ua">
                                 Я дуже задоволена цією 
                                 кольоровою гамою. <br>
@@ -353,7 +353,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="reviews-list__item">
+                        <li class="reviews-list__item" data-slider-item >
                             <p class="reviews-list__review reviews-list__review--ua">
                                 Якраз підійде, якщо вам 
                                 потрібно піти на вечірку. 
@@ -383,7 +383,12 @@
                         </ul>
                         <ul class="slider-buttons">
                             <li class="slider-buttons__item">
-                                <button class="slider-buttons__left" id="prevBtn" type="button" disabled="">
+                                <button 
+                                    class="slider-buttons__left"
+                                    type="button"
+                                    data-slider-prevBtn
+                                    disabled=""
+                                >
                                     <!-- <img src="./images/reviews_slider-button-left.svg" alt="slider button left"> -->
                                     <svg 
                                         width="45" 
@@ -409,7 +414,11 @@
                                 </button>
                             </li>
                             <li class="slider-buttons__item">
-                                <button class="slider-buttons__right" id="nextBtn" type="button">
+                                <button 
+                                    class="slider-buttons__right"
+                                    type="button"
+                                    data-slider-nextBtn
+                                >
                                     <!-- <img src="./images/reviews_slider-button-right.svg" alt="slider button right"> -->
                                     <svg 
                                         width="45" 
