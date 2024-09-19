@@ -64,7 +64,7 @@
 
         .slider-box {
             position: relative;
-            /* overflow: hidden; */
+            // overflow: hidden;
             // width: 100%;
             width: 172px;
             height: 100%;
@@ -96,8 +96,6 @@
                 &__item {
                     width: 172px;
                     height: 197px;
-                
-
                     // ! міксін outline
                     // @include outline($type: dashed, $color: yellow);
                     

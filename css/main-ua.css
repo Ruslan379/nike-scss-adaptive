@@ -1101,7 +1101,6 @@ body {
 }
 .reviews .container .slider-box {
   position: relative;
-  /* overflow: hidden; */
   width: 172px;
   height: 100%;
   outline: 1px dotted tomato;

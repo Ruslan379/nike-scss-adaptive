@@ -41,7 +41,7 @@ function slideLeft() {
 
 function updateSlider() {
     const newPosition = currentIndex * slideWidth;
-    slider.style.transform = `translateX(${newPosition}px)`;
+    slider.style.transform = `translateX(${- newPosition}px)`; //!!!!! - newPosition
     // +++++ зміна стану та кольору копок "<" і ">" та Пагінація
     if (currentIndex === 0) {
         // зміна кольору:
