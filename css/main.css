@@ -955,6 +955,7 @@ body {
 .reviews .container .slider-box .slider-box-hidden .reviews-list__review {
   margin-bottom: 11px;
   font-size: 18px;
+  line-height: 1.1;
 }
 @media screen and (min-width: 1440px) {
   .reviews .container .slider-box .slider-box-hidden .reviews-list__review {

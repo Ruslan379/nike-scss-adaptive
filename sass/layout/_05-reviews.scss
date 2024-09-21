@@ -160,8 +160,8 @@
                     &__review {
                         margin-bottom: 11px;
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                        font-size: if($lang == ua, 18px, 18px);
-                        // line-height: if($lang == ua, 1.042, 1.042);
+                        font-size: if($lang == ua, 16px, 18px);
+                        line-height: if($lang == ua, 1.05, 1.1);
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
                             margin-bottom: 8px;
