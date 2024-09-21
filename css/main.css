@@ -900,7 +900,7 @@ body {
 .reviews .container .slider-box {
   position: relative;
   width: 172px;
-  height: 100%;
+  height: 209px;
   outline: 1px dotted tomato;
 }
 .reviews .container .slider-box .slider-box-hidden {
@@ -911,6 +911,7 @@ body {
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list {
   position: absolute;
+  z-index: 1;
   left: 0;
   width: 300%;
   height: 100%;
@@ -933,7 +934,6 @@ body {
   flex-direction: column;
   padding: 9px;
   border-radius: 15px;
-  outline: 1px dashed yellow;
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__item::before, .reviews .container .slider-box .slider-box-hidden .reviews-list__item::after {
   content: "";
