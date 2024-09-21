@@ -80,11 +80,9 @@
                     position: absolute;
                     // ! +++++ Пагінація +++++ 
                     left: 0;
-                    /* right: -100%; */
-                    /* right: -200%; */
-                    // ! ______Пагінація______ 
                     width: 300%;
                     height: 100%;
+                    // ! ______Пагінація______ 
                     display: flex;
                     // * анімація 
                     transition: 
@@ -102,18 +100,24 @@
                     &__item {
                         width: 172px;
                         height: 197px;
+                        //! ------------
+                        display: flex;
+                        flex-direction: column;
+                        //! _________
+                        padding: 9px;
+                        border-radius: 15px;
                         // ! міксін outline
-                        // @include outline($type: dashed, $color: yellow);
+                        @include outline($type: dashed, $color: yellow);
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
                             padding: 49px 11px 29px 18px;
                             width: 255px;
                             // height: 292px;
-                            border-radius: 15px;
+                            // border-radius: 15px;
                         }
                     }
                     
-                    &__item:nth-child(1) {
+                    &__item-:nth-child(1) {
                         background: 
                             linear-gradient(
                                 135deg, 
@@ -126,7 +130,7 @@
                             0 14px 0 -5px #7b54b2,
                             0 30px 0 -13px #533978;
                     }
-                    &__item:nth-child(2) {
+                    &__item-:nth-child(2) {
                         background: 
                             linear-gradient(
                                 135deg, 
@@ -139,7 +143,7 @@
                             0 14px 0 -5px #9159b1,
                             0 30px 0 -13px #61337c;
                     }
-                    &__item:nth-child(3) {
+                    &__item-:nth-child(3) {
                         background: 
                             linear-gradient(
                                 135deg, 
@@ -154,30 +158,60 @@
                     }
         
                     &__review {
-                        margin-bottom: 8px;
+                        margin-bottom: 11px;
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                        font-size: if($lang == ua, 19px, 24px);
-                        line-height: if($lang == ua, 1.175, 1.17);
+                        font-size: if($lang == ua, 18px, 18px);
+                        // line-height: if($lang == ua, 1.042, 1.042);
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            margin-bottom: 8px;
+                            //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                            font-size: if($lang == ua, 19px, 24px);
+                            line-height: if($lang == ua, 1.175, 1.17);
+                        }
                     }
                     
                     &__date {
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                        margin-bottom: if($lang == ua, 70px, 47px);
+                        // margin-bottom: if($lang == ua, 70px, 47px);
                         font-size: 14px;
                         line-height: 1.14;
                         color: getColor('font-third');
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                            margin-bottom: if($lang == ua, 70px, 47px);
+                            font-size: 14px;
+                            line-height: 1.14;
+                            color: getColor('font-third');
+                        }
                     }
                     
                     &__reviewer-box {
+                        flex-grow: 1;
+                        padding-left: 5px;
                         display: flex;
-                        align-items: center;
-                        gap: 5px;
+                        // justify-content: space-between;
+                        align-items: flex-end;
+                        gap: 10px;
                         // ! міксін outline
-                        // @include outline(1px, solid, black);
+                        // @include outline($color: black);
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
                     }
                     
                     &__reviewer-img {
+                        // align-self: self-end;
+                        margin-bottom: 14px;
                         border-radius: 50%;
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            // border-radius: 50%;
+                        }
                     }
                     
                     &__reviewer-name {
@@ -187,13 +221,16 @@
                     }
                     
                     &__reviewer-term {
+                        width: 67px;
                         font-size: 12px;
                         color: $color-font-third;
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            width: 100%;
+                        }
                     }
                 }
             }
-
-            
 
             .slider-buttons {
                 position: absolute;
