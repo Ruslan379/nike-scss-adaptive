@@ -93,6 +93,7 @@
                     // @include outline($type: solid, $color: orange);
                     
                     @media screen and (min-width: getBreakPoint('desktop')) {
+                        // position: static;
                         padding: 0 80px;
                         @include flex_JCsb;
                     }
