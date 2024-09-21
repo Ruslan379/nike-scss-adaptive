@@ -1134,6 +1134,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 9px;
+  border-radius: 15px;
   outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
@@ -1150,21 +1151,22 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  border-radius: 15px;
   background-repeat: no-repeat;
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__item:nth-child(1):nth-child(1)::before {
   z-index: -1;
-  width: 169px;
+  width: 167px;
   height: 189px;
   bottom: -6px;
-  background-image: url(../images/reviews_background-item-one-first.png);
+  background: linear-gradient(135deg, rgba(0, 229, 230, 0.6) 7.29%, rgba(0, 168, 247, 0.6) 26.04%, rgba(154, 118, 249, 0.6) 62.5%, rgba(204, 94, 194, 0.6) 100%);
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__item:nth-child(1):nth-child(1)::after {
   z-index: -2;
-  width: 159px;
+  width: 158px;
   height: 183px;
   bottom: -12px;
-  background-image: url(../images/reviews_background-item-one-second.png);
+  background: linear-gradient(135deg, rgba(0, 229, 230, 0.6) 7.29%, rgba(0, 168, 247, 0.6) 26.04%, rgba(154, 118, 249, 0.6) 62.5%, rgba(204, 94, 194, 0.6) 100%);
 }
 @media screen and (min-width: 1440px) {
   .reviews .container .slider-box .slider-box-hidden .reviews-list__item:nth-child(1) {
