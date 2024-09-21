@@ -307,12 +307,12 @@
             &::before {
                 z-index: -2;
                 // content: '';
-                width: 299px;
+                width: 301px;
                 // height: 36px;
                 // position: absolute;
                 // left: 50%;
                 // transform: translate(-50%);
-                bottom: -6px;
+                bottom: -3px;
                 background-image:url(../images/benefits_background-main-text-first.svg);
                 // background-repeat: no-repeat;
             }
@@ -320,15 +320,17 @@
             &::after {
                 z-index: -1;
                 // content: '';
-                width: 301px;
+                width: 299px;
                 // height: 36px;
                 // position: absolute;
                 // left: 50%;
                 // transform: translate(-50%);
-                bottom: -3px;
+                bottom: -6px;
                 background-image:url(../images/benefits_background-main-text-second.svg);
                 // background-repeat: no-repeat;
             }
+            
+            
         }
     }
 }

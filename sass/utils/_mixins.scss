@@ -58,6 +58,12 @@
     align-items: center;
 }
 
+@mixin flex_AIfe {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
 @mixin flex_JCsb {
     display: flex;
     flex-direction: row;
@@ -105,6 +111,11 @@
     align-items: center;
 }
 
+@mixin flex_FDcol {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin flex_FDcol-AIcen {
     display: flex;
     flex-direction: column;
@@ -112,11 +123,7 @@
 }
 
 //todo поки не  використовувається
-// @mixin flex_AIfe {
-//     display: flex;
-//     flex-direction: row;
-//     align-items: flex-end;
-// }
+
 // @mixin flex_JCsb-AIfe {
 //     display: flex;
 //     flex-direction: row;
