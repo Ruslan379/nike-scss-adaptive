@@ -1,7 +1,7 @@
 // Задаємо коліри для кнопок < (prevBtn), > (nextBtn) та пагінації
 const colorArrowBtnFirst = '#FFB549';
 const colorArrowBtnSecond = 'rgba(255, 255, 255, 0.28)';
-const colorPaginationBtn = '#283036';
+const colorPaginationBtn = '#757575';
 
 const slider = document.querySelector("[data-slider]");
 const prevBtn = document.querySelector("[data-slider-prevBtn]");
@@ -130,19 +130,19 @@ function handleMouseDown(event) {
 function handleMouseMove(event) {
     if (!isDragging) return;
     const diffX = event.clientX - startX;
-    // console.log("diffX > 50:", diffX);
-    if (diffX > 50) {
-        // console.log("currentIndex->handleMouseMove(diffX > 50)", currentIndex);
+    // console.log("diffX < -50:", diffX);
+    if (diffX < -50) {
+        // console.log("currentIndex->handleMouseMove(diffX < -50)", currentIndex);
         if (currentIndex === 2) return;
         slideRight();
-        // console.log("currentIndex->handleMouseMove(diffX > 50+)", currentIndex);
+        // console.log("currentIndex->handleMouseMove(diffX < -50+)", currentIndex);
         startX = event.clientX;
         // console.log("startX->handleMouseMove+:", startX);
-    } else if (diffX < -50) {
-        // console.log("currentIndex->handleMouseMove(diffX < -50)", currentIndex);
+    } else if (diffX > 50) {
+        // console.log("currentIndex->handleMouseMove(diffX > 50)", currentIndex);
         if (currentIndex === 0) return;
         slideLeft();
-        // console.log("currentIndex->handleMouseMove(diffX < -50-)", currentIndex);
+        // console.log("currentIndex->handleMouseMove(diffX > 50-)", currentIndex);
         startX = event.clientX;
         // console.log("startX->handleMouseMove-:", startX);
     }
