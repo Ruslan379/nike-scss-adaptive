@@ -1,7 +1,9 @@
 // Задаємо коліри для кнопок < (prevBtn), > (nextBtn) та пагінації
 const colorArrowBtnFirst = '#FFB549';
+const colorArrowBtnFirstBoxShadow = '3px 3px 5px 3px rgba(221, 16, 16, 0.5)';
 const colorArrowBtnSecond = 'rgba(255, 255, 255, 0.28)';
 const colorPaginationBtn = '#757575';
+const colorPaginationBtnBoxShadow = '2px 2px 4px 2px rgba(30, 36, 55, 0.5)';
 
 const slider = document.querySelector("[data-slider]");
 const prevBtn = document.querySelector("[data-slider-prevBtn]");
@@ -56,10 +58,13 @@ function updateSlider() {
         // Пагінація:
         paginationFirst.style.height = '8px';
         paginationFirst.style.backgroundColor = colorArrowBtnFirst;
+        paginationFirst.style.boxShadow = colorArrowBtnFirstBoxShadow;
         paginationSecond.style.height = '6px';
         paginationSecond.style.backgroundColor = colorPaginationBtn;
+        paginationSecond.style.boxShadow = colorPaginationBtnBoxShadow;
         paginationThird.style.height = '6px';
         paginationThird.style.backgroundColor = colorPaginationBtn;
+        paginationThird.style.boxShadow = colorPaginationBtnBoxShadow;
 
     } else if (currentIndex === 1) {
         // зміна кольору:
@@ -71,10 +76,13 @@ function updateSlider() {
         // Пагінація:
         paginationFirst.style.height = '6px';
         paginationFirst.style.backgroundColor = colorPaginationBtn;
+        paginationFirst.style.boxShadow = colorPaginationBtnBoxShadow;
         paginationSecond.style.height = '8px';
         paginationSecond.style.backgroundColor = colorArrowBtnFirst;
+        paginationSecond.style.boxShadow = colorArrowBtnFirstBoxShadow;
         paginationThird.style.height = '6px';
         paginationThird.style.backgroundColor = colorPaginationBtn;
+        paginationThird.style.boxShadow = colorPaginationBtnBoxShadow;
     } else if (currentIndex === 2) {
         // зміна кольору:
         prevBtn.querySelector('path').setAttribute('stroke', colorArrowBtnFirst);
@@ -85,10 +93,13 @@ function updateSlider() {
         // Пагінація:
         paginationFirst.style.height = '6px';
         paginationFirst.style.backgroundColor = colorPaginationBtn;
+        paginationFirst.style.boxShadow = colorPaginationBtnBoxShadow;
         paginationSecond.style.height = '6px';
         paginationSecond.style.backgroundColor = colorPaginationBtn;
+        paginationSecond.style.boxShadow = colorPaginationBtnBoxShadow;
         paginationThird.style.height = '8px';
         paginationThird.style.backgroundColor = colorArrowBtnFirst;
+        paginationThird.style.boxShadow = colorArrowBtnFirstBoxShadow;
     }
     // +++++
 }
