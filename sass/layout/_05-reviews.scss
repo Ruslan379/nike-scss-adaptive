@@ -184,7 +184,7 @@
                                 0 30px 0 -13px #533978;
                         }
                     }
-
+                    
                     &__item:nth-child(2) {
                         background: 
                             linear-gradient(
@@ -225,7 +225,7 @@
                                 0 30px 0 -13px #61337c;
                             }
                     }
-
+                    
                     &__item:nth-child(3) {
                         background: 
                             linear-gradient(
@@ -266,7 +266,7 @@
                                 0 30px 0 -13px #732f26;
                         }
                     }
-        
+                    
                     &__review {
                         margin-bottom: 11px;
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
@@ -344,6 +344,7 @@
             .slider-buttons {
                 position: absolute;
                 top: 50%;
+                top: calc(50% - 12px);
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: calc(100% + 132px);

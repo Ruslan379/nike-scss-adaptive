@@ -1272,6 +1272,7 @@ body {
 .reviews .container .slider-box .slider-buttons {
   position: absolute;
   top: 50%;
+  top: calc(50% - 12px);
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% + 132px);
