@@ -22,6 +22,9 @@ const slideWidth = slides[0].clientWidth;
 // console.log("slideWidth:", slideWidth);
 let currentIndex = 0;
 
+prevBtn.addEventListener('click', slideLeft);
+nextBtn.addEventListener('click', slideRight);
+
 function slideRight() {
     currentIndex++;
     if (currentIndex >= slides.length) {
@@ -89,9 +92,6 @@ function updateSlider() {
     }
     // +++++
 }
-
-prevBtn.addEventListener('click', slideLeft);
-nextBtn.addEventListener('click', slideRight);
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
