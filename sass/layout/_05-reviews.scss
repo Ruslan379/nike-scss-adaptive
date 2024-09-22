@@ -101,8 +101,8 @@
                     
                     @media screen and (min-width: getBreakPoint('desktop')) {
                         // position: static;
-                        transform: translate(0);
-                        left: 0;
+                        transform: translate(0); //!!! не працює
+                        // left: 0; //!!! не працює
                         width: 100%;
                         // padding: 0 80px;
                         @include flex_JCsb;

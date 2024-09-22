@@ -928,7 +928,6 @@ body {
 @media screen and (min-width: 1440px) {
   .reviews .container .slider-box .slider-box-hidden .reviews-list {
     transform: translate(0);
-    left: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
