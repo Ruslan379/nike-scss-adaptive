@@ -9,7 +9,8 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     //! Вибір адаптивної чи респонсивної (чутливої) верстки.
-    background-size: if($adaptive, auto, cover);
+    // background-size: if($adaptive, auto, cover);
+    background-size: cover;
     
     @media screen and (min-width: getBreakPoint('desktop')) {
         height: 532px;

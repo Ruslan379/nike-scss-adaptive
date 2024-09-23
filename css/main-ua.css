@@ -1045,7 +1045,7 @@ body {
   background-image: url(../images/reviews_background-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: auto;
+  background-size: cover;
 }
 @media screen and (min-width: 1440px) {
   .reviews {
