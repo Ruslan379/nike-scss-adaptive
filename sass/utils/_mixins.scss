@@ -52,6 +52,11 @@
 }
 
 //! ----------- flex-властивості (flex-контейнери) -----------
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin flex_AIcen {
     display: flex;
     flex-direction: row;

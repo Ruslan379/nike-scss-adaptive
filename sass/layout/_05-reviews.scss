@@ -30,6 +30,7 @@
         @media screen and (min-width: getBreakPoint('desktop')) {
             display: block;
             padding-bottom: 0px;
+            padding-left: 326px;
         }
         
         &::before {
@@ -41,6 +42,13 @@
             bottom: 0;
             background-image:url(../images/reviews_background-image-left-mobile.png);
             background-repeat: no-repeat;
+
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                z-index: 2;
+                width: 340px;
+                height: 380px;
+                background-image:url(../images/reviews_background-image-desktop.png);
+            }
         }
         
         &::after {
@@ -60,7 +68,7 @@
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 display: block;
-                margin-bottom: 24px;
+                margin-bottom: 42px;
             }
         }
 
@@ -81,6 +89,10 @@
                 overflow: hidden;
                 width: 100%;
                 height: 100%;
+                
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    // width: fit-content;
+                }
                 
                 .reviews-list {
                     position: absolute;
@@ -104,8 +116,12 @@
                         transform: translate(0); //!!! не працює
                         // left: 0; //!!! не працює
                         width: 100%;
-                        // padding: 0 80px;
-                        @include flex_JCsb;
+                        // @include flex_JCsb;
+                        gap: 93px;
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        justify-content: if($adaptive, flex-start, space-between);
+                        gap: if($adaptive, 93px, auto);
+                        
                     }
                     
                     &__item {
@@ -128,6 +144,10 @@
                             transform: translateX(-50%);
                             border-radius: 15px;
                             background-repeat: no-repeat;
+                            
+                            @media screen and (min-width: getBreakPoint('desktop')) {
+                                display: none;;
+                            }
                         }
                         &::before {
                             z-index: -1;
@@ -284,7 +304,7 @@
                         line-height: if($lang == ua, 1.05, 1.1);
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
-                            margin-bottom: 8px;
+                            // margin-bottom: 8px;
                             //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
                             font-size: if($lang == ua, 19px, 24px);
                             line-height: if($lang == ua, 1.175, 1.17);
@@ -316,8 +336,6 @@
                         // @include outline($color: black);
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
-                            // display: flex;
-                            // align-items: center;
                             @include flex_AIcen;
                             gap: 5px;
                         }
@@ -329,7 +347,7 @@
                         border-radius: 50%;
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
-                            // border-radius: 50%;
+                            margin-bottom: 0;
                         }
                     }
                     

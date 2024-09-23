@@ -1069,6 +1069,7 @@ body {
   .reviews .container {
     display: block;
     padding-bottom: 0px;
+    padding-left: 326px;
   }
 }
 .reviews .container::before {
@@ -1080,6 +1081,14 @@ body {
   bottom: 0;
   background-image: url(../images/reviews_background-image-left-mobile.png);
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1440px) {
+  .reviews .container::before {
+    z-index: 2;
+    width: 340px;
+    height: 380px;
+    background-image: url(../images/reviews_background-image-desktop.png);
+  }
 }
 .reviews .container::after {
   content: "";
@@ -1097,7 +1106,7 @@ body {
 @media screen and (min-width: 1440px) {
   .reviews .container .section-title {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 42px;
   }
 }
 .reviews .container .slider-box {
@@ -1131,9 +1140,9 @@ body {
   .reviews .container .slider-box .slider-box-hidden .reviews-list {
     transform: translate(0);
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    gap: 93px;
     justify-content: space-between;
+    gap: auto;
   }
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__item {
@@ -1152,6 +1161,11 @@ body {
   transform: translateX(-50%);
   border-radius: 15px;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1440px) {
+  .reviews .container .slider-box .slider-box-hidden .reviews-list__item::before, .reviews .container .slider-box .slider-box-hidden .reviews-list__item::after {
+    display: none;
+  }
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__item::before {
   z-index: -1;
@@ -1225,7 +1239,6 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .reviews .container .slider-box .slider-box-hidden .reviews-list__review {
-    margin-bottom: 8px;
     font-size: 24px;
     line-height: 1.17;
   }
@@ -1262,6 +1275,11 @@ body {
 .reviews .container .slider-box .slider-box-hidden .reviews-list__reviewer-img {
   margin-bottom: 14px;
   border-radius: 50%;
+}
+@media screen and (min-width: 1440px) {
+  .reviews .container .slider-box .slider-box-hidden .reviews-list__reviewer-img {
+    margin-bottom: 0;
+  }
 }
 .reviews .container .slider-box .slider-box-hidden .reviews-list__reviewer-name {
   margin-bottom: 1px;
