@@ -1062,7 +1062,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  outline: 2px dashed yellow;
+  outline: 1px dashed yellow;
 }
 @media screen and (min-width: 1440px) {
   .reviews .container {
@@ -1112,7 +1112,6 @@ body {
   position: relative;
   width: 50vw;
   height: 209px;
-  outline: 1px dotted tomato;
 }
 @media screen and (min-width: 1440px) {
   .reviews .container .slider-box {

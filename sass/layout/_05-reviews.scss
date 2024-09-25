@@ -26,7 +26,7 @@
         padding-bottom: 159px;
         @include flex_JCcen-AIcen;
         // ! міксін outline
-        @include outline(2px, dashed, yellow);
+        @include outline($type: dashed, $color: yellow);
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             display: block;
@@ -80,7 +80,7 @@
             width: if($adaptive, 174px, 50vw);
             // height: 100%;
             height: 209px;
-            @include outline($type: dotted);
+            // @include outline($type: dotted);
             
             @media screen and (min-width: getBreakPoint('desktop')) {
                 width: 100%;
