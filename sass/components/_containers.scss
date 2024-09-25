@@ -31,7 +31,7 @@
     // }
     //? var-03.map-get --> getBreakPoint
     @media screen and (min-width: getBreakPoint('mobile')) {
-        max-width: getBreakPoint('mobile');
+        // max-width: getBreakPoint('mobile');
         // width: 360px;
         //! Вибір адаптивної чи респонсивної (чутливої) верстки.
         max-width: if($adaptive, getBreakPoint('mobile'), 100vw);
