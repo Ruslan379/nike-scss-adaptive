@@ -306,8 +306,11 @@
                     &__review {
                         margin-bottom: 11px;
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                        font-size: if($lang == ua, 16px, 18px);
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        // font-size: if($lang == ua, 16px, 18px);
+                        font-size: if($lang == ua, if($adaptive, 16px, calc(13px + 1vw)), if($adaptive, 18px, calc(15px + 1vw)));
                         line-height: if($lang == ua, 1.05, 1.1);
+                        // line-height: if($lang == ua, if($adaptive, 1.05, calc(1.05 + 1vw)), if($adaptive, 1.1, calc(1.1 + 1vw))); //! так не працює
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
                             // margin-bottom: 8px;
