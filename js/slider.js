@@ -20,14 +20,18 @@ const slides = document.querySelectorAll("[data-slider] [data-slider-item]");
 const paginationFirst = document.querySelector("[data-slider-pagination-first]");
 const paginationSecond = document.querySelector("[data-slider-pagination-second]");
 const paginationThird = document.querySelector("[data-slider-pagination-third]");
-const slideWidth = slides[0].clientWidth;
-// console.log("slideWidth:", slideWidth);
+// const slideWidth = slides[0].clientWidth;
+let slideWidth;
+// let slideWidth = slides[0].clientWidth;
+// console.log("slideWidth_0:", slideWidth);
 let currentIndex = 0;
 
 prevBtn.addEventListener('click', slideLeft);
 nextBtn.addEventListener('click', slideRight);
 
 function slideRight() {
+    slideWidth = slides[0].clientWidth;
+    console.log("slideWidth_R:", slideWidth);
     currentIndex++;
     if (currentIndex >= slides.length) {
         currentIndex = 0;
@@ -37,6 +41,8 @@ function slideRight() {
 }
 
 function slideLeft() {
+    slideWidth = slides[0].clientWidth;
+    console.log("slideWidth_L:", slideWidth);
     currentIndex--;
     if (currentIndex < 0) {
         currentIndex = slides.length - 1;
@@ -45,6 +51,11 @@ function slideLeft() {
 }
 
 function updateSlider() {
+    // Перевіка ширини єкрану та повернення а початкову позицію (не працює):
+    // if (window.innerWidth >= 1440) {
+    //     slider.style.transform = `translateX(0)`; //todo - повернення на початкову позицію
+    //     return;
+    // };
     const newPosition = currentIndex * slideWidth;
     slider.style.transform = `translateX(${- newPosition}px)`; //!!!!! - newPosition
     // +++++ зміна стану та кольору копок "<" і ">" та Пагінація
@@ -131,14 +142,13 @@ function paginationThirdСlick() {
 // перетягуючи їх у різні боки ліворуч та праворуч
 isDragging = false;
 
-function handleMouseDown(event) {
-    isDragging = true;
-    startX = event.clientX;
-    slider.style.cursor = 'pointer';
-    // console.log("startX->handleMouseDown:", startX);
-}
+slider.addEventListener('mousemove', handleMouseMove);
+slider.addEventListener('mousedown', handleMouseDown);
+slider.addEventListener('mouseup', handleMouseUp);
 
 function handleMouseMove(event) {
+    // Перевіка ширини єкрану:
+    if (window.innerWidth >= 1440) return;
     if (!isDragging) return;
     const diffX = event.clientX - startX;
     // console.log("diffX < -50:", diffX);
@@ -159,14 +169,17 @@ function handleMouseMove(event) {
     }
 }
 
+function handleMouseDown(event) {
+    isDragging = true;
+    startX = event.clientX;
+    slider.style.cursor = 'pointer';
+    // console.log("startX->handleMouseDown:", startX);
+}
+
 function handleMouseUp() {
     isDragging = false;
     slider.style.cursor = 'auto';
 }
-
-slider.addEventListener('mousedown', handleMouseDown);
-slider.addEventListener('mousemove', handleMouseMove);
-slider.addEventListener('mouseup', handleMouseUp);
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
