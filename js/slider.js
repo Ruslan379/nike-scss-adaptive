@@ -123,15 +123,18 @@ paginationSecond.addEventListener('click', paginationSecondСlick);
 paginationThird.addEventListener('click', paginationThirdСlick);
 
 function paginationFirstСlick() {
+    slideWidth = slides[0].clientWidth;
     currentIndex = 0;
     updateSlider();
 }
 
 function paginationSecondСlick() {
+    slideWidth = slides[0].clientWidth;
     currentIndex = 1;
     updateSlider();
 }
 function paginationThirdСlick() {
+    slideWidth = slides[0].clientWidth;
     currentIndex = 2;
     updateSlider();
 }
