@@ -322,14 +322,15 @@
                     
                     &__date {
                         //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                        // margin-bottom: if($lang == ua, 70px, 47px);
-                        font-size: 14px;
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        // font-size: 14px;   
+                        font-size: if($lang == ua, if($adaptive, 10px, calc(7px + 1vw)), if($adaptive, 12px, calc(9px + 1vw)));
                         line-height: 1.14;
                         color: getColor('font-third');
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
                             //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
-                            margin-bottom: if($lang == ua, 70px, 47px);
+                            // margin-bottom: if($lang == ua, 70px, 47px);
                             font-size: 14px;
                             line-height: 1.14;
                             color: getColor('font-third');
@@ -345,34 +346,60 @@
                         // @include outline($color: black);
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
-                            @include flex_AIcen;
-                            gap: 5px;
+                            // @include flex_AIcen;
+                            // gap: 5px;
                         }
                     }
                     
                     &__reviewer-img {
-                        // align-self: self-end;
-                        margin-bottom: 14px;
+                        // align-self: flex-start;
+                        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        // width: 31px;
+                        width: if($lang == ua, if($adaptive, 31px, calc(27px + 2vw)), if($adaptive, 31px, calc(27px + 2vw)));
+                        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                        // margin-bottom: 14px;
+                        margin-bottom: if($lang == ua, 14px, 0);
                         border-radius: 50%;
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
+                            width: 31px;
                             margin-bottom: 0;
                         }
                     }
-                    
+
+                    // &__reviewer-info-box {
+                    //     // ! міксін outline
+                    //     @include outline($type: dashed, $color: yellow);
+                    // }
+
                     &__reviewer-name {
                         margin-bottom: 1px;
-                        font-size: 14px;
+                        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        // font-size: 14px;   
+                        font-size: if($lang == ua, if($adaptive, 14px, calc(11px + 1vw)), if($adaptive, 14px, calc(11px + 1vw)));
                         line-height: 1.14;
+                        
+                        @media screen and (min-width: getBreakPoint('desktop')) {
+                            font-size: 14px;
+                        }
                     }
                     
                     &__reviewer-term {
-                        width: 67px;
-                        font-size: 12px;
+                        min-width: 67px;
+                        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                        // width: 100%;
+                        width: if($lang == ua, 67px, 100%);
+                        //! var.2 - Вибір властивості для сторінки index-ua.html або index.html (eng)
+                        //! Вибір адаптивної чи респонсивної (чутливої) верстки.
+                        // font-size: 12px;
+                        font-size: if($lang == ua, if($adaptive, 12px, calc(9px + 1vw)), if($adaptive, 12px, calc(9px + 1vw)));
                         color: $color-font-third;
                         
                         @media screen and (min-width: getBreakPoint('desktop')) {
                             width: 100%;
+                            font-size: 12px;
                         }
                     }
                 }
