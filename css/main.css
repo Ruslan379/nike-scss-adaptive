@@ -897,6 +897,11 @@ body {
   background-image: url(../images/reviews_background-image-right-mobile.png);
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 1440px) {
+  .reviews .container::after {
+    display: none;
+  }
+}
 .reviews .container .section-title {
   display: none;
 }
